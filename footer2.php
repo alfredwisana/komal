@@ -47,7 +47,8 @@
                         <a href="https://Facebook.com"><i class="fa fa-facebook"></i></a>
                         <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
                         <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
-                        <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+                        <!-- shopee -->
+                        <a href="https://youtube.com"><i class="fa-solid fa-bag-shopping" style="color: #ff6600;"></i></a>
                         <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     <br>

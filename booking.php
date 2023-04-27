@@ -205,5 +205,7 @@ while ($row = mysqli_fetch_array($result)) {
         });
     });
 </script>
-
+<?php
+require 'footer.php'
+?>
 </html>

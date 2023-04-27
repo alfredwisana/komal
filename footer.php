@@ -13,20 +13,15 @@
                 <div class="container bottom_border">
                     <div class="row">
                         <div class=" col-sm-4 col-md col-sm-4  col-12 col">
-                            <p><i class="fa fa-location-arrow"></i> Jl. Magersari, RT.1/RW.1, Magersari, Krian, Sidoarjo, Kabupaten Sidoarjo, Jawa Timur </p>
-                            <p><i class="fa fa-phone"></i> 085748177559 </p>
-                            <p><i class="fa fa-clock"></i> 7AM-9:30PM </p>
+                            
                         </div>
                         <div class=" col-sm-4 col-md  col-6 col">
                             <h5 class="headin5_amrc col_white_amrc pt2">Contact Us</h5>
                             <!--headin5_amrc-->
                             <p class="mb10">Senin - Minggu</p>
-                            <a href="https://web.Tokopedia.com/" class="btn" style="background-color: lightgreen
-                            ;"> Tokopedia</a>
-                            <br>
-                            <br>
-                            <a href="https://web.whatsapp.com/" class="btn" style="background-color: lightgreen
-                            ;"><i class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-whatsapp"></span></i> Hubungi di Whatsapp</a>
+                            <p><i class="fa fa-location-arrow"></i> Jl. Magersari, RT.1/RW.1, Magersari, Krian, Sidoarjo, Kabupaten Sidoarjo, Jawa Timur </p>
+                            <p><i class="fa fa-phone"></i> 085748177559 </p>
+                            <p><i class="fa fa-clock"></i> 7AM-9:30PM </p>
                             <!--footer_ul_amrc ends here-->
                         </div>
 

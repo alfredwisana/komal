@@ -155,7 +155,9 @@ $res = mysqli_query($con, $remind);
             <?php } ?>
         </div>
     </div>
-
+    <?php
+        require 'footer.php';
+    ?>
 
 </body>
 

@@ -35,11 +35,11 @@
                             <!--headin5_amrc ends here-->
 
                             <ul class="footer_ul2_amrc">
-                                <li><i class="fa-solid fa-bag-shopping" style="color: #4ce821;"></i>
-                                    <a href="https://web.Tokopedia.com/" title="Tokped" alt="Tokped" style="text-decoration: none; color:black">Facebook</a>
-                                </li>
                                 <li><a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-instagram" style="color:black"></span></a> </a>
                                     <a href="https://instagram.com" title="Instagram" alt="Instagram" style="text-decoration: none; color:black">Instagram</a>
+                                </li>
+                                <li><i class="fa-solid fa-bag-shopping" style="color: #4ce821;"></i>
+                                    <a href="https://web.Tokopedia.com/" title="Tokped" alt="Tokped" style="text-decoration: none; color:black">Tokopedia</a>
                                 </li>
                                 <li><i class="fa-solid fa-bag-shopping" style="color: #ff6600;"></i>
                                     <a href="https://youtube.com" title="Shopee" alt="Shopee" style="text-decoration: none; color:black">Shopee</a>

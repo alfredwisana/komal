@@ -21,13 +21,13 @@
                         <a href="https://web.whatsapp.com/">Contact</a>
                     </p>
 
-                    <p class="footer-company-name">Copyright ©2023 | Designed by Learning Service Team Universitas Kristen Petra</p>
+                    <p class="footer-company-name">Copyright ©2023 | Designed by Service Learning Team Universitas Kristen Petra</p>
                 </div>
 
                 <div class="footer-center">
                     <div>
                         <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9"><i class="fa fa-location-arrow"></i></a>
-                        <p><span>Jl. Magersari, RT.1/RW.1, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
+                        <p><span>JL.Gubernur Sunandar no 578, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
                     </div>
 
                     <div>

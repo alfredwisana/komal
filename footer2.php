@@ -41,8 +41,8 @@
                 </div>
                 <div class="footer-right">
                     <p class="footer-company-about">
-                        <span>About Us</span>
-                        We are the best and most complete baby shop in this town with the best price.</p>
+                        <span>Contact Us</span>
+                        </p>
                     <div class="footer-icons">
                         <a href="https://Facebook.com"><i class="fa fa-facebook"></i></a>
                         <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>

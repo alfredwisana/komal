@@ -36,8 +36,8 @@
                         <p>085748177559</p>
                     </div>
                     <div>
-                        <i class="fa fa-clock-o"></i>
-                        <p>7AM - 9:30PM</p>
+                    <i class="fa-regular fa-envelope"></i>
+                        <p>BerkahJaya@gmail.com</p>
                     </div>
                 </div>
                 <div class="footer-right">
@@ -46,7 +46,7 @@
                         </p>
                     <div class="footer-icons">
                         <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                         <!-- tokped-->
                         <a href="https://Tokopedia.com"><i class="fa-solid fa-bag-shopping" style="color: ##4ce821;"></i></a>
                         <!-- shopee-->
@@ -54,9 +54,9 @@
                         <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     <br>
-                    <p class="footer-company-about">
+                    <!-- <p class="footer-company-about">
                         <a href="https://Tokopedia.com"><span>Visit Us</span></a>
-                        Click to shop now!</p>
+                        Click to shop now!</p> -->
                     
                 </div>
             </footer>

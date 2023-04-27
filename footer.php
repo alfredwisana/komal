@@ -18,10 +18,8 @@
                         <div class=" col-sm-4 col-md  col-6 col">
                             <h5 class="headin5_amrc col_white_amrc pt2">Contact Us</h5>
                             <!--headin5_amrc-->
-                            <p class="mb10">Senin - Minggu</p>
-                            <p><i class="fa fa-location-arrow"></i> Jl. Magersari, RT.1/RW.1, Magersari, Krian, Sidoarjo, Kabupaten Sidoarjo, Jawa Timur </p>
                             <p><i class="fa fa-phone"></i> 085748177559 </p>
-                            <p><i class="fa fa-clock"></i> 7AM-9:30PM </p>
+                            <p><i class="fa fa-location-arrow"></i> Jl. Magersari, RT.1/RW.1, Magersari, Krian, Sidoarjo, Kabupaten Sidoarjo, Jawa Timur </p>
                             <!--footer_ul_amrc ends here-->
                         </div>
 

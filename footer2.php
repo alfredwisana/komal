@@ -48,7 +48,7 @@
                         <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
                         <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                         <!-- tokped-->
-                        <a href="https://Tokopedia.com"><i class="fa-solid fa-bag-shopping" style="color: ##4ce821;"></i></a>
+                        <a href="https://Tokopedia.com"><i class="fa-solid fa-bag-shopping" style="color: green;"></i></a>
                         <!-- shopee-->
                         <a href="https://shopee.com"><i class="fa-solid fa-bag-shopping" style="color: #ff6600;"></i></a>
                         <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->

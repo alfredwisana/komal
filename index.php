@@ -1,3 +1,7 @@
+<?php
+require 'connect.php'
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +48,6 @@
 		  	</button>
 		</div>
 
-<<<<<<< HEAD
 		<div id="menu">
 			<ul>
 				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
@@ -58,12 +61,11 @@
 			</ul>
 		</div>
 	</div>
-=======
-        <div class="row">
+        <!-- <div class="row">
             <?php
                 // Query untuk mengambil data barang dari database
                 $sql = "SELECT * FROM services";
-                $result = mysqli_query($con, $query);
+                $result = mysqli_query($con, $sql);
 
                 // Looping data barang
                 while($row = mysqli_fetch_assoc($result)){
@@ -82,9 +84,9 @@
             <?php
             }
         ?>
-        </div>
+        </div> -->
     </div>
->>>>>>> 4f3ea8f62e4316407a8bfdee6f6252dfcbc27349
+
     <?php
         require 'footer2.php';
     ?>

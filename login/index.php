@@ -6,7 +6,7 @@ require '../connect.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Pijat</title>
+    <title>Login</title>
 
     <!-- bootstrap 5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -34,8 +34,8 @@ require '../connect.php';
 
         .form {
             margin-top: 8.125rem;
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 25%;
+            margin-right: 25%;
             padding-left: 10%;
             padding-right: 10%;
             padding-top: 3.125rem;
@@ -49,7 +49,7 @@ require '../connect.php';
           display: inline-block;
           width: 6em;
           height: 2.6em;
-          line-height: 2.5em;
+          line-height: 2.0em;
           overflow: hidden;
           /* margin: 20px; */
           margin-top:1.25rem; 
@@ -64,9 +64,9 @@ require '../connect.php';
         button::before {
           position: absolute;
           content: "";
-          background: var(--color);
-          width: 150px;
-          height: 200px;
+          backgrou150px;
+          height:nd: var(--color);
+          width:  200px;
           z-index: -1;
           border-radius: 50%;
         }
@@ -100,16 +100,14 @@ require '../connect.php';
           outline-offset: 5px;
           background-color: #edf0e7;
         }
-        .input{
-            padding-top: 10px;
-        }
+        
     </style>
 </head>
 
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
           <div class="form">
-            <h2 style=" padding-bottom: 15px;">Login</h2>
+            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;">Login</h2>
             <div class="input">
                 <input type="text" class="form-control" id="username"  placeholder="Username">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>

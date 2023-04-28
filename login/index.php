@@ -64,9 +64,9 @@ require '../connect.php';
         button::before {
           position: absolute;
           content: "";
-          backgrou150px;
-          height:nd: var(--color);
-          width:  200px;
+          background: var(--color);
+          width: 150px;
+          height: 200px;
           z-index: -1;
           border-radius: 50%;
         }

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require 'connect.php';
+require '../connect.php';
 if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
         $_SESSION['id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
-        header("location: indexadmin.php");
+        header("location: ../indexadmin.php");
     }
     else{
         echo "

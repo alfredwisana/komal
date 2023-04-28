@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,41 +26,97 @@ require 'connect.php';
         body {
             /* background-position: center; */
             background-repeat: no-repeat;
-            /* background-size: cover; */
+            background-size: cover; 
             overflow-x: hidden;
         }
 
         form {
             margin-top: 130px;
-            margin-left: 300px;
-            margin-right: 300px;
+            margin-left: 450px;
+            margin-right: 450px;
             padding-left: 100px;
             padding-right: 100px;
             padding-top: 50px;
             padding-bottom: 50px;
-            background-color: rgb(79, 236, 105);
+            background-color: rgb(200, 211, 184);
             border-radius: 20px;
+        }
+        button {
+          --color: #9AAF7D;
+          font-family: inherit;
+          display: inline-block;
+          width: 6em;
+          height: 2.6em;
+          line-height: 2.5em;
+          overflow: hidden;
+          margin: 20px;
+          font-size: 17px;
+          z-index: 1;
+          color: var(--color);
+          border: 2px solid var(--color);
+          border-radius: 15px;
+          position: relative;
+        }
+
+        button::before {
+          position: absolute;
+          content: "";
+          background: var(--color);
+          width: 150px;
+          height: 200px;
+          z-index: -1;
+          border-radius: 50%;
+        }
+
+        button:hover {
+          color: white;
+        }
+
+        button:before {
+          top: 100%;
+          left: 100%;
+          transition: .3s all;
+        }
+
+        button:hover::before {
+          top: -30px;
+          left: -30px;
+        }
+        .input input {
+          border-radius: 10px;
+          outline: 2px solid #9AAF7D;
+          border: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          background-color: #edf0e7;
+          outline-offset: 3px;
+          padding: 10px 1rem;
+          transition: 0.25s;
+        }
+
+        .input input:focus {
+          outline-offset: 5px;
+          background-color: #edf0e7;
+        }
+        .input{
+            padding-top: 10px;
         }
     </style>
 </head>
 
-<body background="https://thumbs.dreamstime.com/b/banner-bamboo-15236876.jpg">
+<body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper">
         <form action="loginprocess.php" method="post">
-            <h2 style=" padding-bottom: 15px;">Login Admin</h2>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="username">
+            <h2 style=" padding-bottom: 15px;">Login</h2>
+            <div class="input">
+                <input type="text" class="form-control" id="exampleInputEmail1" name="username" placeholder="Username">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            <div class="input" style="padding-top:30px;">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary" name="login">Login</button>
+                <button type="submit" name="login">Login</button>
             </div>
-            <p>Not an admin? <a href="loginUser.php">Login Here Login Here</a>.</p>
         </form>
     </div>
 </body>

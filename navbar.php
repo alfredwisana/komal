@@ -25,7 +25,7 @@
             </ul>
             <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="logoutlink">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
+                    <a class="nav-link" aria-current="page" href="login/logout.php">Logout</a>
                 </li>
             </ul>
         </div>

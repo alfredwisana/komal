@@ -220,59 +220,34 @@ require 'connect.php'
             </div>
         </div>
     </nav>
+    <div class="container">  
+            <div class="row">
+                <?php
+                    // Query untuk mengambil data barang dari database
+                    $sql = "SELECT * FROM services";
+                    $result = mysqli_query($con, $sql);
 
-		  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Previous</span>
-		  	</button>
-
-		  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Next</span>
-		  	</button>
-		</div>
-
-		<div id="menu">
-			<ul>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
-			</ul>
-		</div>
-	</div>
-        <!-- <div class="row">
-            <?php
-                // Query untuk mengambil data barang dari database
-                $sql = "SELECT * FROM services";
-                $result = mysqli_query($con, $sql);
-
-                while($row = mysqli_fetch_assoc($result)){
-                ?>
-                <div class="col-md-3">
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
-                            <p class="card-text"><?php echo $row['deskripsi'] ?></p>
-                            <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                            <a href="booking.php" class="btn btn-primary">Booking</a>
+                    while($row = mysqli_fetch_assoc($result)){
+                    ?>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
+                                <p class="card-text"><?php echo $row['deskripsi'] ?></p>
+                                <p class="card-price">Rp <?php echo $row['harga'] ?></p>
+                                <a href="booking.php" class="btn btn-primary">Booking</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php
-            }
+                <?php
+                }
+            ?>
+            </div>
+        </div>    
+        <?php
+            require 'footer.php';
         ?>
-        </div> -->
-    </div>
-
-    <?php
-        require 'footer.php';
-    ?>
-
+    </div>    
 </body>
 </html>

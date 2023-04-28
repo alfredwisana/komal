@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
         $_SESSION['id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
-        header("location: ../indexadmin.php");
+        header("location: ../admin/index.php");
     }
     else{
         echo "

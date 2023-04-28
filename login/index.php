@@ -32,7 +32,7 @@ require '../connect.php';
             background-attachment: fixed;
         }
 
-        form {
+        .form {
             margin-top: 8.125rem;
             margin-left: 20%;
             margin-right: 20%;
@@ -108,7 +108,7 @@ require '../connect.php';
 
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
-        
+          <div class="form">
             <h2 style=" padding-bottom: 15px;">Login</h2>
             <div class="input">
                 <input type="text" class="form-control" id="username"  placeholder="Username">
@@ -120,7 +120,7 @@ require '../connect.php';
             <div class="text-center">
                 <button id="login">Login</button>
             </div>
-            
+          </div>
     </div>
 </body>
 

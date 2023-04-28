@@ -18,7 +18,7 @@ if(isset($_POST['login'])){
         echo "
         <script>
         window.alert('Invalid Username/Password');
-        window.location.href = 'loginAdmin.php';
+        window.location.href = 'index.php';
         </script>
         ";
     }

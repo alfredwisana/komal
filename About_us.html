@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- STYLE -->
+    <style>
+
+    /*FONT*/
+    @font-face
+      {
+        font-family: 'sprinkle';
+        src: url('asset/font/Sprinkle-Regular.ttf');
+      }
+      @font-face
+      {
+        font-family: 'cofee';
+        src: url('asset/font/Coffee Mood.otf');
+      }
+      @font-face
+      {
+        font-family: 'khalila';
+        src: url('asset/font/Khalila.otf');
+      }
+      @font-face
+      {
+        font-family: 'lullaby';
+        src: url('asset/font/LullabiestByHttpsgoths-Regular.otf');
+      }
+      @font-face
+      {
+        font-family: 'coolvetica';
+        src: url('asset/font/coolvetica rg.otf');
+      }
+      
+
+
+      
+    /*AUTO ADJUST COL*/
+    * {
+        box-sizing: border-box;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+    }
+
+    /*BTN*/
+    .btn1 {
+    height: 3.5rem;
+    padding: 0 2rem;
+    border: 0.1rem solid #000;
+    border-radius: 3.12rem;
+    box-shadow: 0 0.4rem 0 0 #000;
+    background-color: beige;
+    color: #000;
+    font-family: "Epilogue", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        transform: translateY(0.3rem);
+        box-shadow: 0 0.2rem 0 0 #000;
+    }
+    }
+    #btn1{
+/*        padding-left: 6.25rem;*/
+    }
+    #btn2{
+/*        padding-right: 6.25rem;*/
+    }
+
+    /*banner*/
+    #banner{
+        margin-top: 20px;
+        width: 80%;
+        height: 35rem;
+        border: 0.1rem solid #000;
+        border-radius: 2rem;
+        background-image: linear-gradient(rgba(104,68,52,0.6),rgba(104,68,52,0.6)),url(asset/toko.png);
+        background-size: cover;
+    }
+
+
+
+    </style>
+
+</head>
+
+<body style="background-color:#e3dfca">
+    <!-- button -->
+    <div id="button" class="row" >
+        <div id="btn1" class="col-6">
+            <center><button class="btn1" style="font-family:sprinkle">About Us</button></center>
+        </div>
+        <div id="btn2" class="col-6" >
+            <center><center><button class="btn1" style="font-family:sprinkle">Contact</button></center></center>
+        </div>
+    </div>
+    <!-- Banner -->
+    <center>
+            <div  class="row">
+                <div class="col" id="banner">
+                    <h1 style="font-family:coolvetica;color: beige;font-size: 3.5rem;text-align: left;padding-left: 2rem;padding-top: 21rem;">About Us .</h1>
+                    <h1 style="font-family:coolvetica;color: beige;font-size: 1rem;text-align: left;padding-left: 2rem;margin-top: -2.5rem;">Sedikit lebih jauh mengenai latar belakang toko berkah jaya.</h1>
+                </div>
+            </div>
+    </center>
+
+
+ 
+
+    <!-- map -->
+<!--     <div>
+        <img src="asset/map.png">
+    </div> -->
+    
+</body>
+
+
+</html>

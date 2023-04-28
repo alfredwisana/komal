@@ -31,15 +31,15 @@ require '../connect.php';
         }
 
         form {
-            margin-top: 130px;
-            margin-left: 450px;
-            margin-right: 450px;
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            margin-top: 8.125rem;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 6.25rem;
+            padding-right: 6.25rem;
+            padding-top: 3.125rem;
+            padding-bottom: 3.125rem;
             background-color: rgb(200, 211, 184);
-            border-radius: 20px;
+            border-radius: 1.25rem;
         }
         button {
           --color: #9AAF7D;
@@ -82,7 +82,7 @@ require '../connect.php';
           top: -30px;
           left: -30px;
         }
-        .input input {
+        input {
           border-radius: 10px;
           outline: 2px solid #9AAF7D;
           border: 0;
@@ -93,25 +93,25 @@ require '../connect.php';
           transition: 0.25s;
         }
 
-        .input input:focus {
+        input:focus {
           outline-offset: 5px;
           background-color: #edf0e7;
         }
-        .input{
+        /* .input{
             padding-top: 10px;
-        }
+        } */
     </style>
 </head>
 
-<body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
-    <div class="wrapper">
+<body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg" style="width=100%; max-width=160rem; height=auto;">
+    <div class="wrapper container-xl">
         <form action="loginprocess.php" method="post">
-            <h2 style=" padding-bottom: 15px;">Login</h2>
-            <div class="input">
+            <h2 style=" padding-bottom: 0.938rem;">Login</h2>
+            <div class="mb-3">
                 <input type="text" class="form-control" id="exampleInputEmail1" name="username" placeholder="Username">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <div class="input" style="padding-top:30px;">
+            <div class="mb3" style="padding-top:1.875rem;">
                 <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
             </div>
             <div class="text-center">

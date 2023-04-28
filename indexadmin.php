@@ -130,7 +130,9 @@ $result = mysqli_query($con, $query);
             <?php } ?>
         </div>
     </div>
-
+    <?php
+        require 'footer2.php';
+    ?>
 
 </body>
 

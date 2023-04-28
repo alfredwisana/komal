@@ -1,25 +1,30 @@
 <?php 
 session_start();
 require '../connect.php';
-if(isset($_POST['login'])){
+
+$result = array(
+    'status' => 0,
+    'message' => ""
+  ); 
+
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     $query = "SELECT * FROM admins WHERE `username` = '$username' and `password` = '$password'";
-    $result = mysqli_query($con, $query);
-    $row = mysqli_fetch_array($result);
-    if(is_array($row)){
+    $result_query = mysqli_query($con, $query);
+    $row = mysqli_fetch_array($result_query);
+    if(mysqli_num_rows($result_query) == 1){
         $_SESSION['id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
-        header("location: ../admin/index.php");
+        $result['message'] = "Log In ".$username. " berhasil";
+        $result['status'] = 1;
     }
     else{
-        echo "
-        <script>
-        window.alert('Invalid Username/Password');
-        window.location.href = 'index.php';
-        </script>
-        ";
+        $result['message'] = "Invalid Username/Password";
+        $result['status']  = 0;
     }
-}
+
+    echo json_encode($result)
+?>

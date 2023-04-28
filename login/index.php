@@ -3,7 +3,6 @@ require '../connect.php';
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +17,8 @@ require '../connect.php';
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -107,20 +108,68 @@ require '../connect.php';
 
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
-        <form action="loginprocess.php" method="post">
+        
             <h2 style=" padding-bottom: 15px;">Login</h2>
             <div class="input">
-                <input type="text" class="form-control" id="exampleInputEmail1" name="username" placeholder="Username">
+                <input type="text" class="form-control" id="username"  placeholder="Username">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="input" style="padding-top:30px;">
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                <input type="password" class="form-control" id="password"  placeholder="Password">
             </div>
             <div class="text-center">
-                <button type="submit" name="login">Login</button>
+                <button id="login">Login</button>
             </div>
-        </form>
+            
     </div>
 </body>
+
+<script>
+  $(document).ready(function(){
+    $("#login").click(function(){
+      var v_username = $("#username").val();
+      var v_password = $("#password").val();
+      console.log(v_username);
+      $.ajax({
+        url: "loginprocess.php",
+        type: "POST",
+        dataType: "json",
+        data: {
+          username : v_username,
+          password : v_password
+        },
+        success: function(result){
+          console.log('sukses');
+          if (result.status == 1)
+          {
+            Swal.fire({
+            icon: 'success',
+            title: 'SUCCESS',
+            text: result.message,
+            })
+          }
+          else
+          {
+            Swal.fire({
+            icon: 'error',
+            title: 'FAILED',
+            text: result.message,
+          })
+          }
+
+        if(result.status == 1) {
+          setTimeout(function(){window.location.replace("../admin/index.php")}, 2000);
+        } else {
+          setTimeout(function(){window.location.reload()}, 2000);
+        }
+      },
+      error: function(request,status,error) {
+        alert(request.responseText);
+      }
+  
+    })
+    })
+  })
+</script>
 
 </html>

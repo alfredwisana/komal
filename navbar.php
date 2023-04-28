@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-left mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="homepage.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

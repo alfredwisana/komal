@@ -1,30 +1,15 @@
 <?php
-require 'connect.php';
-session_start();
-// if (!isset($_SESSION['username'])) {
-// header('location: login.php');
-// }
-
-$query = 'SELECT * FROM services';
-$result = mysqli_query($con, $query);
-?>
-<?php
-$remind = 'SELECT * FROM orders';
-$res = mysqli_query($con, $remind);
+require 'connect.php'
 ?>
 
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Pijat</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- bootstrap 5.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -236,29 +221,35 @@ $res = mysqli_query($con, $remind);
         </div>
     </nav>
 
-    <div class="container">
-        <!-- <div class="row" id= "reminder" style="padding-bottom: 60px;">
-            <?php while ($rows = mysqli_fetch_array($res)) {
+		  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+		  	</button>
 
-                if ($_SESSION['username'] == $rows['username']) {
-                    ?>
-                <div class="col-sm-6" style="padding-bottom: 10px;">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Reminder<button type="button" class="btn-close remove" aria-label="Close" style="float: right;"></button></h5>
-                        <p class="card-text">Pada <?php echo date($rows['tanggal']) ?> <?php echo $rows['waktu'] ?>, <?php echo $rows['namaCustomer'] ?> memiliki appointment <?php echo $rows['namaServis'] ?>. Jangan lupa untuk datang! Terima kasih.</p>
-                      </div>
-                    </div>
-                </div>
-            <?php }
-            } ?>
-        </div> -->
+		  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+		  	</button>
+		</div>
 
-        <div class="row">
+		<div id="menu">
+			<ul>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+			</ul>
+		</div>
+	</div>
+        <!-- <div class="row">
             <?php
                 // Query untuk mengambil data barang dari database
                 $sql = "SELECT * FROM services";
-                $result = mysqli_query($con, $query);
+                $result = mysqli_query($con, $sql);
 
                 while($row = mysqli_fetch_assoc($result)){
                 ?>
@@ -276,26 +267,12 @@ $res = mysqli_query($con, $remind);
             <?php
             }
         ?>
-        </div>
+        </div> -->
     </div>
+
     <?php
-        require 'footer2.php';
+        require 'footer.php';
     ?>
 
 </body>
-
-<script>
-    // <!-- initialize AOS -->
-    AOS.init();
-
-    $(document).ready(function () {
-
-    });
-    $("div").on("click", ".remove", function () {
-        $(this).parent().parent().parent().parent().remove();
-        AOS.refresh();
-    });
-</script>
-
-
 </html>

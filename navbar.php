@@ -20,7 +20,7 @@
             </form>
             <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="loginlink">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="login.php">Login</a>
+                    <a class="nav-link" aria-current="page" href="login/index.php">Login</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="logoutlink">

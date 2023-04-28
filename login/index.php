@@ -28,18 +28,19 @@ require '../connect.php';
             background-repeat: no-repeat;
             background-size: cover; 
             overflow-x: hidden;
+            background-attachment: fixed;
         }
 
         form {
-            margin-top: 130px;
-            margin-left: 450px;
-            margin-right: 450px;
-            padding-left: 100px;
-            padding-right: 100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            margin-top: 8.125rem;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 3.125rem;
+            padding-bottom: 3.125rem;
             background-color: rgb(200, 211, 184);
-            border-radius: 20px;
+            border-radius: 1.25rem;
         }
         button {
           --color: #9AAF7D;
@@ -49,7 +50,8 @@ require '../connect.php';
           height: 2.6em;
           line-height: 2.5em;
           overflow: hidden;
-          margin: 20px;
+          /* margin: 20px; */
+          margin-top:1.25rem; 
           font-size: 17px;
           z-index: 1;
           color: var(--color);
@@ -89,7 +91,7 @@ require '../connect.php';
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           background-color: #edf0e7;
           outline-offset: 3px;
-          padding: 10px 1rem;
+          /* padding: 10px 1rem; */
           transition: 0.25s;
         }
 
@@ -104,7 +106,7 @@ require '../connect.php';
 </head>
 
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
-    <div class="wrapper">
+    <div class="wrapper container-lg">
         <form action="loginprocess.php" method="post">
             <h2 style=" padding-bottom: 15px;">Login</h2>
             <div class="input">

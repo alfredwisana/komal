@@ -71,47 +71,47 @@ if (!isset($_SESSION['username'])) {
         }
 
         .button {
-  padding: 1em 2em;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: white;
-  background-color: #d9b4e2;
-  transition: all 1000ms;
-  font-size: 15px;
-  position: relative;
-  overflow: hidden;
-  outline: 2px solid #beafe1;
-  width: 10rem;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: white;
+            background-color: #d9b4e2;
+            transition: all 1000ms;
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
+            outline: 2px solid #beafe1;
+            width: 10rem;
 
-  left: 45%;
-}
+            left: 45%;
+        }
 
-button:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-  outline: 2px solid #beafe1;
-  box-shadow: 4px 5px 17px -4px #d9b4e2;
-}
+        button:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+            outline: 2px solid #beafe1;
+            box-shadow: 4px 5px 17px -4px #d9b4e2;
+        }
 
-button::before {
-  content: "";
-  position: absolute;
-  left: -50px;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: #beafe1;
-  transform: skewX(45deg);
-  z-index: -1;
-  transition: width 1000ms;
-}
+        button::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: #beafe1;
+            transform: skewX(45deg);
+            z-index: -1;
+            transition: width 1000ms;
+        }
 
-button:hover::before {
-  width: 250%;
-}
+        button:hover::before {
+            width: 250%;
+        }
     </style>
 </head>
 
@@ -119,36 +119,7 @@ button:hover::before {
     <div id="wrapper">
 
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="indexadmin.php">Baby Shop</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="indexadmin.php">Home</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mb-5 d-flex mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="add.php">Add Services</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-
-                    <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="logoutlink">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php require "navbar.php" ?>
 
         <br>
         <div class="container">

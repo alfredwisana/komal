@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2023 at 01:14 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Apr 29, 2023 at 07:21 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `admins` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admins`
@@ -41,6 +41,25 @@ INSERT INTO `admins` (`id`, `username`, `password`) VALUES
 (1, 'c14210030', 'bambang'),
 (2, 'kentang', 'huha'),
 (3, 'auk', 'ah');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL,
+  `namaKategori` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `namaKategori`) VALUES
+(1, 'pijat'),
+(2, 'atasan');
 
 -- --------------------------------------------------------
 
@@ -55,20 +74,18 @@ CREATE TABLE `produk` (
   `harga` int(11) NOT NULL,
   `gambar` text NOT NULL,
   `category` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`, `category`) VALUES
-(1, 'pijat normal', 'ya pijat biasa mau apa lg', 100000, 'images/istockphoto-1150999338-612x612.jpg', NULL),
-(2, 'pijat plus', 'ya pijat biasa ada plusnya', 150000, 'https://images.unsplash.com/photo-1669394146376-4d59b2d016d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80', NULL),
-(3, 'pijat plus plus', 'ya pijat biasa ada plus plusnya', 200000, 'https://media.istockphoto.com/id/1336348648/id/foto/beberapa-pijat-di-resor-spa-pasangan-cantik-mendapatkan-pijatan-belakang-di-luar-ruangan-akhir.jpg?s=612x612&w=0&k=20&c=iQnv2c2JqjCb2h3LcL1sALdwWvUTvlLsiAOeWznJcDM=', NULL),
-(17, 'qwqwqwqw', 'uiuiui', 71, 'images/anakbayi.jpg', NULL),
-(19, 'anak bayi', 'asdsad', 69000, 'images/Screenshot 2023-04-16 195651.png', 'atasan'),
-(20, 'anak bayi', 'asdsad', 69000, 'images/Screenshot 2023-04-16 195651.png', 'atasan'),
-(21, 'anak bayi', 'qwer', 123, 'images/Screenshot 2023-04-16 195651.png', 'atasan');
+(2, 'pijat plus', 'ya pijat biasa ada plusnya', 150000, 'https://images.unsplash.com/photo-1669394146376-4d59b2d016d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80', 'pijat'),
+(3, 'pijat plus plus', 'ya pijat biasa ada plus plusnya', 200000, 'https://media.istockphoto.com/id/1336348648/id/foto/beberapa-pijat-di-resor-spa-pasangan-cantik-mendapatkan-pijatan-belakang-di-luar-ruangan-akhir.jpg?s=612x612&w=0&k=20&c=iQnv2c2JqjCb2h3LcL1sALdwWvUTvlLsiAOeWznJcDM=', 'pijat'),
+(25, 'hehe', 'xsascsdc', 1000, '../images/hehe.jpg', 'ketawa'),
+(27, 'baju', 'pokoknya baju', 1000, '../images/anakbayi.jpg', ''),
+(28, 'absol', 'keren', 10000, '../images/Absol.jpg', 'ketawa');
 
 -- --------------------------------------------------------
 
@@ -79,20 +96,20 @@ INSERT INTO `produk` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`, `categ
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `namaServis` varchar(100) NOT NULL,
+  `kategori` varchar(50) NOT NULL,
   `deskripsi` varchar(200) NOT NULL,
   `harga` int(11) NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`) VALUES
-(1, 'pijat normal', 'ya pijat biasa mau apa lg', 100000, 'images/istockphoto-1150999338-612x612.jpg'),
-(2, 'pijat plus', 'ya pijat biasa ada plusnya', 150000, 'https://images.unsplash.com/photo-1669394146376-4d59b2d016d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'),
-(3, 'pijat plus plus', 'ya pijat biasa ada plus plusnya', 200000, 'https://media.istockphoto.com/id/1336348648/id/foto/beberapa-pijat-di-resor-spa-pasangan-cantik-mendapatkan-pijatan-belakang-di-luar-ruangan-akhir.jpg?s=612x612&w=0&k=20&c=iQnv2c2JqjCb2h3LcL1sALdwWvUTvlLsiAOeWznJcDM='),
-(17, 'qwqwqwqw', 'uiuiui', 71, 'images/anakbayi.jpg');
+INSERT INTO `services` (`id`, `namaServis`, `kategori`, `deskripsi`, `harga`, `gambar`) VALUES
+(2, 'pijat plus', '', 'ya pijat biasa ada plusnya', 150000, 'https://images.unsplash.com/photo-1669394146376-4d59b2d016d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'),
+(3, 'pijat plus plus', '', 'ya pijat biasa ada plus plusnya', 200000, 'https://media.istockphoto.com/id/1336348648/id/foto/beberapa-pijat-di-resor-spa-pasangan-cantik-mendapatkan-pijatan-belakang-di-luar-ruangan-akhir.jpg?s=612x612&w=0&k=20&c=iQnv2c2JqjCb2h3LcL1sALdwWvUTvlLsiAOeWznJcDM='),
+(17, 'qwqwqwqw', '', 'uiuiui', 71, 'images/anakbayi.jpg');
 
 --
 -- Indexes for dumped tables
@@ -102,6 +119,12 @@ INSERT INTO `services` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`) VALU
 -- Indexes for table `admins`
 --
 ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -127,16 +150,22 @@ ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

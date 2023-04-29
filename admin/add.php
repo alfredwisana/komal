@@ -151,13 +151,13 @@ if (!isset($_SESSION['username'])) {
                             <option value="0">--Pilih Kategori--</option>
                             <?php
                                 if (isset($_SESSION['username'])) {
-                                $sql = "SELECT DISTINCT category FROM produk";
+                                $sql = "SELECT *  FROM category";
                                 $stmt = $con-> prepare($sql);
                                 $stmt-> execute();
                                 $res = $stmt ->get_result();
                                 
                                 while($row = $res-> fetch_assoc()){
-                                    echo "<option value ='".$row['category']."'>".$row['category']."</option>";
+                                    echo "<option value ='".$row['namaKategori']."'>".$row['namaKategori']."</option>";
                                 }
 
                                 }

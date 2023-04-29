@@ -122,10 +122,12 @@
 
 <body style="background-color:#f7d7bc">
 
+    <?php require "navbar.php"?>
+
     <!-- button -->
     <div id="button" class="row" >
         <div id="btn1" class="col-6">
-            <center><a href="#text"><button class="btn1" style="font-family:coolvetica">About Us</button></a></center>
+            <center><a href="#abt_us"><button class="btn1" style="font-family:coolvetica">About Us</button></a></center>
         </div>
         <div id="btn2" class="col-6" >
             <center><a href="#contact"><button class="btn1" style="font-family:coolvetica">Contact</button></a></center>
@@ -178,7 +180,7 @@
 
     <div class="row">
         <center>
-            <div id="text" style="margin-top:40px">
+            <div id="abt_us" style="margin-top:40px">
             <center><h1 style="font-family:coolvetica">Latar Belakang Beridirinya Berkah Jaya</h1></center>
             <p style="width: 80%;font-family: coolvetica;font-size: 1.75rem;">Toko ini dibangun oleh pemilik toko Pak Handidjaja pada tahun 1998 dikarenakan pandangan nya akan potensi bisnis kebutuhan bayi ini, di dunia bisnis ini menjadi salah satu bisnis yang memiliki pangsa pasar yang besar di seluruh dunia. Hal ini disebabkan karena setiap tahunnya, banyak orang tua yang memerlukan perlengkapan dan kebutuhan bayi dengan cepat dan aman untuk si bayi.Pada awal mula terbentuknya toko ini, Berkah jaya hanya berjualan kebutuhan bayi yang essensial saja. Namun seiring berjalannya waktu berkembang pula jenis barang yang dijualnya mulai dari mainan, hadiah, hingga terbuka cabang Berkah Jaya 2 di lokasi yang berdekatan di Pasar Krian untuk berjualan pakaian dan aksesoris bayi. Setelah berjalan lama sekarang Berkah Jaya baby shop 1 masih ada dan dapat kalian temukan di pasar krian sedang kan untuk baby shop 2 dapat kalian temukan di <br>Jl.Gubernur Sunandar No. 578</p>
             </div>

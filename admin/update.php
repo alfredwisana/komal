@@ -13,6 +13,7 @@ if(isset($_POST['update'])){
     $harga = $_POST['harga'];
     $category = $_POST['category'];
     $localFile = $_POST['localFile'];
+    
     // echo "local file -->" . $localFile;
     // if(empty($localFile)){
     //     echo 'local file is empty';
@@ -27,10 +28,12 @@ if(isset($_POST['update'])){
 }
 if(!empty($localFile)){
     $relativePath = "images/\\$localFile";
-    $query = "UPDATE `produk` SET `namaServis`='$namaServis',`deskripsi`='$deskripsi',`harga`=$harga,`category`=$category,`gambar`='$relativePath' WHERE id = '$id'";
+    $query = " UPDATE produk SET namaServis = '$namaServis',deskripsi = '$deskripsi', harga = '$harga',gambar = '$relativePath', category = '$category' where id = '$id'";
+
 }
 else{
-    $query = "UPDATE `produk` SET `namaServis`='$namaServis',`deskripsi`='$deskripsi',`harga`=$harga,`category`=$category,`gambar`='$gambar' WHERE id = '$id'";
+    alert("keluar");
+    $query = " UPDATE produk SET namaServis = '$namaServis',deskripsi = '$deskripsi', harga = '$harga',gambar = '$gambar', category = '$category' where id = '$id'";
 }
 
 

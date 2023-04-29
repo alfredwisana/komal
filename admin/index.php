@@ -466,7 +466,7 @@ require '../connect.php'
 			}
 			?>
 		</div>
-	</div> -->
+	</div>
 	
 
 	<?php

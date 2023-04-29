@@ -152,13 +152,13 @@ while ($row = mysqli_fetch_array($result)) {
                                 </option>
                             <?php
                                 if (isset($_SESSION['username'])) {
-                                $sql = "SELECT DISTINCT category FROM produk";
+                                $sql = "SELECT * FROM category";
                                 $stmt = $con-> prepare($sql);
                                 $stmt-> execute();
                                 $res = $stmt ->get_result();
                                 
                                 while($row = $res-> fetch_assoc()){
-                                    echo "<option value ='".$row['category']."'>".$row['category']."</option>";
+                                    echo "<option value ='".$row['namaKategori']."'>".$row['namaKategori']."</option>";
                                 }
 
                                 }

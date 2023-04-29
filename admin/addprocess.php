@@ -36,7 +36,7 @@ if(isset($_POST['add'])){
 // if(!empty($gambar)){
 //     echo"masuk";
 // }
-$sql="INSERT INTO services VALUES(null,'$nama','$kategori','$deskripsi','$harga','$destination')";
+$sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$kategori')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
 ?>

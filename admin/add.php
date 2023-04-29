@@ -162,7 +162,7 @@ if (!isset($_SESSION['username'])) {
                             <input type="file" id="gambar" name="gambar">
                         </div>
                         <div class="row mt-5">
-                            <button class="button" id="aubutton" style="background-color: d9b4e2;" name="Add">Add</button>
+                            <button class="button" id="aubutton" style="background-color: d9b4e2;" name="add">Add</button>
                         </div>
                     </form>
                 </div>

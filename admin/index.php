@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
     header('location: ../login/index.php');
 }
 
-$query = 'SELECT * FROM services';
+$query = 'SELECT * FROM produk';
 $result = mysqli_query($con, $query);
 ?>
 

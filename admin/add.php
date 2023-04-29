@@ -145,10 +145,25 @@ if (!isset($_SESSION['username'])) {
                             <label for="formFile" class="form-label">Nama Barang</label>
                             <input type="text" id="nama" name="nama" class="form-control">
                         </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Kategori</label>
-                            <input type="text" id="kategori" name="kategori" class="form-control">
-                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="formFile" class="form-label">Kategori</label> 
+                            <select class="form-control" name="category" id="category">
+                            <option value="0">--Pilih Kategori--</option> -->
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                $sql = "SELECT DISTINCT category FROM produk";
+                                $stmt = $con-> prepare($sql);
+                                $stmt-> execute();
+                                $res = $stmt ->get_result();
+                                
+                                while($row = $res-> fetch_assoc()){
+                                    echo "<option value ='".$row['category']."'>".$row['category']."</option>";
+                                }
+                                exit();
+                                }
+                            ?>
+                            <!-- </select>
+                        </div> -->
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Deskripsi Barang</label>
                             <textarea class="form-control" id="deskripsi" name="deskripsi"></textarea>

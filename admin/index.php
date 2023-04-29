@@ -17,6 +17,10 @@ $result = mysqli_query($con, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Website Pijat</title>
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
     <!-- bootstrap 5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
@@ -40,6 +44,12 @@ $result = mysqli_query($con, $query);
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
+        /* wrapper */
+
+        #wrapper {
+            background-color: eee7d3;
+        }
+
         /* custom scrollbar */
         /* width */
         ::-webkit-scrollbar {
@@ -67,72 +77,175 @@ $result = mysqli_query($con, $query);
             transform: scale(1.2);
             transition: .2s;
         }
+
+        .container {
+            width: 85%;
+            position: relative;
+        }
+
+        /* Style the sidebar - fixed full height */
+        .sidebar {
+            float: left;
+            height: auto;
+            width: 15%;
+            z-index: 1;
+            overflow-x: hidden;
+
+            position: -webkit-sticky;
+            position: -moz-sticky;
+            position: -ms-sticky;
+            position: -o-sticky;
+            position: sticky;
+            top: 0px;
+            bottom: auto;
+        }
+
+        /* Style sidebar links */
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+        }
+
+        /* Style links on mouse-over */
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Style the main content */
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        /* On screens that are less than 700px wide, make the sidebar into a topbar */
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
+
+        /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- navabar -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="indexadmin.php">Website Pijat</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="indexadmin.php">Home</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mb-5 d-flex mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="add.php">Add Services</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
 
-                <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="logoutlink">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../login/logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hello -->
-    <section class="jumbotron text-center mb-4">
-        <h3 class="display-4 mt-3" data-aos="zoom-out">Hello <?php echo $_SESSION['username'] ?></h3>
-    </section>
-    <!-- Close Hello -->
-
-    <div class="container">
-        <div class="row">
-
-            <?php while ($row = mysqli_fetch_array($result)) { ?>
-                <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
-                    <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
-                        <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
-                        <div class="card-body">
-                            <h5 class="card-title" id="<?php echo $row['id'] ?>"><?php echo $row['namaServis'] ?></h5>
-                            <p class="card-text"><?php echo $row['deskripsi'] ?></p>
-                            <h6>harga: <?php echo $row['harga'] ?></h6>
-
-                            <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
-
-                            <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;" ><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
-                        </div>
-                    </div>
+    <div id="wrapper" style="background-color:ee7d3;">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-transparent mb-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.php"><img src="https://cdn-icons-png.flaticon.com/512/3282/3282468.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-left mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success bg-white" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="addLink">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../add.php">Add</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="loginlink">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../login/index.php">Login</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="logoutlink">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../login/logout.php">Logout</a>
+                        </li>
+                    </ul>
                 </div>
-            <?php } ?>
+            </div>
+        </nav>
+
+        <div id="header" style="position: relative; text-align: center; background-color:white;">
+            <img src="../images/headerAdmin3.jpeg" style=" width:100%; opacity: 0.5;">
+            <!-- Hello -->
+            <h3 class="display-4 mt-3" data-aos="zoom-out" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);">Hello <?php echo $_SESSION['username'] ?></h3>
+            <!-- Close Hello -->
         </div>
-    </div>
-    <?php
+        <br></br>
+
+        <div id="wrapper2">
+            <div class="sidebar">
+
+
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                </a>
+                <ul class="dropdown-menu">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('cars')"> Atasan</button>
+                    <button class="btn" onclick="filterSelection('animals')"> Bawahan</button>
+                    <button class="btn" onclick="filterSelection('fruits')"> Dress</button>
+                    <button class="btn" onclick="filterSelection('colors')"> Aksesoris</button>
+                    <button class="btn" onclick="filterSelection('colors')"> Lain-Lain</button>
+                </ul>
+                <br><br><br><br><br><br>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <?php while ($row = mysqli_fetch_array($result)) { ?>
+                        <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
+                            <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
+                                <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="<?php echo $row['id'] ?>"><?php echo $row['namaServis'] ?></h5>
+                                    <h6 class="card-text"><?php echo $row['kategori'] ?></h6>
+                                    <p class="card-text"><?php echo $row['deskripsi'] ?></p>
+                                    <h6>harga: <?php echo $row['harga'] ?></h6>
+
+                                    <a href="../edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
+
+                                    <a href="../delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <?php
         require '../footer2.php';
-    ?>
+        ?>
+    </div>
 
 </body>
 

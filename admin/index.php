@@ -1,5 +1,5 @@
 <?php
-require 'connect.php'
+require '../connect.php'
 ?>
 
 <!DOCTYPE html>
@@ -404,6 +404,9 @@ require 'connect.php'
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="loginlink">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" aria-current="page" href="../add.php" >Add</a>
+                        </li>
                         <li class="nav-item">
                             <a class="btn btn-primary" aria-current="page" href="login/logout.php" >Logout</a>
                         </li>

@@ -1,5 +1,5 @@
 <?php
-require 'connect.php'
+require '../connect.php'
 ?>
 
 <!DOCTYPE html>
@@ -246,7 +246,7 @@ require 'connect.php'
             </div>
         </div>    
         <?php
-            require 'footer2.php';
+            require '../footer2.php';
         ?>
     </div>    
 </body>

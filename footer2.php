@@ -197,7 +197,7 @@
 
                 <div class="footer-left">
                 <img src="https://cdn-icons-png.flaticon.com/512/3282/3282468.png">
-                    <h3><span>Barokah Jaya</span> Baby Shop</h3>
+                    <h3><span>Berkah Jaya</span> Baby Shop</h3>
 
                     <p class="footer-links">
                         <a href="home.php">Home</a>

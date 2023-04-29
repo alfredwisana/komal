@@ -32,7 +32,7 @@ if(!empty($localFile)){
 
 }
 else{
-    alert("keluar");
+    // alert("keluar");
     $query = " UPDATE produk SET namaServis = '$namaServis',deskripsi = '$deskripsi', harga = '$harga',gambar = '$gambar', category = '$category' where id = '$id'";
 }
 

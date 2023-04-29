@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
 
 if(isset($_POST['add'])){
     $nama = $_POST['nama'];
-    $kategori = $_POST['kategori'];
+    $category = $_POST['category'];
     $deskripsi = $_POST['deskripsi'];
     $harga = $_POST['harga'];
     $namaFile = $_FILES['gambar']['name'];
@@ -36,7 +36,7 @@ if(isset($_POST['add'])){
 // if(!empty($gambar)){
 //     echo"masuk";
 // }
-$sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$kategori')";
+$sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$category')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
 ?>

@@ -238,7 +238,7 @@
     </center>
  
 
-    
+<?php require "footer.php" ?>    
 </body>
 
 

@@ -20,10 +20,12 @@
         background-color: #d9b4e2;
         box-sizing: border-box;
         width: 100%;
+        /* max-height: 400px; */
         text-align: left;
         font: bold 16px sans-serif;
         padding: 50px 50px 60px 50px;
         margin-top: 80px;
+        /* margin-left: -10%; */
     }
 
     .footer-distributed .footer-left,

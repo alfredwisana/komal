@@ -156,9 +156,9 @@ require '../connect.php';
           }
 
         if(result.status == 1) {
-          setTimeout(function(){window.location.replace("../admin/index.php")}, 2000);
+          setTimeout(function(){window.location.replace("../admin/index.php")}, 1000);
         } else {
-          setTimeout(function(){window.location.reload()}, 2000);
+          setTimeout(function(){window.location.reload()}, 1000);
         }
       },
       error: function(request,status,error) {

@@ -224,7 +224,7 @@ require '../connect.php'
             <div class="row">
                 <?php
                     // Query untuk mengambil data barang dari database
-                    $sql = "SELECT * FROM services";
+                    $sql = "SELECT * FROM produk";
                     $result = mysqli_query($con, $sql);
 
                     while($row = mysqli_fetch_assoc($result)){

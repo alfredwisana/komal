@@ -453,7 +453,7 @@ require '../connect.php'
 			?>
 				<div class="col-md-3">
 					<div class="card">
-						<img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
+						<img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
 						<div class="card-body">
 							<h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
 							<p class="card-text"><?php echo $row['deskripsi'] ?></p>

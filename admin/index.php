@@ -470,7 +470,7 @@ require '../connect.php'
 	
 
 	<?php
-	require 'footer.php';
+	require '../footer2.php';
 	?>
 </body>
 

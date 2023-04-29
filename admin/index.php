@@ -1,5 +1,5 @@
 <?php
-require '../connect.php'
+require 'connect.php'
 ?>
 
 <!DOCTYPE html>
@@ -442,37 +442,32 @@ require '../connect.php'
                 <div class="row" style="margin-bottom : 30px;">
                     <?php
                     // Query untuk mengambil data barang dari database
-                    $sql = "SELECT * FROM services";
+                    $sql = "SELECT * FROM produk";
                     $result = mysqli_query($con, $sql);
 
-                    $counter = 1;
+			// Looping data barang
+			while ($row = mysqli_fetch_assoc($result)) {
+			?>
+				<div class="col-md-3">
+					<div class="card">
+						<img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
+						<div class="card-body">
+							<h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
+							<p class="card-text"><?php echo $row['deskripsi'] ?></p>
+							<p class="card-price">Rp <?php echo $row['harga'] ?></p>
+							<a href="#" class="btn btn-primary">Booking</a>
+						</div>
+					</div>
+				</div>
+			<?php
+			}
+			?>
+		</div>
+	</div> -->
+	
 
-                    while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
-                                    <p class="card-text"><?php echo $row['deskripsi'] ?></p>
-                                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                                    <a href="booking.php" class="btn btn-primary">Booking</a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        if($counter == 3) {
-                            echo '</div><div class="row">';
-                            $counter = 0;
-                        }
-                        $counter++;
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
 	<?php
-	require '../footer.php';
+	require 'footer.php';
 	?>
 </body>
 

@@ -161,7 +161,7 @@ $result = mysqli_query($con, $query);
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-left mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -170,7 +170,7 @@ $result = mysqli_query($con, $query);
                     </form>
                     <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="addLink">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../add.php">Add</a>
+                            <a class="nav-link" aria-current="page" href="add.php">Add</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="loginlink">
@@ -228,9 +228,9 @@ $result = mysqli_query($con, $query);
                                     <p class="card-text"><?php echo $row['deskripsi'] ?></p>
                                     <h6>harga: <?php echo $row['harga'] ?></h6>
 
-                                    <a href="../edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
+                                    <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
 
-                                    <a href="../delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                    <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
                                 </div>
                             </div>
                         </div>

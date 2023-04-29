@@ -2,7 +2,7 @@
 require '../connect.php';
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('location: login.php');
+    header('location: ../login.php');
 }
 ?>
 
@@ -68,9 +68,10 @@ if (!isset($_SESSION['username'])) {
         .btn:hover {
             transform: scale(1.2);
             transition: .2s;
+            color: gray;
         }
 
-        .button {
+        #aubutton {
             padding: 1em 2em;
             border: none;
             border-radius: 5px;
@@ -89,14 +90,14 @@ if (!isset($_SESSION['username'])) {
             left: 45%;
         }
 
-        button:hover {
+        #aubutton:hover {
             color: #ffffff;
             transform: scale(1.1);
             outline: 2px solid #beafe1;
             box-shadow: 4px 5px 17px -4px #d9b4e2;
         }
 
-        button::before {
+        #aubutton::before {
             content: "";
             position: absolute;
             left: -50px;
@@ -109,7 +110,7 @@ if (!isset($_SESSION['username'])) {
             transition: width 1000ms;
         }
 
-        button:hover::before {
+        #aubutton:hover::before {
             width: 250%;
         }
     </style>
@@ -138,6 +139,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
 
                 <div class="col">
+                    <h3 class="mb-4">Add Item</h3>
                     <form action="addprocess.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Nama Barang</label>
@@ -160,7 +162,7 @@ if (!isset($_SESSION['username'])) {
                             <input type="file" id="gambar" name="gambar">
                         </div>
                         <div class="row mt-5">
-                            <button class="button" style="background-color: d9b4e2;" name="Add">Add</button>
+                            <button class="button" id="aubutton" style="background-color: d9b4e2;" name="Add">Add</button>
                         </div>
                     </form>
                 </div>

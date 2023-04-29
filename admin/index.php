@@ -76,6 +76,7 @@ $result = mysqli_query($con, $query);
         .btn:hover {
             transform: scale(1.2);
             transition: .2s;
+            color: gray;
         }
 
         .container {

@@ -68,9 +68,10 @@ while ($row = mysqli_fetch_array($result)) {
         .btn:hover {
             transform: scale(1.2);
             transition: .2s;
+            color: gray;
         }
 
-        .button {
+        #aubutton {
             padding: 1em 2em;
             border: none;
             border-radius: 5px;
@@ -88,14 +89,14 @@ while ($row = mysqli_fetch_array($result)) {
             left: 45%;
         }
 
-        button:hover {
+        #aubutton:hover {
             color: #ffffff;
             transform: scale(1.1);
             outline: 2px solid #beafe1;
             box-shadow: 4px 5px 17px -4px #268391;
         }
 
-        button::before {
+        #aubutton::before {
             content: "";
             position: absolute;
             left: -50px;
@@ -108,7 +109,7 @@ while ($row = mysqli_fetch_array($result)) {
             transition: width 1000ms;
         }
 
-        button:hover::before {
+        #aubutton:hover::before {
             width: 250%;
         }
     </style>
@@ -129,7 +130,9 @@ while ($row = mysqli_fetch_array($result)) {
                     <div class="row">
 
                         <form action="update.php" method="post">
-                            <h3 class="mb-4"><?php echo $namaServis ?></h3>
+                            <!-- <h3 class="mb-4"><?php echo $namaServis ?></h3> -->
+                            <h3 class="mb-4">Edit Item</h3>
+
                             <input type="hidden" name="id" value="<?php echo $id ?>">
                             <div class="row mb-3">
                                 <div class="col-3">
@@ -179,7 +182,7 @@ while ($row = mysqli_fetch_array($result)) {
                             </div>
 
                             <div class="row mt-5">
-                                <button class="button" style="background-color: #d9b4e2;" name="update">Update</button>
+                                <button class="button" id="aubutton" style="background-color: #d9b4e2;" name="update">Update</button>
                             </div>
                         </form>
 

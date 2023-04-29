@@ -7,11 +7,12 @@ if (!isset($_SESSION['username'])) {
 
 $id = $_GET['id'];
 
+
 $query = 'SELECT * FROM produk WHERE id = ' . $id . '';
 $result = mysqli_query($con, $query);
 while ($row = mysqli_fetch_array($result)) {
     $namaServis = $row['namaServis'];
-    $kategori = $row['kategori'];
+    $category = $row['category'];
     $deskripsi = $row['deskripsi'];
     $harga = $row['harga'];
     $gambar = $row['gambar'];
@@ -143,14 +144,27 @@ while ($row = mysqli_fetch_array($result)) {
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <div class="col-3">
-                                    <label for="">Kategori: </label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="text" class="form-control" value="<?php echo $kategori ?>" name="kategori">
-                                </div>
-                            </div>
+                            <div class="mb-3">
+                            <label for="formFile" class="form-label">Kategori</label> 
+                            <select class="form-control" name="category" id="category">
+                                <option value="<?php echo $category?>">
+                                <?php echo $category ?>
+                                </option>
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                $sql = "SELECT DISTINCT category FROM produk";
+                                $stmt = $con-> prepare($sql);
+                                $stmt-> execute();
+                                $res = $stmt ->get_result();
+                                
+                                while($row = $res-> fetch_assoc()){
+                                    echo "<option value ='".$row['category']."'>".$row['category']."</option>";
+                                }
+
+                                }
+                            ?>
+                            </select>
+                        </div>
 
                             <div class="row mb-3">
                                 <div class="col-3">

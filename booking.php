@@ -3,7 +3,7 @@ require 'connect.php';
 $id = $_GET['id'];
 // echo "<script>alert(" . $id . ")</script>";
 
-$query = 'SELECT * FROM services WHERE id = ' . $id . '';
+$query = 'SELECT * FROM produk WHERE id = ' . $id . '';
 $result = mysqli_query($con, $query);
 while ($row = mysqli_fetch_array($result)) {
     $namaServis = $row['namaServis'];

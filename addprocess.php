@@ -9,6 +9,7 @@ if(isset($_POST['add'])){
     $nama = $_POST['nama'];
     $deskripsi = $_POST['deskripsi'];
     $harga = $_POST['harga'];
+    $kategori = $_POST['kategori'];
     // $gambar = $_POST['gambar'];
     // $localFile = $_POST['localFile'];
     // echo "local file -->" . $localFile;
@@ -16,7 +17,7 @@ if(isset($_POST['add'])){
     //     echo 'local file is empty';
     // }
     // echo $id. "<br>";
-    // echo var_dump($id);
+    // echo var_dump($kategori);
     // echo "<br>";
     // echo $namaServis ."<br>";
     // echo $deskripsi."<br>";
@@ -48,7 +49,7 @@ if(isset($_POST['add'])){
 // if(!empty($gambar)){
 //     echo"masuk";
 // }
-$sql="INSERT INTO services VALUES(null,'$nama','$deskripsi','$harga','$destination')";
+$sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$kategori')";
 $query=mysqli_query($con,$sql);
-header ("Location: indexadmin.php?status=success");
+header ("Location: admin/index.php?status=success");
 ?>

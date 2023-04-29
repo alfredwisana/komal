@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 session_start();
 if (!isset($_SESSION['username'])) {
     header('location: login.php');
@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Pijat</title>
+    <title>Baby Shop</title>
 
     <!-- bootstrap 5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -121,7 +121,7 @@ button:hover::before {
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="indexadmin.php">Website Pijat</a>
+                <a class="navbar-brand" href="indexadmin.php">Baby Shop</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -156,7 +156,7 @@ button:hover::before {
 
                 <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
                     <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
-                        <img src="images/dummy.png" alt="..." class="card-img-top" style="border-radius: 15px;">
+                        <img src="../images/dummy.png" alt="..." class="card-img-top" style="border-radius: 15px;">
                         <div class="card-body">
                             <h5 class="card-title" id="namaServis">Nama Barang</h5>
                             <h6 class="card-text">Kategori Barang</h6>
@@ -197,7 +197,7 @@ button:hover::before {
         </div>
 
         <?php
-        require 'footer2.php';
+        require '../footer2.php';
         ?>
     </div>
 

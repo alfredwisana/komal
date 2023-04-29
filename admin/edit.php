@@ -1,8 +1,8 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('location: login.php');
+    header('location: ../login.php');
 }
 
 $id = $_GET['id'];
@@ -214,7 +214,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
 
         <?php
-        require 'footer2.php';
+        require '../footer2.php';
         ?>
     </div>
 

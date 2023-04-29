@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 session_start();
 if (!isset($_SESSION['username'])) {
     header('location: ../login/login.php');
@@ -34,6 +34,6 @@ else{
 
 
 mysqli_query($con, $query);
-header("location: admin/index.php");
+header("location: index.php");
 // echo "sini <br>";
 // echo mysqli_affected_rows($con);

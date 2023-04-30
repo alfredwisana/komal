@@ -262,7 +262,7 @@ require '../connect.php'
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -272,7 +272,7 @@ require '../connect.php'
                             <a class="btn btn-primary" aria-current="page" href="login/logout.php">Logout</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </nav>
         <div class="container">

@@ -280,7 +280,24 @@ require '../connect.php'
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="filter-sidebar">
                         <h5>Katalog</h5>
-                        <div class="catalog-item" href="#">
+                        
+                        <?php 
+                        $sql = "SELECT *  FROM category";
+                        $stmt = $con->prepare($sql);
+                        $stmt->execute();
+                        $res = $stmt->get_result();
+
+                        
+
+                        while($row = $res -> fetch_assoc()){
+                            echo "<div class='catalog-item'>";
+                            echo "<li><a>$row[namaKategori]</a></li>";
+                            echo "</div>";
+                            
+                        }
+
+                        ?>
+                        <!-- <div class="catalog-item" href="#">
                             <li><a href="#">Atasan</a></li>
                         </div>
                         <div class="catalog-item" href="#">
@@ -294,7 +311,7 @@ require '../connect.php'
                         </div>
                         <div class="catalog-item" href="#">
                             <li><a href="#">Lain-Lain</a></li>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-12">

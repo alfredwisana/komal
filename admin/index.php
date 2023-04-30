@@ -391,7 +391,7 @@ $result = mysqli_query($con, $query);
 
                         setTimeout(function() {
                             window.location.reload()
-                        }, 500);
+                        }, 1000);
 
                     },
         

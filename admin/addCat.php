@@ -11,4 +11,3 @@ if(isset($_POST['addCat'])){
 $sql="INSERT INTO category VALUES(null,'$namaKategori')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
-?>

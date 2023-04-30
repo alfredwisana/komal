@@ -3,8 +3,6 @@ require "../connect.php";
 
 if (isset($_POST['cat'])) {
 
-
-    echo "<div> Halo </div>";
     $cat = $_POST['cat'];
     $sql = "SELECT * FROM produk WHERE category = '$cat'";
     $result = mysqli_query($con, $sql);

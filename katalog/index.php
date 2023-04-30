@@ -291,7 +291,7 @@ require '../connect.php'
 
                         while($row = $res -> fetch_assoc()){
                             echo "<div class='catalog-item'>";
-                            echo "<li><a>$row[namaKategori]</a></li>";
+                            echo "<li class ='category' id ='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
                             echo "</div>";
                             
                         }
@@ -314,7 +314,7 @@ require '../connect.php'
                         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="col-lg-9 col-md-8 col-sm-12" id = "katalog">
                     <?php
                     // Query untuk mengambil data barang dari database
                     $sql = "SELECT * FROM produk";
@@ -364,3 +364,26 @@ require '../connect.php'
     </body>
 
 </html>
+
+
+<script>
+
+    $(document).ready(function(){
+        $(".category").click(function(){
+            var v_cat = $(this).attr('id');
+            alert(v_cat);
+            $.ajax({
+                type : "post",
+                url: "proc.php",
+                data :{
+                    cat : v_cat
+                },
+                success: function(result){
+                    alert("filter berhasil")
+                    $("#katalog").html(result);
+                }
+
+            })
+        })
+    })
+</script>

@@ -280,7 +280,9 @@ require '../connect.php'
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="filter-sidebar">
                         <h5>Katalog</h5>
-                        
+                        <div class='catalog-item'>
+                            <li class ='category' id ='semua'><a>semua</a></li>
+                        </div>
                         <?php 
                         $sql = "SELECT *  FROM category";
                         $stmt = $con->prepare($sql);
@@ -371,7 +373,7 @@ require '../connect.php'
     $(document).ready(function(){
         $(".category").click(function(){
             var v_cat = $(this).attr('id');
-            alert(v_cat);
+            
             $.ajax({
                 type : "post",
                 url: "proc.php",
@@ -379,7 +381,7 @@ require '../connect.php'
                     cat : v_cat
                 },
                 success: function(result){
-                    alert("filter berhasil")
+                    
                     $("#katalog").html(result);
                 }
 

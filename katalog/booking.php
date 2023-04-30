@@ -71,24 +71,25 @@ while ($row = mysqli_fetch_array($result)) {
             transform: scale(1.2);
             transition: .2s;
         }
+        
     </style>
 </head>
-
+<body style="background-color:#EAD7c3">
 <body>
     <!-- navabar -->
-    <nav class="navbar navbar-expand-lg bg-light mb-5">
+    <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Website Pijat</a>
+            <a class="nav-link active" aria-current="page" href="index.php"><h1 class="navbar-brand">Katalog</h1><a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
-                </ul>
-                <form class="d-flex" role="search">
+                </ul> -->
+                <!--<form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -96,66 +97,29 @@ while ($row = mysqli_fetch_array($result)) {
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="login.php">Login</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="row mt-5 mb-5">
-            <div class="col">
-                <img src="<?php echo $gambar ?>" alt="" style="width: 400px; height: auto; margin-left: 40px;">
+            <div class="col container">
+                <img src="<?php echo $gambar ?>" alt="" style="width: 300px; height: auto; margin-left: 25px;">
             </div>
-            <div class="col">
-                <div class="row">
+            <div class="col container" style="margin-left: 25px;">
+                <div class="row justify-content-center">
                     <h3 id="namaServis"><?php echo $namaServis ?></h3>
+                    <p style="font-weight: bold;">Rp <?php echo $harga ?></p>
                     <p><?php echo $deskripsi ?></p>
-                    <p>Rp <?php echo $harga ?></p>
                 </div>
                 <div class="row mt-5">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: lightblue;">Book Now</button>
+                    <!-- <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: lightblue;">Book Now</button> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Booking</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="name">
-                    <label for="no-telp" class="form-label">No telp</label>
-                    <input type="text" class="form-control" id="notelp" ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" required />
-                    <label for="date" class="col-sm-1 col-form-label">Date</label>
-                    <div class="col-sm-4">
-                        <div class="input-group date" id="datepicker">
-                            <input type="date" class="form-control" id="tanggal">
-                        </div>
-                    </div>
-                    <label for="time" class="col-sm-1 col-form-label">Time</label>
-                    <div class="col-sm-4">
-                        <div class="input-group time" id="timepicker">
-                            <input type="time" class="form-control" id="waktu">
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary order" id="order" data-bs-dismiss="modal">Order</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 

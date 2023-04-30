@@ -166,18 +166,52 @@ $result = mysqli_query($con, $query);
         <div id="wrapper2">
             <div class="sidebar">
 
+                <a>New Category</a>
+                <input type="text" id="namaKategori" name="namaKategori" 
+                class="form-control" style="width:65%; float:left;">
+                <button class="btn btn-outline-success bg-white" name="addCat" 
+                style="width:30%; float:right;">Add</button>
 
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categories
-                </a>
-                <ul class="dropdown-menu">
-                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="btn" onclick="filterSelection('cars')"> Atasan</button>
-                    <button class="btn" onclick="filterSelection('animals')"> Bawahan</button>
-                    <button class="btn" onclick="filterSelection('fruits')"> Dress</button>
-                    <button class="btn" onclick="filterSelection('colors')"> Aksesoris</button>
-                    <button class="btn" onclick="filterSelection('colors')"> Lain-Lain</button>
-                </ul>
+                <br>
+                <a>Delete Category</a>
+                <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
+
+                    <option value="0">--Pilih Kategori--</option>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        $sql = "SELECT *  FROM category";
+                        $stmt = $con->prepare($sql);
+                        $stmt->execute();
+                        $res = $stmt->get_result();
+
+                        while ($row = $res->fetch_assoc()) {
+                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+                <button class="btn btn-outline-success bg-white" type="submit" style="width:30%; float:right;">Delete</button>
+
+                <br><br>
+
+                <a>Search Category</a>
+                <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
+
+                    <option value="0">--Pilih Kategori--</option>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        $sql = "SELECT *  FROM category";
+                        $stmt = $con->prepare($sql);
+                        $stmt->execute();
+                        $res = $stmt->get_result();
+
+                        while ($row = $res->fetch_assoc()) {
+                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+                <button class="btn btn-outline-success bg-white" type="submit" style="width:30%; float:right;">Search</button>
                 <br><br><br><br><br><br>
 
             </div>

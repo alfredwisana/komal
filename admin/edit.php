@@ -144,27 +144,30 @@ while ($row = mysqli_fetch_array($result)) {
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                            <label for="formFile" class="form-label">Kategori</label> 
-                            <select class="form-control" name="category" id="category">
-                                <option value="<?php echo $category?>">
-                                <?php echo $category ?>
-                                </option>
-                            <?php
-                                if (isset($_SESSION['username'])) {
-                                $sql = "SELECT * FROM category";
-                                $stmt = $con-> prepare($sql);
-                                $stmt-> execute();
-                                $res = $stmt ->get_result();
-                                
-                                while($row = $res-> fetch_assoc()){
-                                    echo "<option value ='".$row['namaKategori']."'>".$row['namaKategori']."</option>";
-                                }
+                            <div class="row mb-3">
+                                <div class="col-3">
+                                    <label for="formFile" class="form-label">Kategori: </label>
+                                </div>
+                                <div class="col-9">
+                                    <select class="form-control" name="category" id="category">
+                                        <option value="<?php echo $category ?>">
+                                            <?php echo $category ?>
+                                        </option>
+                                        <?php
+                                        if (isset($_SESSION['username'])) {
+                                            $sql = "SELECT * FROM category";
+                                            $stmt = $con->prepare($sql);
+                                            $stmt->execute();
+                                            $res = $stmt->get_result();
 
-                                }
-                            ?>
-                            </select>
-                        </div>
+                                            while ($row = $res->fetch_assoc()) {
+                                                echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
 
                             <div class="row mb-3">
                                 <div class="col-3">

@@ -145,6 +145,7 @@ if (!isset($_SESSION['username'])) {
                             <label for="formFile" class="form-label">Nama Barang</label>
                             <input type="text" id="nama" name="nama" class="form-control">
                         </div>
+
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Kategori</label> 
                             <select class="form-control" name="category" id="category">
@@ -164,18 +165,22 @@ if (!isset($_SESSION['username'])) {
                             ?>
                             </select>
                         </div>
+                        
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Deskripsi Barang</label>
                             <textarea class="form-control" id="deskripsi" name="deskripsi"></textarea>
                         </div>
+
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Harga</label>
                             <input type="text" id="harga" name="harga" class="form-control">
                         </div>
+
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Masukkan File</label>
                             <input type="file" id="gambar" name="gambar">
                         </div>
+                            
                         <div class="row mt-5">
                             <button class="button" id="aubutton" style="background-color: d9b4e2;" name="add">Add</button>
                         </div>

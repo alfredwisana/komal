@@ -1,16 +1,20 @@
 <?php
+
+$result = array(
+    'message' => ""
+  ); 
     require '../connect.php';
     session_start();
     if (!isset($_SESSION['username'])) {
         header('location: ../login/index.php');
     }
-    if (isset($_GET['id'])){
+    if (isset($_POST['id'])){
 
-        $id = $_GET['id'];
+        $id = $_POST['id'];
         $sql = "DELETE FROM `produk` WHERE id = $id ";
         $query=mysqli_query($con,$sql);
         $result['message'] = "Barang berhasil dihapus";
-        header("Location: index.php");
+       echo json_encode($result);
     }
 
 ?>

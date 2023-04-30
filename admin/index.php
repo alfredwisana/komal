@@ -38,7 +38,7 @@ $result = mysqli_query($con, $query);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Sweet Alert -->
-    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- AOS Animate on Scroll -->
     <!-- CSS -->
@@ -260,15 +260,15 @@ $result = mysqli_query($con, $query);
                             <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
                                 <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
                                     <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title" id="<?php echo $row['id'] ?>"><?php echo $row['namaServis'] ?></h5>
+                                    <div class="card-body" id="<?php echo $row['id'] ?>">
+                                        <h5 class="card-title" ?>"><?php echo $row['namaServis'] ?></h5>
                                         <p class="card-text"><?php echo $row['category'] ?></p>
                                         <p class="card-text"><?php echo $row['deskripsi'] ?></p>
                                         <h6>harga: <?php echo $row['harga'] ?></h6>
 
                                         <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
 
-                                        <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                        <a class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +321,46 @@ $result = mysqli_query($con, $query);
         } else {
             document.getElementById('addCatButton').disabled = false;
         }
-    }
+    };
+
+    $(".delete").click(function() {
+        v_id = $(this).parent().attr('id');
+        
+        Swal.fire({
+            title: 'Delete',
+            text: "Apakah Anda Yakin mau menghapus barang ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "delete.php",
+                    dataType: "json",
+                    data: {
+                        id: v_id
+                    },
+                    success: function(result) {
+                        console.log('sukses');
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'SUCCESS',
+                            text: result.message,
+                        })
+
+
+                        setTimeout(function() {
+                            window.location.reload()
+                        }, 1000);
+
+                    }
+                })
+            }
+        })
+    });
     // <!-- initialize AOS -->
     AOS.init();
 </script>

@@ -8,8 +8,6 @@ if (!isset($_SESSION['username'])) {
 if(isset($_POST['addCat'])){
     $namaKategori = $_POST['namaKategori'];
 }
-var_dump($namaKategori);
-
 $sql="INSERT INTO category VALUES(null,'$namaKategori')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");

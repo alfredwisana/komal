@@ -166,13 +166,15 @@ $result = mysqli_query($con, $query);
         <div id="wrapper2">
             <div class="sidebar">
 
+            <form action="addCat.php" method="post" enctype="multipart/form-data">
                 <a>New Category</a>
                 <input type="text" id="namaKategori" name="namaKategori" 
                 class="form-control" style="width:65%; float:left;">
                 <button class="btn btn-outline-success bg-white" name="addCat" 
                 style="width:30%; float:right;">Add</button>
+            </form>
 
-                <br>
+                <br><br>
                 <a>Delete Category</a>
                 <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
 

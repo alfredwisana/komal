@@ -391,12 +391,17 @@ $result = mysqli_query($con, $query);
 
                         setTimeout(function() {
                             window.location.reload()
-                        }, 1000);
+                        }, 500);
 
+                    },
+        
+                    error: function(request,status,error) {
+                    alert(request.responseText);
                     }
-                })
-                window.location.reload()
 
+                })
+                
+                   
             }
         })
     });

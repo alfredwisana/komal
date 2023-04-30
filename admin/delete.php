@@ -14,7 +14,7 @@ $result = array(
         $sql = "DELETE FROM `produk` WHERE id = $id ";
         $query=mysqli_query($con,$sql);
         $result['message'] = "Barang berhasil dihapus";
-       echo json_encode($result);
+        echo json_encode($result);
     }
 
 ?>

@@ -39,4 +39,3 @@ if(isset($_POST['add'])){
 $sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$category')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
-?>

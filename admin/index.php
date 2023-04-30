@@ -45,9 +45,12 @@ $result = mysqli_query($con, $query);
 
     <style>
         /* wrapper */
-
         #wrapper {
             background-color: eee7d3;
+        }
+
+        #wrapper2 {
+            min-height: 15rem;
         }
 
         /* custom scrollbar */
@@ -166,54 +169,57 @@ $result = mysqli_query($con, $query);
         <div id="wrapper2">
             <div class="sidebar">
 
-            <form action="addCat.php" method="post" enctype="multipart/form-data">
-                <a>New Category</a>
-                <input type="text" id="namaKategori" name="namaKategori" class="form-control" style="width:65%; float:left;">
-                <button class="btn btn-outline-success bg-white" name="addCat" style="width:30%; float:right;">Add</button>
-            </form>
+                <form action="addCat.php" method="post" enctype="multipart/form-data">
+                    <a>New Category</a>
+                    <input type="text" id="namaKategori" name="namaKategori" class="form-control" style="width:65%; float:left;">
+                    <button class="btn btn-outline-success bg-white" name="addCat" style="width:30%; float:right;">Add</button>
+                </form>
 
                 <br><br>
-            <form action="delCat.php" method="post" enctype="multipart/form-data">
-                <a>Delete Category</a>
-                <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
+                <form action="delCat.php" method="post" enctype="multipart/form-data">
+                    <a>Delete Category</a>
+                    <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
 
-                    <option value="0">--Pilih Kategori--</option>
-                    <?php
-                    if (isset($_SESSION['username'])) {
-                        $sql = "SELECT *  FROM category";
-                        $stmt = $con->prepare($sql);
-                        $stmt->execute();
-                        $res = $stmt->get_result();
+                        <option value="0">--Pilih Kategori--</option>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                            $sql = "SELECT *  FROM category";
+                            $stmt = $con->prepare($sql);
+                            $stmt->execute();
+                            $res = $stmt->get_result();
 
-                        while ($row = $res->fetch_assoc()) {
-                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            while ($row = $res->fetch_assoc()) {
+                                echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            }
                         }
-                    }
-                    ?>
-                </select>
-                <button class="btn btn-outline-success bg-white" name="delCat" style="width:30%; float:right;">Delete</button>
-            </form>
+                        ?>
+                    </select>
+                    <button class="btn btn-outline-success bg-white" name="delCat" style="width:30%; float:right;">Delete</button>
+                </form>
 
                 <br><br>
 
                 <a>Search Category</a>
-                <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
+                <form action="index.php" method="post" enctype="multipart/form-data">
+                    <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
 
-                    <option value="0">--Pilih Kategori--</option>
-                    <?php
-                    if (isset($_SESSION['username'])) {
-                        $sql = "SELECT *  FROM category";
-                        $stmt = $con->prepare($sql);
-                        $stmt->execute();
-                        $res = $stmt->get_result();
+                        <option value="0">--Pilih Kategori--</option>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                            $sql = "SELECT *  FROM category";
+                            $stmt = $con->prepare($sql);
+                            $stmt->execute();
+                            $res = $stmt->get_result();
 
-                        while ($row = $res->fetch_assoc()) {
-                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            echo "<option value=all> Semua </option>";
+                            while ($row = $res->fetch_assoc()) {
+                                echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            }
                         }
-                    }
-                    ?>
-                </select>
-                <button class="btn btn-outline-success bg-white" type="submit" style="width:30%; float:right;">Search</button>
+                        ?>
+                    </select>
+                    <button class="btn btn-outline-success bg-white" name="seaCat" id="seaCat" type="submit" style="width:30%; float:right;">Search</button>
+                </form>
                 <br><br><br><br><br><br>
 
             </div>
@@ -221,24 +227,49 @@ $result = mysqli_query($con, $query);
             <div class="container">
 
                 <div class="row">
+                    <?php
+                    if (isset($_POST['seaCat'])) {
+                        $namaKategori = $_POST['namaKategori'];
+                        $sql = mysqli_query($con, "SELECT * FROM produk WHERE category = '$namaKategori'");
+                        if ($namaKategori == "all") {
+                            $sql = mysqli_query($con, "SELECT * FROM produk");
+                        }
+                    } else {
+                        $sql = mysqli_query($con, "SELECT * FROM produk");
+                    }
 
-                    <?php while ($row = mysqli_fetch_array($result)) { ?>
-                        <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
-                            <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
-                                <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
-                                <div class="card-body">
-                                    <h5 class="card-title" id="<?php echo $row['id'] ?>"><?php echo $row['namaServis'] ?></h5>
-                                    <p class="card-text"><?php echo $row['category'] ?></p>
-                                    <p class="card-text"><?php echo $row['deskripsi'] ?></p>
-                                    <h6>harga: <?php echo $row['harga'] ?></h6>
+                    if (mysqli_num_rows($sql) >= 1) {
+                        if (isset($_POST['seaCat'])) {
+                            $sql = "SELECT * FROM produk WHERE category = '$namaKategori'";
+                            if ($namaKategori == "all") {
+                                $sql = "SELECT * FROM produk";
+                            }
+                        } else {
+                            $sql = "SELECT * FROM produk";
+                        }
+                        $result = mysqli_query($con, $sql);
 
-                                    <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
+                        while ($row = mysqli_fetch_array($result)) {
+                    ?>
+                            <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
+                                <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
+                                    <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="<?php echo $row['id'] ?>"><?php echo $row['namaServis'] ?></h5>
+                                        <p class="card-text"><?php echo $row['category'] ?></p>
+                                        <p class="card-text"><?php echo $row['deskripsi'] ?></p>
+                                        <h6>harga: <?php echo $row['harga'] ?></h6>
 
-                                    <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
+
+                                        <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
 
             </div>

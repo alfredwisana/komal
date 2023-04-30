@@ -147,25 +147,24 @@ if (!isset($_SESSION['username'])) {
                         </div>
 
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Kategori</label> 
+                            <label for="formFile" class="form-label">Kategori</label>
                             <select class="form-control" name="category" id="category">
-                            <option value="0">--Pilih Kategori--</option>
-                            <?php
+                                <option value="0">--Pilih Kategori--</option>
+                                <?php
                                 if (isset($_SESSION['username'])) {
-                                $sql = "SELECT *  FROM category";
-                                $stmt = $con-> prepare($sql);
-                                $stmt-> execute();
-                                $res = $stmt ->get_result();
-                                
-                                while($row = $res-> fetch_assoc()){
-                                    echo "<option value ='".$row['namaKategori']."'>".$row['namaKategori']."</option>";
-                                }
+                                    $sql = "SELECT *  FROM category";
+                                    $stmt = $con->prepare($sql);
+                                    $stmt->execute();
+                                    $res = $stmt->get_result();
 
+                                    while ($row = $res->fetch_assoc()) {
+                                        echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                                    }
                                 }
-                            ?>
+                                ?>
                             </select>
                         </div>
-                        
+
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Deskripsi Barang</label>
                             <textarea class="form-control" id="deskripsi" name="deskripsi"></textarea>
@@ -180,7 +179,7 @@ if (!isset($_SESSION['username'])) {
                             <label for="formFile" class="form-label">Masukkan File</label>
                             <input type="file" id="gambar" name="gambar">
                         </div>
-                            
+
                         <div class="row mt-5">
                             <button class="button" id="aubutton" style="background-color: d9b4e2;" name="add">Add</button>
                         </div>

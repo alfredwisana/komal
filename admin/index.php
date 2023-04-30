@@ -261,7 +261,7 @@ $result = mysqli_query($con, $query);
                                 <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
                                     <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
                                     <div class="card-body" id="<?php echo $row['id'] ?>">
-                                        <h5 class="card-title" ?>"><?php echo $row['namaServis'] ?></h5>
+                                        <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
                                         <p class="card-text"><?php echo $row['category'] ?></p>
                                         <p class="card-text"><?php echo $row['deskripsi'] ?></p>
                                         <h6>harga: <?php echo $row['harga'] ?></h6>

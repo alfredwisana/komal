@@ -30,7 +30,7 @@ if(isset($_POST['add'])){
                 </script>";
                 exit;
     }
-    $destination = '../images/' . $namaFile;
+    $destination = '../images/catalog_baju' . $namaFile;
     move_uploaded_file($tmpName, $destination);
 }
 // if(!empty($gambar)){

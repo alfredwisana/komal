@@ -24,48 +24,48 @@ require 'connect.php'
 	</div>
 	<div class="content">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
+			<div class="carousel-inner">
 				<div class="carousel-item active">
-                    <!-- to make an image as an access to link put the image inside the a and make 
+					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-                    <a href="https://www.asus.com"><img  src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
-                   
-                </div>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
 
-                <div class="carousel-item">
-                    <!-- to make an image as an access to link put the image inside the a and make 
+				</div>
+
+				<div class="carousel-item">
+					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-                    <a href="https://www.asus.com"><img src="images/dummy.jpg"  class="img-responsive d-block w-100" alt="..."></a>
-                   
-                </div>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
 
-                <div class="carousel-item">
-                    <!-- to make an image as an access to link put the image inside the a and make 
+				</div>
+
+				<div class="carousel-item">
+					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-                    <a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a> 
-                </div>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+				</div>
 
-                <div class="carousel-item">
-                    <!-- to make an image as an access to link put the image inside the a and make 
+				<div class="carousel-item">
+					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-                    <a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
-                </div>
-		  	</div>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+				</div>
+			</div>
 
-		  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Previous</span>
-		  	</button>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
 
-		  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Next</span>
-		  	</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
 		</div>
 
 		<div id="menu">
 			<ul>
-			<li><a href="https://www.asus.com"><img src="images/dummy2.jpg" class="img-responsive d-block w-100" alt="..."></a></li>
+				<li><a href="https://www.asus.com"><img src="images/dummy2.jpg" class="img-responsive d-block w-100" alt="..."></a></li>
 				<li><a href="https://www.asus.com"><img src="images/dummy2.jpg" class="img-responsive d-block w-100" alt="..."></a></li>
 				<li><a href="https://www.asus.com"><img src="images/dummy2.jpg" class="img-responsive d-block w-100" alt="..."></a></li>
 				<li><a href="https://www.asus.com"><img src="images/dummy2.jpg" class="img-responsive d-block w-100" alt="..."></a></li>
@@ -80,7 +80,7 @@ require 'connect.php'
 		<div class="row">
 			<?php
 			// Query untuk mengambil data barang dari database
-			$sql = "SELECT * FROM services";
+			$sql = "SELECT * FROM produk";
 			$result = mysqli_query($con, $sql);
 
 			// Looping data barang
@@ -102,7 +102,7 @@ require 'connect.php'
 			?>
 		</div>
 	</div> -->
-	
+
 
 	<?php
 	require 'footer.php';

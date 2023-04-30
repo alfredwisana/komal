@@ -256,7 +256,7 @@ require '../connect.php'
         <!-- navabar -->
         <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
             <div class="container-fluid">
-                <h1 class="navbar-brand" href="index.php">Berkah Jaya</h1>
+                <a href="../index.php" style="text-decoration: none;"><h1 class="navbar-brand">Berkah Jaya</h1></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

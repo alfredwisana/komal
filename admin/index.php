@@ -168,15 +168,14 @@ $result = mysqli_query($con, $query);
 
             <form action="addCat.php" method="post" enctype="multipart/form-data">
                 <a>New Category</a>
-                <input type="text" id="namaKategori" name="namaKategori" 
-                class="form-control" style="width:65%; float:left;">
-                <button class="btn btn-outline-success bg-white" name="addCat" 
-                style="width:30%; float:right;">Add</button>
+                <input type="text" id="namaKategori" name="namaKategori" class="form-control" style="width:65%; float:left;">
+                <button class="btn btn-outline-success bg-white" name="addCat" style="width:30%; float:right;">Add</button>
             </form>
 
                 <br><br>
+            <form action="delCat.php" method="post" enctype="multipart/form-data">
                 <a>Delete Category</a>
-                <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
+                <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
 
                     <option value="0">--Pilih Kategori--</option>
                     <?php
@@ -192,7 +191,8 @@ $result = mysqli_query($con, $query);
                     }
                     ?>
                 </select>
-                <button class="btn btn-outline-success bg-white" type="submit" style="width:30%; float:right;">Delete</button>
+                <button class="btn btn-outline-success bg-white" name="delCat" style="width:30%; float:right;">Delete</button>
+            </form>
 
                 <br><br>
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-
+    
     <!-- STYLE -->
     <style>
         /*FONT*/
@@ -155,6 +157,54 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /*scroll up button*/
+        #button {
+          display: inline-block;
+          text-align: center;
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          height: 3.5rem;
+          padding: 0 2rem;
+          border: 0.1rem solid #000;
+          border-radius: 3.12rem;
+          box-shadow: 0 0.4rem 0 0 #000;
+          background-color: beige;
+          color: #000;
+          font-family: "Epilogue", sans-serif;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: background-color .3s, 
+            opacity .5s, visibility .5s;
+          opacity: 100;
+          visibility: visible;
+          z-index: 1000;
+        }
+        #button::after {
+          content: "\f077";
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 2em;
+          line-height: 50px;
+          color: #65350f;
+        }
+        #button:hover {
+          cursor: pointer;
+          background-color: #333;
+        }
+        #button:active {
+          background-color: #555;
+        }
+        /* Styles for the content section */
+
+        @media (min-width: 500px) {
+          #button {
+            margin: 30px;
+          }
+        }
+
     </style>
 
 </head>
@@ -163,8 +213,10 @@
 
     <?php require "navbar.php" ?>
 
+    <a id="button" href="#button1"></a>
+
     <!-- button -->
-    <div id="button" class="row">
+    <div id="button1" class="row">
         <div id="btn1" class="col-6">
             <center><a href="#abt_us"><button class="btn1" style="font-family:coolvetica">About Us</button></a></center>
         </div>
@@ -219,9 +271,9 @@
 
         <div class="container">
             <div class="col-sm-12">
-                <div id="abt_us" style="margin-top:40px">
-                    <h1 style="font-family:coolvetica">Latar Belakang Beridirinya Berkah Jaya</h1>
-                    <p style="width: 80%;font-family: coolvetica;font-size: 1.75rem;">Toko ini dibangun oleh pemilik
+                <div id="abt_us" style="margin-top:40px;width:100%">
+                    <h1 style="font-family:coolvetica;text-align: center;">Latar Belakang Beridirinya Berkah Jaya</h1>
+                    <p style="width: 100%;font-family: coolvetica;font-size: 1.75rem;text-align: center;object-position: center;">Toko ini dibangun oleh pemilik
                         toko
                         Pak Handidjaja pada tahun 1998 dikarenakan pandangan nya akan potensi bisnis kebutuhan bayi ini,
                         di
@@ -237,7 +289,7 @@
                         yang berdekatan di Pasar Krian untuk berjualan pakaian dan aksesoris bayi. Setelah berjalan lama
                         sekarang Berkah Jaya baby shop 1 masih ada dan dapat kalian temukan di pasar krian sedang kan
                         untuk
-                        baby shop 2 dapat kalian temukan di <br>Jl.Gubernur Sunandar No. 578</p>
+                        baby shop 2 dapat kalian temukan di Jl.Gubernur Sunandar No. 578</p>
                 </div>
             </div>
             <div class="row">
@@ -271,7 +323,7 @@
 
 
         <center>
-            <div class="container" style="margin-top:20px;width:80%;height:250px;">
+            <div id="contact" class="container" style="margin-top:20px;width:80%;height:250px;">
                 <h1 style="font-family:coolvetica">Contact / Where you can find us</h1>
                 <a href="https://www.tokopedia.com/berkahjayababyshop">
                     <div class="col-4"><img src="images/tokped2.png" style="height:50%;width: 50%;object-fit: contain;">

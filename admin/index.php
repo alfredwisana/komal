@@ -181,26 +181,24 @@ $result = mysqli_query($con, $query);
 
                 <!-- Hapus category -->
                 <br><br>
-                <form action="delCat.php" method="post" enctype="multipart/form-data">
-                    <a>Delete Category</a>
-                    <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
+                <a>Delete Category</a>
+                <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
 
-                        <option value="0">--Pilih Kategori--</option>
-                        <?php
-                        if (isset($_SESSION['username'])) {
-                            $sql = "SELECT *  FROM category";
-                            $stmt = $con->prepare($sql);
-                            $stmt->execute();
-                            $res = $stmt->get_result();
+                    <option value="0">--Pilih Kategori--</option>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        $sql = "SELECT *  FROM category";
+                        $stmt = $con->prepare($sql);
+                        $stmt->execute();
+                        $res = $stmt->get_result();
 
-                            while ($row = $res->fetch_assoc()) {
-                                echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
-                            }
+                        while ($row = $res->fetch_assoc()) {
+                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
                         }
-                        ?>
-                    </select>
-                    <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
-                </form>
+                    }
+                    ?>
+                </select>
+                <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
 
                 <br><br>
 
@@ -323,9 +321,10 @@ $result = mysqli_query($con, $query);
         }
     };
 
+    // Sweet alert delete produk
     $(".delete").click(function() {
         v_id = $(this).parent().attr('id');
-        
+
         Swal.fire({
             title: 'Delete',
             text: "Apakah Anda Yakin mau menghapus barang ini?",
@@ -351,6 +350,44 @@ $result = mysqli_query($con, $query);
                             text: result.message,
                         })
 
+                        setTimeout(function() {
+                            window.location.reload()
+                        }, 1000);
+
+                    }
+                })
+            }
+        })
+    });
+
+    // Sweet alert delete category
+    $("#delCat").click(function() {
+        v_namaKategori = $('#Kategori').val();;
+
+        Swal.fire({
+            title: 'Delete',
+            text: "Apakah Anda Yakin mau menghapus kategori ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "delCat.php",
+                    dataType: "json",
+                    data: {
+                        Kategori: v_namaKategori
+                    },
+                    success: function(result) {
+                        console.log('sukses');
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'SUCCESS',
+                            text: result.message,
+                        })
 
                         setTimeout(function() {
                             window.location.reload()
@@ -358,6 +395,8 @@ $result = mysqli_query($con, $query);
 
                     }
                 })
+                window.location.reload()
+
             }
         })
     });

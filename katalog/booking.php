@@ -79,7 +79,7 @@ while ($row = mysqli_fetch_array($result)) {
     <!-- navabar -->
     <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
         <div class="container-fluid">
-            <a class="nav-link active" aria-current="page" href="index.php"><h1 class="navbar-brand">Katalog</h1><a>
+            <a class="nav-link active" aria-current="page" href="index.php"><h1 class="navbar-brand">Berkah Jaya</h1><a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

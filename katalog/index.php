@@ -8,7 +8,7 @@ require '../connect.php'
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Katalog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -256,7 +256,7 @@ require '../connect.php'
         <!-- navabar -->
         <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
             <div class="container-fluid">
-                <h1 class="navbar-brand" href="index.php">Website Pijat</h1>
+                <h1 class="navbar-brand" href="index.php">Berkah Jaya</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

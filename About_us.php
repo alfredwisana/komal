@@ -151,6 +151,9 @@
             border-radius: 2rem;
             background-image: linear-gradient(rgba(104, 68, 52, 0.6), rgba(104, 68, 52, 0.6)), url(images/toko.png);
             background-size: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 
@@ -171,40 +174,44 @@
     </div>
 
     <!-- Banner -->
-    <center>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10" id="banner">
-                <h1
-                    style="font-family:coolvetica;color: beige;font-size: 4rem;text-align: left;padding-left: 2rem;padding-top: 22rem;">
-                    About Us .</h1>
-                <h1 style="font-family:coolvetica;color: beige;font-size: 1.5rem;text-align: left;padding-left: 2rem;">
-                    Sedikit lebih jauh mengenai latar belakang toko berkah jaya.</h1>
-            </div>
-            <div class="col-sm-1"></div>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10" id="banner">
+            <h1
+                style="font-family:coolvetica;color: beige;font-size: 4rem;text-align: left;padding-left: 3%;padding-top: 24rem;">
+                About Us .</h1>
+            <h1 style="font-family:coolvetica;color: beige;font-size: 1.5rem;text-align: left;padding-left: 3%;">
+                Sedikit lebih jauh mengenai latar belakang toko berkah jaya.</h1>
         </div>
-    </center>
+        <div class="col-sm-1"></div>
+    </div>
+
 
     <!-- Foto Polaroid -->
 
-    <div id="awal1" class="container" style="margin-top: 60px;">
+    <div id="awal1" class="container-fluid" style="margin-top: 60px;">
         <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
-            <img src="images/awal1.png" style="height: 28.75rem;border: 0.1rem solid #000;">
+            <img src="images/awal1.png"
+                style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
         <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
-            <img src="images/awal2.png" style="height: 28.75rem;border: 0.1rem solid #000;">
+            <img src="images/awal2.png"
+                style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
         <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
-            <img src="images/awal3.png" style="height: 28.75rem;border: 0.1rem solid #000;">
+            <img src="images/awal3.png"
+                style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
         <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
-            <img src="images/awal4.png" style="height: 28.75rem;border: 0.1rem solid #000;">
+            <img src="images/awal4.png"
+                style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
         <div class="col-md-12">
-            <div style="height:1px;width: 95%;background-color: black;margin-top: 40px;">
+            <div style="height:1px;width: 100%;background-color: black;margin-top: 40px;">
             </div>
         </div>
 
@@ -297,7 +304,7 @@
                     <p style="font-family:coolvetica; margin-top: 1%; text-align:center;">Map Berkah Jaya 2 (Jl.
                         Gubernur
                         Sunandar No. 578, Krian, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61226)</p>
-                        </center>
+                </center>
             </div>
         </center>
     </div>
@@ -306,7 +313,7 @@
         require "footer.php";
         ?>
     </div>
-        
+
 </body>
 
 

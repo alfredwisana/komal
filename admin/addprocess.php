@@ -30,7 +30,7 @@ if(isset($_POST['add'])){
                 </script>";
                 exit;
     }
-    $destination = '../images/catalog_baju' . $namaFile;
+    $destination = '../images/catalog_baju/' . $namaFile;
     move_uploaded_file($tmpName, $destination);
 }
 // if(!empty($gambar)){
@@ -39,3 +39,4 @@ if(isset($_POST['add'])){
 $sql="INSERT INTO produk VALUES(null,'$nama','$deskripsi','$harga','$destination','$category')";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
+?>

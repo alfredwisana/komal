@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
     header('location: ../login.php');
 }
 
-if (isset($_POST['delCat'])) {
+if (isset($_POST['Kategori'])) {
     $Kategori = $_POST['Kategori'];
 }
 echo "$Kategori";

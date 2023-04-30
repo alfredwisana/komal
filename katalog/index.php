@@ -307,7 +307,7 @@ require '../connect.php'
                                 <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
                                 <p class="card-text"><?php echo $row['deskripsi'] ?></p>
                                 <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                                <a href="../booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
+                                <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ if (isset($_POST['Kategori'])) {
 
     $sql = "DELETE FROM `category` WHERE namaKategori = '$Kategori'";
     $query = mysqli_query($con, $sql);
-    $result['message'] = "Barang berhasil dihapus";
+    $result['message'] = "Kategori berhasil dihapus";
     echo json_encode($result);
     }
 ?>

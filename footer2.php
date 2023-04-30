@@ -231,11 +231,11 @@
                         </p>
                     <div class="footer-icons">
                         <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
-                        <a href="https://instagram.com"><img src="../images/insta.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
+                        <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="../images/insta.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
                         <!-- tokped-->
-                        <a href="https://Tokopedia.com"><img src="../images/tokped.png" style="height:2rem; weight:2rem; margin-top: -0.2rem;"></a>
+                        <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:2rem; weight:2rem; margin-top: -0.2rem;"></a>
                         <!-- shopee-->
-                        <a href="https://shopee.com"><img src="../images/shopee.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.3rem;"></a>
+                        <a href="https://shp.ee/trzp2g6"><img src="../images/shopee.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.3rem;"></a>
                         <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     <br>

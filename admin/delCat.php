@@ -9,7 +9,7 @@ if(isset($_POST['delCat'])){
     $Kategori = $_POST['Kategori'];
 }
 echo"$Kategori";
-$sql="DELETE FROM `category` WHERE namaKategori = $Kategori";
+$sql="DELETE FROM `category` WHERE namaKategori = '$Kategori'";
 $query=mysqli_query($con,$sql);
 header ("Location: index.php?status=success");
 ?>

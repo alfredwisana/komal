@@ -161,7 +161,7 @@ $result = mysqli_query($con, $query);
         <!-- navbar -->
         <?php require "navbar.php" ?>
 
-        <div id="header" style="position: relative; text-align: center; background-color:white;">
+        <div id="header" style="position: relative; margin-top:-0.5rem; text-align: center; background-color:white;">
             <img src="../images/headerAdmin3.jpeg" style=" width:100%; opacity: 0.5;">
             <!-- Hello -->
             <h3 class="display-4 mt-3" data-aos="zoom-out" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);">Hello <?php echo $_SESSION['username'] ?></h3>
@@ -262,7 +262,7 @@ $result = mysqli_query($con, $query);
                                         <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
                                         <p class="card-text"><?php echo $row['category'] ?></p>
                                         <p class="card-text"><?php echo $row['deskripsi'] ?></p>
-                                        <h6>harga: <?php echo $row['harga'] ?></h6>
+                                        <h6>harga: Rp<?php echo $row['harga'] ?></h6>
 
                                         <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
 

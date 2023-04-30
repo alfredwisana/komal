@@ -125,7 +125,7 @@ while ($row = mysqli_fetch_array($result)) {
         <div class="container">
             <div class="row mt-5 mb-5">
                 <div class="col">
-                    <img src="<?php echo $gambar ?>" alt="">
+                    <img src="<?php echo $gambar ?>" alt="" style="max-width:25rem; max-height:25rem;">
                 </div>
                 <div class="col">
                     <div class="row">

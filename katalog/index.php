@@ -290,7 +290,7 @@ require '../connect.php'
             <div class="col-lg-9 col-md-8 col-sm-12">
                 <?php
                     // Query untuk mengambil data barang dari database
-                    $sql = "SELECT * FROM services";
+                    $sql = "SELECT * FROM produk";
                     $result = mysqli_query($con, $sql);
 
                     // Memulai pembukaan tag div untuk row
@@ -302,7 +302,7 @@ require '../connect.php'
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="card">
-                            <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="<?php echo $row['nama'] ?>">
+                            <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
                                 <p class="card-text"><?php echo $row['deskripsi'] ?></p>
@@ -324,7 +324,7 @@ require '../connect.php'
             </div>
         </div>
         <?php
-            require '../footer.php';
+            require '../footer2.php';
         ?>
     </body>
 </html>

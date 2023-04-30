@@ -169,12 +169,14 @@ $result = mysqli_query($con, $query);
         <div id="wrapper2">
             <div class="sidebar">
 
+                <!-- Tambah category -->
                 <form action="addCat.php" method="post" enctype="multipart/form-data">
                     <a>New Category</a>
-                    <input type="text" id="namaKategori" name="namaKategori" class="form-control" style="width:65%; float:left;">
-                    <button class="btn btn-outline-success bg-white" name="addCat" style="width:30%; float:right;">Add</button>
+                    <input type="text" id="addCat" name="addCat" class="form-control" style="width:65%; float:left;" onkeyup="if(this.value.length > 0) document.getElementById('addCatButton').disabled = false; else document.getElementById('addCatButton').disabled = true;" />
+                    <button class="btn btn-outline-success bg-white" id="addCatButton" name="addCatButton" style="width:30%; float:right;" disabled>Add</button>
                 </form>
 
+                <!-- Hapus category -->
                 <br><br>
                 <form action="delCat.php" method="post" enctype="multipart/form-data">
                     <a>Delete Category</a>
@@ -194,11 +196,12 @@ $result = mysqli_query($con, $query);
                         }
                         ?>
                     </select>
-                    <button class="btn btn-outline-success bg-white" name="delCat" style="width:30%; float:right;">Delete</button>
+                    <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
                 </form>
 
                 <br><br>
 
+                <!-- Cari categpry -->
                 <a>Search Category</a>
                 <form action="index.php" method="post" enctype="multipart/form-data">
                     <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
@@ -218,7 +221,7 @@ $result = mysqli_query($con, $query);
                         }
                         ?>
                     </select>
-                    <button class="btn btn-outline-success bg-white" name="seaCat" id="seaCat" type="submit" style="width:30%; float:right;">Search</button>
+                    <button class="btn btn-outline-success bg-white" name="seaCat" id="seaCat" type="submit" style="width:30%; float:right;" disabled>Search</button>
                 </form>
                 <br><br><br><br><br><br>
 
@@ -285,6 +288,40 @@ $result = mysqli_query($con, $query);
 </body>
 
 <script>
+    // Kalau di input box nda ada isinya, maka submit button mati
+    $(document).ready(function() {
+        $('#Kategori').val("0");
+        $('#namaKategori').val("0");
+
+        $('#Kategori').change(function() {
+            selectVal = $('#Kategori').val();
+
+            if (selectVal == 0) {
+                $('#delCat').prop("disabled", true);
+            } else {
+                $('#delCat').prop("disabled", false);
+            }
+        })
+
+        $('#namaKategori').change(function() {
+            selectVal = $('#namaKategori').val();
+
+            if (selectVal == 0) {
+                $('#seaCat').prop("disabled", true);
+            } else {
+                $('#seaCat').prop("disabled", false);
+            }
+        })
+
+    });
+
+    function success() {
+        if (document.getElementById("addCat").value === "") {
+            document.getElementById('addCatButton').disabled = true;
+        } else {
+            document.getElementById('addCatButton').disabled = false;
+        }
+    }
     // <!-- initialize AOS -->
     AOS.init();
 </script>

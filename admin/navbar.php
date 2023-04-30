@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg mb-2" style="background-color: #d9b4e2;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img src="https://cdn-icons-png.flaticon.com/512/3282/3282468.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
+                <a class="navbar-brand" href="index.php"><img src="https://cdn-icons-png.flaticon.com/512/3282/3282468.png" style="height:1.5rem; width:1.5rem; margin-top: -0.2rem;"></a>
                 <button class="navbar-toggler" id="search" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

@@ -147,6 +147,7 @@ require '../connect.php'
 
         .catalog-item {
             margin-bottom: 10px;
+            color: white;
         }
 
         .catalog-item li {
@@ -178,6 +179,7 @@ require '../connect.php'
             font-weight: bold;
             color: #007bff;
         }
+        
 
         .card {
             background-color: #eee7d3;

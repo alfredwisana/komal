@@ -196,7 +196,7 @@
             <footer class="footer-distributed">
 
                 <div class="footer-left">
-                <img src="images/logo.png">
+                <img src="../images/logo.png">
                     <h3><span>Berkah Jaya</span> Baby Shop</h3>
 
                     <p class="footer-links">

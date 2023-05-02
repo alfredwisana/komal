@@ -22,7 +22,7 @@ if (isset($_POST['cat'])) {
                     <h5 class='card-title'>$row[namaServis]</h5>
                     <p class='card-text'>$row[deskripsi]</p>
                     <p class='card-price'>Rp $row[harga]</p>
-                    <a href='booking.php?id='$row[id]' class='btn btn-primary'>Lihat
+                    <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat
                         detail</a>
                 </div>
             </div>

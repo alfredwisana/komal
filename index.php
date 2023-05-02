@@ -28,27 +28,27 @@ require 'connect.php'
 				<div class="carousel-item active">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
+					<a href="https://www.asus.com"><img src="images/carousel1.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
+					<a href="https://www.asus.com"><img src="images/carousel2.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
+					<a href="https://www.asus.com"><img src="images/carousel3.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
+					<a href="https://www.asus.com"><img src="images/carousel4.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 				</div>
 			</div>
 

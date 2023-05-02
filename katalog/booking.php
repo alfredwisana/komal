@@ -71,25 +71,27 @@ while ($row = mysqli_fetch_array($result)) {
             transform: scale(1.2);
             transition: .2s;
         }
-        
     </style>
 </head>
+
 <body style="background-color:#EAD7c3">
-<body>
-    <!-- navabar -->
-    <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
-        <div class="container-fluid">
-            <a class="nav-link active" aria-current="page" href="index.php"><h1 class="navbar-brand">Berkah Jaya</h1><a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <body>
+        <!-- navabar -->
+        <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
+            <div class="container-fluid">
+                <a class="nav-link active" aria-current="page" href="index.php">
+                    <h1 class="navbar-brand">Berkah Jaya</h1><a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                 </ul> -->
-                <!--<form class="d-flex" role="search">
+                        <!--<form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -99,77 +101,89 @@ while ($row = mysqli_fetch_array($result)) {
                     </li>
                 </ul> -->
             </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row mt-5 mb-5">
-            <div class="col container">
-                <img src="<?php echo $gambar ?>" alt="" style="width: 300px; height: auto; margin-left: 25px;">
             </div>
-            <div class="col container" style="margin-left: 25px;">
-                <div class="row justify-content-center">
-                    <h3 id="namaServis"><?php echo $namaServis ?></h3>
-                    <p style="font-weight: bold;">Rp <?php echo $harga ?></p>
-                    <p><?php echo $deskripsi ?></p>
-                </div>
-                <div class="row mt-5">
-                    <!-- <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: lightblue;">Book Now</button> -->
-                </div>
-            </div>
-        </div>
-    </div>
+        </nav>
 
+        <form method='post'>
+            <input onclick='goBack()' type='button' value='Back' />
+        </form>
 
-</body>
-
-<script>
-    $(document).ready(function() {
-        $('#order').on('click', function() {
-            namaServis = $('#namaServis').text();
-            nama = $("#nama").val();
-            notelp = $("#notelp").val();
-            tanggal = $("#tanggal").val();
-            waktu = $("#waktu").val();
-
-            if (nama == "" || notelp == "" || tanggal == "" || waktu == "") {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Fail!',
-                    text: 'Silahkan lengkapi data terlebih dahulu',
-                })
-
-            } else {
-                $.ajax({
-                    url: 'processbooking.php',
-                    type: 'POST',
-                    data: {
-                        book: 1,
-                        nama: nama,
-                        namaServis: namaServis,
-                        notelp: notelp,
-                        tanggal: tanggal,
-                        waktu: waktu
-                    },
-                    success: function(res) {
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'Booked Successfully',
-                            icon: 'success',
-                            confirmButtonText: 'Ok'
-                        })
-                    }
-                });
-
-                $("#nama").val('');
-                $("#notelp").val('');
-                $("#tanggal").val('');
-                $("#waktu").val('');
+        <script>
+            function goBack() {
+                window.history.go(-1);
             }
+        </script>
+
+
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col container">
+                    <img src="<?php echo $gambar ?>" alt="" style="width: 300px; height: auto; margin-left: 25px;">
+                </div>
+                <div class="col container" style="margin-left: 25px;">
+                    <div class="row justify-content-center">
+                        <h3 id="namaServis"><?php echo $namaServis ?></h3>
+                        <p style="font-weight: bold;">Rp <?php echo $harga ?></p>
+                        <p><?php echo $deskripsi ?></p>
+                    </div>
+                    <div class="row mt-5">
+                        <!-- <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: lightblue;">Book Now</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script>
+        $(document).ready(function() {
+            $('#order').on('click', function() {
+                namaServis = $('#namaServis').text();
+                nama = $("#nama").val();
+                notelp = $("#notelp").val();
+                tanggal = $("#tanggal").val();
+                waktu = $("#waktu").val();
+
+                if (nama == "" || notelp == "" || tanggal == "" || waktu == "") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Fail!',
+                        text: 'Silahkan lengkapi data terlebih dahulu',
+                    })
+
+                } else {
+                    $.ajax({
+                        url: 'processbooking.php',
+                        type: 'POST',
+                        data: {
+                            book: 1,
+                            nama: nama,
+                            namaServis: namaServis,
+                            notelp: notelp,
+                            tanggal: tanggal,
+                            waktu: waktu
+                        },
+                        success: function(res) {
+                            Swal.fire({
+                                title: 'Success!',
+                                text: 'Booked Successfully',
+                                icon: 'success',
+                                confirmButtonText: 'Ok'
+                            })
+                        }
+                    });
+
+                    $("#nama").val('');
+                    $("#notelp").val('');
+                    $("#tanggal").val('');
+                    $("#waktu").val('');
+                }
+            });
         });
-    });
-</script>
-<?php
-require '../footer2.php'
-?>
+    </script>
+    <?php
+    require '../footer2.php'
+    ?>
+
 </html>

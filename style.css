@@ -16,22 +16,14 @@ body {
   z-index: 1;
 }
 
-#topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-#topnav a:hover {
-  background-color: black;
-  color: white;
-}
-
 .content {
   padding-top: 60px;
+}
+
+.content::after{
+	content: "";
+	clear: both;
+	display: table;
 }
 
 #carouselImage {
@@ -44,7 +36,6 @@ body {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  margin-top: -10px;
   align-items: center;
 }
 
@@ -56,7 +47,6 @@ body {
 
 #menuImages{
   object-fit: cover;
-  float: left;
   height: 600px;
   width: 100%;
 }
@@ -240,4 +230,20 @@ footer{
 		margin-left: 0;
 	}
 
+}
+
+@media screen and (max-width: 731px) {
+	#carouselImage {
+		height: 698px;
+	}
+}
+
+@media screen and (max-width: 731px) {
+	#carouselImage {
+		height: 548px;
+	}
+
+	#menu li {
+		width: 100%;
+	}
 }

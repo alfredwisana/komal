@@ -10,7 +10,7 @@ require 'connect.php'
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Homepage</title>
 </head>
@@ -28,27 +28,27 @@ require 'connect.php'
 				<div class="carousel-item active">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
-					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..."></a>
+					<a href="https://www.asus.com"><img src="images/dummy.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage"></a>
 				</div>
 			</div>
 

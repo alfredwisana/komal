@@ -30,7 +30,7 @@ require 'connect.php'
 
 		<div id="menu">
 			<ul>
-				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
+				<li><a href="https://www.asus.com"><img id="mensuImages" src="images/dummy2.jpg"></a></li>
 				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
 				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>
 				<li><a href="https://www.asus.com"><img id="menuImages" src="images/dummy2.jpg"></a></li>

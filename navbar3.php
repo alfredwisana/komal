@@ -19,7 +19,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.php" class="nav-link text-uppercase font-weight-bold">Home</a></li>
                             <li class="nav-item"><a href="About_us.php" class="nav-link text-uppercase font-weight-bold">About us</a></li>
-                            <li class="nav-item"><a href="catalog.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
+                            <li class="nav-item"><a href="katalog/index.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
                             <li class="nav-item"><a href="login/index.php" class="nav-link text-uppercase font-weight-bold">Login</a></li>
                     </ul>
             </div>

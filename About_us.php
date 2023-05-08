@@ -325,15 +325,15 @@
         <center>
             <div id="contact" class="container" style="margin-top:20px;width:80%;height:250px;">
                 <h1 style="font-family:coolvetica">Contact / Where you can find us</h1>
-                <a href="https://www.tokopedia.com/berkahjayababyshop">
+                <a href="https://www.tokopedia.com/berkahjayababyshop" target="_blank">
                     <div class="col-4"><img src="images/tokped2.png" style="height:50%;width: 50%;object-fit: contain;">
                     </div>
                 </a>
-                <a href="https://shp.ee/trzp2g6">
+                <a href="https://shp.ee/trzp2g6" target="_blank">
                     <div class="col-4"><img src="images/shopee.png" style="height:50%;width: 50%;object-fit: contain;">
                     </div>
                 </a>
-                <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D">
+                <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D" target="_blank">
                     <div class="col-4"><img src="images/ig.png" style="height:55%;width: 55%;object-fit: contain;">
                     </div>
                 </a>

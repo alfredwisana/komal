@@ -52,7 +52,7 @@ require '../connect.php';
           line-height: 2.0em;
           overflow: hidden;
           /* margin: 20px; */
-          margin-top:1.25rem; 
+          margin-top:0.005rem; 
           font-size: 17px;
           z-index: 1;
           color: var(--color);
@@ -100,6 +100,7 @@ require '../connect.php';
           outline-offset: 5px;
           background-color: #edf0e7;
         }
+      
         
     </style>
 </head>
@@ -115,6 +116,7 @@ require '../connect.php';
             <div class="input" style="padding-top:30px;">
                 <input type="password" class="form-control" id="password"  placeholder="Password">
             </div>
+            <p style="padding-top: 3%;"><a href="../index.php">Back to Home page</a></p>
             <div class="text-center">
                 <button id="login">Login</button>
             </div>

@@ -5,7 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 <!-- navabar -->
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light" id="navbar">
         <div class="container-fluid">
             <img src="images/logo.png" style="width: 3rem; margin-right: 0.5rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>

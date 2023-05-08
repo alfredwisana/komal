@@ -213,7 +213,7 @@
 
     <?php require "navbar.php" ?>
 
-    <a id="button" href="#button1"></a>
+    <a id="button" href="#navbar"></a>
 
     <!-- button -->
     <div id="button1" class="row">

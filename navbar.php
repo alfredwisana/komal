@@ -5,7 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 <!-- navabar -->
-<nav class="navbar navbar-expand-lg bg-transparent mb-2">
+<nav class="navbar navbar-expand-lg bg-transparent mb-2" id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img src="images/logo.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

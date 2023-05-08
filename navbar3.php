@@ -15,6 +15,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="home.php" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
                             <li class="nav-item"><a href="about.php" class="nav-link text-uppercase font-weight-bold">About us</a></li>
+                            <li class="nav-item"><a href="catalog.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
                             <li class="nav-item"><a href="login/index.php" class="nav-link text-uppercase font-weight-bold">Login</a></li>
                     </ul>
                 <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">

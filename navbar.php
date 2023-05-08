@@ -13,15 +13,13 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent"style="width: 3rem;">
-                <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
-                </ul>
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-end mb-lg-0">
                     <li class="nav-item active"><a href="index.php" class="nav-link text-uppercase font-weight-bold">Home</a></li>
-                            <li class="nav-item"><a href="About_us.php" class="nav-link text-uppercase font-weight-bold">About us</a></li>
-                            <li class="nav-item"><a href="katalog/index.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
-                            <li class="nav-item"><a href="login/index.php" class="nav-link text-uppercase font-weight-bold">Login</a></li>
-                    </ul>
+                        <li class="nav-item"><a href="About_us.php" class="nav-link text-uppercase font-weight-bold">About us</a></li>
+                        <li class="nav-item"><a href="katalog/index.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
+                        <li class="nav-item"><a href="login/index.php" class="nav-link text-uppercase font-weight-bold">Login</a></li>
+                </ul>
             </div>
         </div>
     </nav>

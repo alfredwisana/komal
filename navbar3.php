@@ -14,7 +14,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent"style="width: 3rem;">
-                <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
+                <ul class="navbar-nav me-auto mb-5 d-flex justify-content-center mb-lg-0">
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="../index.php" class="nav-link text-uppercase font-weight-bold">Home</a></li>

@@ -63,14 +63,14 @@ require 'connect.php'
 
 		<div id="menu">
 			<ul>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="https://www.asus.com"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
 			</ul>
 		</div>
 	</div>

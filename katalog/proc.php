@@ -5,6 +5,7 @@ if (isset($_POST['cat'])) {
 
     $cat = $_POST['cat'];
     if ($cat == 'semua') {
+        // Jika mengambil semua
         $sql = "SELECT * FROM produk";
         $result = mysqli_query($con, $sql);
 

@@ -44,7 +44,7 @@ if (isset($_POST['cat'])) {
         echo '<div class="row">';
 
         $counter = 1;
-
+        // perbaiki katalog
         while ($row = mysqli_fetch_assoc($result)) {
 
             echo "<div class='col-lg-4 col-md-6 col-sm-12 mb-4'>

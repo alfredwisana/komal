@@ -78,31 +78,9 @@ while ($row = mysqli_fetch_array($result)) {
 
     <body>
         <!-- navabar -->
-        <nav class="navbar navbar-expand-lg mb-5" style="background-color:#d9b4e2">
-            <div class="container-fluid">
-                <a class="nav-link active" aria-current="page" href="index.php">
-                    <h1 class="navbar-brand">Berkah Jaya</h1><a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-5 col d-flex justify-content-center mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                    </li>
-                </ul> -->
-                        <!--<form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav mb-5 d-flex mb-lg-0" id="loginlink">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="login.php">Login</a>
-                    </li>
-                </ul> -->
-            </div>
-            </div>
-        </nav>
+        <?php
+            include "../navbar3.php"
+        ?>
 
         <form method='post'>
             <input onclick='goBack()' type='button' value='Back' />

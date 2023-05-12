@@ -22,6 +22,8 @@ require '../connect.php';
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
 
     <style>
         body {
@@ -40,11 +42,11 @@ require '../connect.php';
             padding-right: 10%;
             padding-top: 3.125rem;
             padding-bottom: 3.125rem;
-            background-color: rgb(200, 211, 184);
+            background-color: rgb(201, 160, 220);
             border-radius: 1.25rem;
         }
         button {
-          --color: #9AAF7D;
+          --color: #b47bce;
           font-family: inherit;
           display: inline-block;
           width: 6em;
@@ -87,7 +89,7 @@ require '../connect.php';
         }
         .input input {
           border-radius: 10px;
-          outline: 2px solid #9AAF7D;
+          outline: 2px solid #b47bce;
           border: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           background-color: #edf0e7;
@@ -108,17 +110,17 @@ require '../connect.php';
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
           <div class="form">
-            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;">Login</h2>
+            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;font-family:coolvetica;">Login</h2>
             <div class="input">
-                <input type="text" class="form-control" id="username"  placeholder="Username">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <input type="text" class="form-control" id="username"  placeholder="Username" style="font-family:coolvetica">
+                <div id="emailHelp" class="form-text" style="font-family:coolvetica">We'll never share your email with anyone else.</div>
             </div>
             <div class="input" style="padding-top:30px;">
                 <input type="password" class="form-control" id="password"  placeholder="Password">
             </div>
-            <p style="padding-top: 3%;"><a href="../index.php">Back to Home page</a></p>
+            <p style="padding-top: 3%;"><a href="../index.php" style="font-family:coolvetica; text-decoration:none;">Back to Home page</a></p>
             <div class="text-center">
-                <button id="login">Login</button>
+                <button id="login" style="font-family:coolvetica">Login</button>
             </div>
           </div>
     </div>

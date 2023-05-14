@@ -320,9 +320,9 @@ require '../connect.php'
                                     <h5 class="card-title">
                                         <?php echo $row['namaServis'] ?>
                                     </h5>
-                                    <p class="card-text">
+                                    <!-- <p class="card-text">
                                         <?php echo $row['deskripsi'] ?>
-                                    </p>
+                                    </p> -->
                                     <p class="card-price">Rp
                                         <?php echo $row['harga'] ?>
                                     </p>

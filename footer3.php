@@ -14,15 +14,11 @@
 
     <style>
     .vertical{
-     /*mengatur display pembungkus tag hr*/
      display: flex;
     }
     .hr{
-     /*mengatur tinggi minimal garis*/
      min-height: 100%;
-     /*mengatur tinggi maksimal garis*/
      max-height: 100vh;
-     /*mengatur margin garis*/
      margin: 0;
     }
     </style>

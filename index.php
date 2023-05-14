@@ -21,7 +21,7 @@ require 'connect.php'
 
 	<div id="topnav">
 		<?php
-		require 'navbar4.php';
+		require 'navbar.php';
 		?>
 	</div>
 	<div class="content">

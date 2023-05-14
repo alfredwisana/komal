@@ -29,24 +29,44 @@ require 'connect.php'
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
 					<img src="images/carousel1.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
+					<div class="absolute-div">
+						<div class="carousel-caption">
+							<h3>Menyediakan Beragam Perlengkapan Untuk Bayi</h3>
+						</div>
+					</div>
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
 					<img src="images/carousel2.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
+					<div class="absolute-div">
+						<div class="carousel-caption">
+							<h3>Menyediakan Beragam Perlengkapan Untuk Bayi</h3>
+						</div>
+					</div>
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
 					<img src="images/carousel3.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
+					<div class="absolute-div">
+						<div class="carousel-caption">
+							<h3>Menyediakan Beragam Perlengkapan Untuk Bayi</h3>
+						</div>
+					</div>
 				</div>
 
 				<div class="carousel-item">
 					<!-- to make an image as an access to link put the image inside the a and make 
                          sure it has the img-responsive class -->
 					<img src="images/carousel4.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
+					<div class="absolute-div">
+						<div class="carousel-caption">
+							<h3>Menyediakan Beragam Perlengkapan Untuk Bayi</h3>
+						</div>
+					</div>
 				</div>
 			</div>
 

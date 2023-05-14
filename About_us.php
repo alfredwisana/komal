@@ -362,7 +362,7 @@
     </div>
     <div class="col-sm-12">
         <?php
-        require "footer.php";
+        require "footer3.php";
         ?>
     </div>
 

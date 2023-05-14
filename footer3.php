@@ -4,7 +4,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="../style3.css">
+    <link rel="stylesheet" href="style3.css">
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -14,18 +14,22 @@
 
     <style>
     .vertical{
+     /*mengatur display pembungkus tag hr*/
      display: flex;
     }
     .hr{
+     /*mengatur tinggi minimal garis*/
      min-height: 100%;
+     /*mengatur tinggi maksimal garis*/
      max-height: 100vh;
+     /*mengatur margin garis*/
      margin: 0;
     }
     </style>
 
     <footer>
         <div>
-            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
+            <p style="text-align:justify;"><img src="images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
             <h3 style="margin-left: 45%; margin-top: -85px; margin-bottom: 30px;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
@@ -56,7 +60,7 @@
                 </div>
             <hr />
 
-                <div class="col-3" id="newsletter" style="margin-left: 10%;">
+            <div class="col-3" id="newsletter" style="margin-left: 10%;">
                 <span style="margin-left: -20%;">Follow Us</span>
                   <div class="footer-icons"style="margin-left: -20%;">
                     <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:3rem; weight:3rem; margin-top: -0.4rem;"></a>
@@ -72,7 +76,7 @@
             </div>        
         </div>
 
-       <div id="center" style="text-align: center;">
+        <div id="center" style="text-align: center;">
        <ul class="footer-cat-links">
         <a href="home.php">Home</a>
         |
@@ -81,14 +85,14 @@
         <a href="katalog/index.php">Catalog</a>
         |
         <a href="https://web.whatsapp.com/">Contact</a>
-       </ul>
-       <a href="#" id="gotop" rel="nofollow" name="gotop">^Back To Top^</a>
-       <br>
-       </br>
-       </div>
+      </ul>
+      <a href="#" id="gotop" rel="nofollow" name="gotop">Back To Top</a>
+      <br>
+      </br>
+      </div>
 
         <div id="copyright">
-            Copyright ©2023
+            Copyright Â©2023
         </div>
         
         <div id="owner">

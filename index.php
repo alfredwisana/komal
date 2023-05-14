@@ -123,7 +123,7 @@ require 'connect.php'
 
 
 	<?php
-	require 'footer.php';
+	require 'footer3.php';
 	?>
 </body>
 

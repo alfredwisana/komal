@@ -7,6 +7,20 @@ body {
     margin: 0;
 }
 
+section {
+    text-align: justify;
+    padding: 0 2em 2em;
+}
+
+
+
+.dummy-text {
+    color: #3c3b3b;
+    font-family: lato;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
 .col-6 {
     width:50%;
     display: inline-table;
@@ -146,6 +160,7 @@ footer span{
                 text-align:center;
             }
 
+            
 
     #copyright {
         text-align: center;
@@ -171,62 +186,3 @@ a#gotop{
   font-size:20px;
 color:#17202A;}
 
-/* iPads to Smartphone for Common Elements ----------- */  
-@media only screen and (max-width : 1024px) {    
-
-    .col-3 {
-        display: block;
-        width: 100%;
-        padding-bottom: 1em;
-        position: relative;
-    }
-
-    .col-3#newsletter {
-        width: 100%;
-        position: relative;
-        padding-bottom: 0;
-        padding-top: 1em;
-    }    
-        
-    footer .footer-cat {
-        margin-left: 25px;
-    }
-     
-    .footer-toggle,.footer-toggle::after {
-        background: #fff;
-        height: 2px;
-        width: 15px;
-        position: absolute;
-        display: block;
-        -webkit-transition:all .4s ease-in;
-        transition:all .4s ease-in;
-    }
-
-    .footer-toggle {        
-        top: 11px;
-        cursor:pointer;
-    }
-
-    .footer-toggle::after {
-        content: '';
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-    }
-	
-a#gotop{
-  height:16px;
-  display:block;
-  margin:5px 15px 0 0;
-  text-decoration:none;
-  font-size:20px
-  color:#17202A;}
-
-footer h3{
-	color: #6C3483;
-	font: normal 42px 'Cookie', cursive;
-	padding-left: 1.2em;
-}
-
-footer h3 span{
-	color:  #17202A;
-}

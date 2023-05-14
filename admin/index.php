@@ -57,6 +57,9 @@ $result = mysqli_query($con, $query);
             height: fit-content;
             position: relative;
 
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
         }
 
         /* custom scrollbar */
@@ -208,7 +211,7 @@ $result = mysqli_query($con, $query);
 
                 <br><br>
 
-                <!-- Cari categpry -->
+                <!-- Cari category -->
                 <a>Search Category</a>
                 <form action="index.php" method="post" enctype="multipart/form-data">
                     <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
@@ -286,6 +289,7 @@ $result = mysqli_query($con, $query);
 
         </div>
 
+        <!-- <div style="height:1rem; background-color:orange;"></div> -->
         <?php require '../footer2.php'; ?>
     </div>
 

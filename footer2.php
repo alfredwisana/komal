@@ -60,7 +60,7 @@
                     <span>Follow Us</span>
                     <div class="footer-icons">
                     <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
-                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src=".../images/insta.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
+                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="../images/insta.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
                     <!-- tokped-->
                     <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:2rem; weight:2rem; margin-top: -0.2rem;"></a>
                     <!-- shopee-->

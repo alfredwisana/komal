@@ -59,12 +59,12 @@
                 <div class="col-3" id="newsletter" style="margin-left: 50px;">
                     <span>Follow Us</span>
                     <div class="footer-icons">
-                    <a href="https://whatsapp.com"><img src="./images/wa.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
-                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="./images/insta.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>
+                    <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:3rem; weight:3rem; margin-top: -0.4rem;"></a>
+                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="../images/insta.png" style="height:3rem; weight:3rem; margin-top: -0.4rem;"></a>
                     <!-- tokped-->
-                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="./images/tokped.png" style="height:2rem; weight:2rem; margin-top: -0.2rem;"></a>
+                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:4rem; weight:4rem; margin-top: -0.4rem;"></a>
                     <!-- shopee-->
-                    <a href="https://shp.ee/trzp2g6"><img src="./images/shopee.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.3rem;"></a>
+                    <a href="https://shp.ee/trzp2g6"><img src="../images/shopee.png" style="height:3rem; weight:3rem; margin-top: -0.6rem;"></a>
                     <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     
@@ -72,20 +72,20 @@
             </div>        
         </div>
 
-        <center>
-        <ul class="footer-cat-links">
-            <a href="index.php">Home</a>
-            |
-            <a href="About_us.php">About</a>
-            |
-            <a href="katalog/index.php">Catalog</a>
-            |
-            <a href="https://web.whatsapp.com/">Contact</a>
-        </ul>
-        <a href="#" id="gotop" rel="nofollow" name="gotop">Back To Top</a>
-        <br>
-        </br>
-        </center>
+       <div id="center" style="text-align: center;">
+       <ul class="footer-cat-links">
+        <a href="home.php">Home</a>
+        |
+        <a href="about.php">About</a>
+        |
+        <a href="katalog/index.php">Catalog</a>
+        |
+        <a href="https://web.whatsapp.com/">Contact</a>
+      </ul>
+      <a href="#" id="gotop" rel="nofollow" name="gotop">^Back To Top^</a>
+      <br>
+      </br>
+      </div>
 
         <div id="copyright">
             Copyright ©2023

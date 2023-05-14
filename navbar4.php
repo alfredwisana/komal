@@ -7,7 +7,7 @@
 
 <style>
     h5{
-        font: normal 33px 'Cookie', cursive;
+        font: normal 30px 'Cookie', cursive;
     }
     #info{
         font-size: 18px;

@@ -40,11 +40,6 @@ if (!isset($_SESSION['username'])) {
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
-        #wrapper {
-            background-color: #EEE7D3;
-
-        }
-
         /* custom scrollbar */
         /* width */
         ::-webkit-scrollbar {

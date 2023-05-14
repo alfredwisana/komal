@@ -4,7 +4,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../style3.css">
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -25,7 +25,7 @@
 
     <footer>
         <div>
-            <p style="text-align:justify;"><img src="images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
+            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
             <h3 style="margin-left: 45%; margin-top: -85px; margin-bottom: 30px;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>

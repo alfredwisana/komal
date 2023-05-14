@@ -6,10 +6,10 @@
 <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 <style>
-    h5{
+    nav h5{
         font: normal 30px 'Cookie', cursive;
     }
-    #info{
+    nav #info{
         font-size: 18px;
         font-family: cursive;
         font-weight: bold;

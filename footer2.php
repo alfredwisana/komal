@@ -56,7 +56,7 @@
                 </div>
             <hr />
 
-                <div class="col-3" id="newsletter" style="margin-left: 50px;">
+                <div class="col-3" id="newsletter" style="margin-left: 10%;">
                     <span>Follow Us</span>
                     <div class="footer-icons">
                     <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:1.5rem; weight:1.5rem; margin-top: -0.2rem;"></a>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 04:25 PM
+-- Generation Time: May 14, 2023 at 05:05 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -103,9 +103,9 @@ INSERT INTO `produk` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`, `categ
 (39, 'Dress pink', 'Dress berwarna pink. Dress untuk anak perempuan. Dress nyaman untuk dipakai. Dress dapat dipakai saat bepergian. <br> Size yang tersedia: S  (Panjang: 40 cm ; LP: 50 cm), M (Panjang: 42.5 cm ; LP: 52 cm), L (Panjang: 45 cm ; LP: 54 cm), XL (panjang: 47.5 cm; LP: 56 cm)', 80000, '../images/catalog_baju/dress3.jpg', 'Dress'),
 (40, 'Dress kuning', 'Dress berwarna kuning. Dress untuk anak perempuan. Dress nyaman untuk dipakai. Terdapat gambar kucing pada dress. Dress dapat dipakai saat bepergian. <br> Size yang tersedia: S  (Panjang: 40 cm ; LP: 50 cm), M (Panjang: 42.5 cm ; LP: 52 cm), L (Panjang: 45 cm ; LP: 54 cm), XL (panjang: 47.5 cm; LP: 56 cm)', 80000, '../images/catalog_baju/dress4.jpg', 'Dress'),
 (41, 'Set kaos Rock City dan celana pendek', 'Set kaos Rock and City dan Celana pendek.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 140000, '../images/catalog_baju/set1.jpg', 'Set'),
-(42, 'Set kaos Buaya dan celana pendek jeans', 'Set kaos Buaya dan celana pendek jeans.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 140000, '../images/catalog_baju/set2.jpg', 'Set'),
-(43, 'Set kaos tanpa lengan Dinosaurus dan celana pendek abu-abu', 'Set kaos tanpa lengan Dinosaurus dan celana pendek abu-abu.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 120000, '../images/catalog_baju/set3.jpg', 'Set'),
-(44, 'Set kemeja, rompi, dasi dan celana pendek', 'Set kemeja, rompi, dasi dan celana pendek.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 150000, '../images/catalog_baju/set4.jpg', 'Set'),
+(42, 'Set kaos Buaya dan celana', 'Set kaos Buaya dan celana pendek jeans.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 140000, '../images/catalog_baju/set2.jpg', 'Set'),
+(43, 'Set sleeveless shirt Dino & celana', 'Set kaos tanpa lengan Dinosaurus dan celana pendek abu-abu.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 120000, '../images/catalog_baju/set3.jpg', 'Set'),
+(44, 'Set fancy fashion', 'Set kemeja, rompi, dasi dan celana pendek.<br>Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)', 150000, '../images/catalog_baju/set4.jpg', 'Set'),
 (45, 'Sarung tangan bayi', '1 pasang sarung tangan bayi dengan motif. Sarung tangan ini sangat nyaman dipakai.', 10000, '../images/catalog_baju/aksesoris1.jpg', 'Aksesoris'),
 (46, 'Topi doraemon', 'Topi dengan gambar doraemon.', 13500, '../images/catalog_baju/aksesoris2.jpg', 'Aksesoris'),
 (47, 'Sandal bayi', '1 pasang sandal bayi berwarna merah dari brand Dulux. Sandal ini terbuat dari bahan-bahan yang berkualitas', 23000, '../images/catalog_baju/aksesoris3.jpg', 'Aksesoris'),
@@ -119,7 +119,7 @@ INSERT INTO `produk` (`id`, `namaServis`, `deskripsi`, `harga`, `gambar`, `categ
 (57, 'Cussons Baby Shampoo', 'Cussons Baby Shampoo (Almond Oil & Honey) 100 + 100 ml. For soft and moisturized baby\'s hair.', 6500, '../images/catalog_baju/kbthn_bayi6.jpg', 'Kebutuhan Bayi'),
 (58, 'Johnson\'s Baby Shampoo', 'Johnson\'s Baby Shampoo 200 ml. Ultra gentle for baby\'s hair mild on eyes.', 24500, '../images/catalog_baju/kbthn_bayi7.jpg', 'Kebutuhan Bayi'),
 (59, 'Pigeons Botol susu', 'Pigeons botol susu dengan motif cherry (BPA Free)', 37500, '../images/catalog_baju/kbthn_bayi8.jpg', 'Kebutuhan Bayi'),
-(60, 'Botol susu beruang luar angkasa', 'Botol susu yang bermotif beruang di luar angkasa.', 24500, '../images/catalog_baju/kbthn_bayi9.jpg', 'Kebutuhan Bayi'),
+(60, 'Botol susu beruang space', 'Botol susu yang bermotif beruang di luar angkasa.', 24500, '../images/catalog_baju/kbthn_bayi9.jpg', 'Kebutuhan Bayi'),
 (61, 'Botol susu singa', 'Botol susu yang bermotif singa.', 30000, '../images/catalog_baju/kbthn_bayi10.jpg', 'Kebutuhan Bayi'),
 (62, 'Baby Huki Botol susu', 'Babu Huki botol susu dengan gambar anak-anak.', 26000, '../images/catalog_baju/kbthn_bayi11.jpg', 'Kebutuhan Bayi');
 

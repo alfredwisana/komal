@@ -159,32 +159,35 @@ require '../connect.php'
         .separator {
             display: none;
         }
+        .col-lg-2 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
     }
 
-        @media screen and (max-width: 768px) {
-            /* Tampilkan filter di atas halaman produk pada layar mobile */
+        @media screen and (max-width: 991px) {
             .filter-container {
                 display: block;
             }
-
-            /* Sembunyikan filter sidebar pada layar mobile */
             .sidebar {
                 display: none;
             }
-
-            /* Menghapus garis di layar mobile */
             .container::before {
                 display: none;
             }
             .separator {
-            display: none; /* Menghapus garis pada layar kecil */
+            display: none; 
             }
-            
+            .row .col-lg-2 {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
             .col-10 {
-                margin-left: 0; /* Mengatur margin ke 0 pada layar mobile */
-                justify-content: flex-start; /* Mengatur konten kembali ke posisi awal */
+                margin-left: 0; 
+                justify-content: flex-start; 
             }
         }
+        
 
         .separator {
         border-right: 1px solid #ccc;
@@ -297,34 +300,6 @@ require '../connect.php'
         bottom: 5px;
         }
 
-        @media screen and (min-width: 576px) {
-        .col-sm-6,
-        .col-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        }
-
-        @media screen and (min-width: 768px) {
-        .col-md-3 {
-            flex: 0 0 33.33%;
-            max-width: 33.33%;
-        }
-        }
-
-        @media screen and (min-width: 992px) {
-        .col-lg-2 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-        }
-
-        @media screen and (max-width: 576px) {
-        .container {
-            padding: 0 10px;
-        }
-        }
-
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -357,74 +332,79 @@ require '../connect.php'
 </head>
 
 <body style="background-color:#EAD7c3;">
-    <!-- navbar -->
-    <?php
-    require "../navbar3.php";
-    ?>
-    <div class="container" style="margin-left: 0; margin-right: 0; max-width: 1655px; margin: 30px;">
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="filter-sidebar">
-                    <h5>Katalog</h5>
-                    <div class='catalog-item'>
-                        <li class='category' id='semua'><a>semua</a></li>
-                    </div>
-                    <?php
-                    $sql = "SELECT * FROM category";
-                    $stmt = $con->prepare($sql);
-                    $stmt->execute();
-                    $res = $stmt->get_result();
+        <!-- navabar -->
+        <?php
+        require "../navbar3.php";
+        ?>
+        <div class="container" style="margin-left: 0; margin-right: 0; max-width: 1655px; margin: 30px;">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="filter-sidebar">
+                        <h5>Katalog</h5>
+                        <div class='catalog-item'>
+                            <li class ='category' id ='semua'><a>semua</a></li>
+                        </div>
+                        <?php 
+                        $sql = "SELECT *  FROM category";
+                        $stmt = $con->prepare($sql);
+                        $stmt->execute();
+                        $res = $stmt->get_result();
 
-                    while ($row = $res->fetch_assoc()) {
-                        echo "<div class='catalog-item'>";
-                        echo "<li class='category' id='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
-                        echo "</div>";
+                        
+
+                        while($row = $res -> fetch_assoc()){
+                            echo "<div class='catalog-item'>";
+                            echo "<li class ='category' id ='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
+                            echo "</div>";
+                            
+                        }
+
+                        ?>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-12 seperator" id = "katalog" style="padding-left: 100px;">
+                    <?php
+                    // Query untuk mengambil data barang dari database
+                    $sql = "SELECT * FROM produk";
+                    $result = mysqli_query($con, $sql);
+
+                    // Memulai pembukaan tag div untuk row
+                    echo '<div class="row">';
+
+                    $counter = 1;
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        if ($counter % 6 == 0 && $counter != 0) {
+                            echo '</div><div class="row">';
+                        }
+                        ?>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <?php echo $row['namaServis'] ?>
+                                    </h5>
+                                    <p class="card-price">Rp
+                                        <?php echo $row['harga'] ?>
+                                    </p>
+                                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        $counter++;
                     }
+    
+                    echo '</div>';
                     ?>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-9 col-sm-12 seperator" style="padding-left: 100px;">
-                <?php
-                // Query untuk mengambil data barang dari database
-                $sql = "SELECT * FROM produk";
-                $result = mysqli_query($con, $sql);
-
-                $counter = 0;
-
-                echo '<div class="row">';
-
-                while ($row = mysqli_fetch_assoc($result)) {
-                    if ($counter % 6 == 0 && $counter != 0) {
-                        echo '</div><div class="row">';
-                    }
-                    ?>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <div class="card">
-                            <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <?php echo $row['namaServis'] ?>
-                                </h5>
-                                <p class="card-price">Rp
-                                    <?php echo $row['harga'] ?>
-                                </p>
-                                <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                    $counter++;
-                }
-
-                echo '</div>';
-                ?>
-            </div>
         </div>
-    </div>
-    <?php
-    require '../footer2.php';
-    ?>
-</body>
+        <?php
+        require '../footer2.php';
+        ?>
+    </body>
 </html>
 
 
@@ -449,3 +429,43 @@ require '../connect.php'
         })
     })
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const categories = document.querySelectorAll('.category');
+        const semua = document.querySelector('#semua');
+
+        categories.forEach(category => {
+            category.addEventListener('click', function() {
+                categories.forEach(category => category.classList.remove('selected'));
+                this.classList.add('selected');
+
+                const selectedCategory = this.id;
+
+                // Kode tambahan: Mengatur tampilan produk berdasarkan kategori yang dipilih
+                const products = document.querySelectorAll('.card');
+
+                products.forEach(product => {
+                    if (selectedCategory === 'semua') {
+                        product.style.display = 'block';
+                    } else {
+                        const category = product.getAttribute('data-category');
+                        if (category === selectedCategory) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        semua.addEventListener('click', function() {
+            categories.forEach(category => category.classList.remove('selected'));
+            this.classList.add('selected');
+
+            const products = document.querySelectorAll('.card');
+            products.forEach(product => product.style.display = 'block');
+        });
+    });
+</script>
+

@@ -342,7 +342,7 @@ require '../connect.php'
                     <div class="filter-sidebar">
                         <h5>Katalog</h5>
                         <div class='catalog-item'>
-                            <li class ='category' id ='semua'><a>semua</a></li>
+                            <li class ='category' id ='semua'><a>Semua</a></li>
                         </div>
                         <?php 
                         $sql = "SELECT *  FROM category";
@@ -371,32 +371,35 @@ require '../connect.php'
                     // Memulai pembukaan tag div untuk row
                     echo '<div class="row">';
 
-                    $counter = 1;
+                    $counter = 0;
+                    $cardPerRow = 4;
 
                     while ($row = mysqli_fetch_assoc($result)) {
-                        if ($counter % 6 == 0 && $counter != 0) {
-                            echo '</div><div class="row">';
+                        if ($counter % $cardPerRow == 0) {
+                            echo '<div class="row">';
                         }
                         ?>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card">
                                 <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php echo $row['namaServis'] ?>
-                                    </h5>
-                                    <p class="card-price">Rp
-                                        <?php echo $row['harga'] ?>
-                                    </p>
+                                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
+                                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
                                     <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
                                 </div>
                             </div>
                         </div>
                         <?php
                         $counter++;
+
+                        if ($counter % $cardPerRow == 0) {
+                            echo '</div>';
+                        }
                     }
-    
-                    echo '</div>';
+
+                    if ($counter % $cardPerRow != 0) {
+                        echo '</div>';
+                    }
                     ?>
                 </div>
             </div>

@@ -23,7 +23,7 @@
 </style>
 
 <!-- navabar -->
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light" style="max-height: 3rem;">
         <div class="container-fluid">
             <img src="images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>
@@ -38,7 +38,7 @@
                             <li class="nav-item"><a href="About_us.php" class="nav-link text-uppercase font-weight-bold">About us</a></li>
                             <li class="nav-item"><a href="katalog/index.php" class="nav-link text-uppercase font-weight-bold">Catalog</a></li>
                 </ul>
-                <div class="footer-icons">
+                <div class="navbar-icons">
                     <a href="login/index.php"><i class="fa-solid fa-circle-user fa-2xl" style="color: black;"></i></a>
                 </div>
             </div>

@@ -44,122 +44,123 @@ require '../connect.php'
 
     <style>
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 10px;
-            position: relative;
-        }
-        .col-lg-2,
-        .col-md-3,
-        .col-sm-6,
-        .col-6 {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        position: relative;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .col-lg-2,
+    .col-md-3,
+    .col-sm-6,
+    .col-6 {
         position: relative;
         width: 100%;
         padding: 0 15px;
-        }
+    }
 
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 17%;
-            border-left: 2px solid #000;
-            transform: translateX(-50%);
-        }
+    .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 17%;
+        border-left: 2px solid #000;
+        transform: translateX(-50%);
+    }
 
-        .row > div:nth-child(2),
-        .row > div:nth-child(10) {
-            position: relative;
-            z-index: 1;
-        }
+    .row>div:nth-child(2),
+    .row>div:nth-child(10) {
+        position: relative;
+        z-index: 1;
+    }
 
-        .col-2 {
-            width: calc(24% - 100px);
-            margin: 10px;
-            position: absolute;
-            top: 1;
-            left: 0;
-            background-color: #eee;
-            padding: 10px;
-            box-sizing: border-box;
-            height: 100%;
-        }
+    .col-2 {
+        width: calc(16.6667% - 30px);
+        margin: 15px;
+        position: relative;
+        background-color: #eee;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 100%;
+    }
 
-        .col-10 {
-            width: calc(76%);
-            margin-left: 250px;
-            padding: 5px;
-            box-sizing: border-box;
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end; /* Menggeser konten ke kanan */
-        }
+    .col-10 {
+        width: calc(83.3333% - 30px);
+        padding: 5px;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
 
-        .row {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-        }
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        .col {
-            width: calc(33.33% - 20px);
-            margin: 20px;
-            background-color: #ddd;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+    .col {
+        width: calc(33.33% - 30px);
+        margin: 15px;
+        background-color: #ddd;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-        /* Filter sidebar */
-        .sidebar {
-            width: 25%;
-            float: left;
-        }
+    /* Filter sidebar */
+    .sidebar {
+        width: 25%;
+        float: left;
+    }
 
-        /* Filter label */
-        .filter-label {
-            font-weight: bold;
-            margin-top: 20px;
-        }
+    /* Filter label */
+    .filter-label {
+        font-weight: bold;
+        margin-top: 20px;
+    }
 
-        /* Filter checkbox */
-        .filter-checkbox {
-            margin-bottom: 10px;
-        }
+    /* Filter checkbox */
+    .filter-checkbox {
+        margin-bottom: 10px;
+    }
 
-        /* Filter button */
-        .filter-button {
-            display: block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    /* Filter button */
+    .filter-button {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        /* Filter button hover */
-        .filter-button:hover {
-            background-color: #0069d9;
-        }
+    /* Filter button hover */
+    .filter-button:hover {
+        background-color: #0069d9;
+    }
 
-        /* Filter di atas halaman produk */
-        .filter-container {
-            display: none;
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
+    /* Filter di atas halaman produk */
+    .filter-container {
+        display: none;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
 
-        @media screen and (max-width: 992px) {
+    @media screen and (max-width: 992px) {
         .container::before {
             display: none;
         }
         .separator {
-        display: none; /* Menghapus garis pada layar kecil */
+            display: none;
         }
-        }
+    }
+
         @media screen and (max-width: 768px) {
             /* Tampilkan filter di atas halaman produk pada layar mobile */
             .filter-container {
@@ -293,6 +294,7 @@ require '../connect.php'
         height: 40px; /* Atur tinggi tetap untuk title, harga, dan button */
         display: flex;
         align-items: center;
+        bottom: 5px;
         }
 
         @media screen and (min-width: 576px) {
@@ -354,21 +356,21 @@ require '../connect.php'
     </script>
 </head>
 
-<body style="background-color:#EAD7c3; ">
+<body style="background-color:#EAD7c3;">
     <!-- navbar -->
     <?php
     require "../navbar3.php";
     ?>
     <div class="container" style="margin-left: 0; margin-right: 0; max-width: 1655px; margin: 30px;">
         <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+            <div class="col-lg-2 col-md-4 col-sm-6">
                 <div class="filter-sidebar">
                     <h5>Katalog</h5>
                     <div class='catalog-item'>
                         <li class='category' id='semua'><a>semua</a></li>
                     </div>
                     <?php
-                    $sql = "SELECT *  FROM category";
+                    $sql = "SELECT * FROM category";
                     $stmt = $con->prepare($sql);
                     $stmt->execute();
                     $res = $stmt->get_result();
@@ -381,21 +383,24 @@ require '../connect.php'
                     ?>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-9 col-sm-12 seperator" style="padding-left: 80px;">
+            <div class="col-lg-10 col-md-9 col-sm-12 seperator" style="padding-left: 100px;">
                 <?php
                 // Query untuk mengambil data barang dari database
                 $sql = "SELECT * FROM produk";
                 $result = mysqli_query($con, $sql);
 
-                $counter = 1;
+                $counter = 0;
 
                 echo '<div class="row">';
 
                 while ($row = mysqli_fetch_assoc($result)) {
+                    if ($counter % 6 == 0 && $counter != 0) {
+                        echo '</div><div class="row">';
+                    }
                     ?>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="card">
-                        <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
+                            <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <?php echo $row['namaServis'] ?>
@@ -408,25 +413,18 @@ require '../connect.php'
                         </div>
                     </div>
                     <?php
-                    if ($counter % 6 == 0) {
-                        echo '</div><div class="row">';
-                    }
                     $counter++;
                 }
 
                 echo '</div>';
                 ?>
             </div>
-            
         </div>
     </div>
     <?php
     require '../footer2.php';
     ?>
 </body>
-
-
-
 </html>
 
 

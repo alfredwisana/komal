@@ -81,16 +81,52 @@ require 'connect.php'
 			</button>
 		</div>
 
+	
+		<div class="container mt-5">
+		<h2 class="text-center mb-4"><b>WHY WE ARE THE BEST IN MARKET</b></h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card d-flex align-items-center" style="height: 300px;">
+						<img class="card-img-top" src="images/price.png" alt="Card image"  style="width: 100px; height: 100px; object-fit: contain;">
+						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
+							<h5 class="card-title">GOOD PRICE</h5>
+							<p class="card-text text-muted">Harga yang bersaing dibandingkan toko-toko yang lain.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card d-flex align-items-center" style="height: 300px;">
+						<img class="card-img-top" src="images/service.png" alt="Card image" style="width: 100px; height: 100px; object-fit: contain;">
+						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
+							<h5 class="card-title">GOOD SERVICE</h5>
+							<p class="card-text text-muted">Service yang sangat baik dan kepuasan kustomer adalah yang utama.</p>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card d-flex align-items-center" style="height: 300px;">
+						<img class="card-img-top" src="images/quality.png" alt="Card image"  style="width: 100px; height: 100px; object-fit: contain; ">
+						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
+								<h5 class="card-title">GOOD QUALITY</h5>
+								<p class="card-text text-muted">Kualitas barang yang terbaik dibanding toko-toko lainnya.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			
 		<div id="menu">
+		<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
 			<ul>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-100" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages" ></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
 			</ul>
 		</div>
 	</div>

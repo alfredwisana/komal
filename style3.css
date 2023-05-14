@@ -23,15 +23,15 @@ footer {
         font-size: 28px;
         font-family: roboto;
     }
-h3{
+footer h3{
 	color: #6C3483;
 	font: normal 43px 'Cookie', cursive;
 	margin: 0;
 }
-h3 span{
+footer h3 span{
 	color:  #17202A;
 }
-span{
+footer span{
 	color:  #17202A;
 	
 }
@@ -221,11 +221,12 @@ a#gotop{
   font-size:20px
   color:#17202A;}
 
-h3{
+footer h3{
 	color: #6C3483;
 	font: normal 42px 'Cookie', cursive;
 	padding-left: 1.2em;
 }
-h3 span{
+
+footer h3 span{
 	color:  #17202A;
 }

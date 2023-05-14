@@ -4,7 +4,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../style3.css">
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 

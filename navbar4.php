@@ -13,6 +13,12 @@
         font-size: 18px;
         font-family: cursive;
         font-weight: bold;
+        margin-left: -200px;
+    }
+    @media only screen and (max-width : 1024px) { 
+        #info{
+            margin-left: 0;
+        }
     }
 </style>
 

@@ -72,20 +72,20 @@
             </div>        
         </div>
 
-        <center>
-        <ul class="footer-cat-links">
-            <a href="index.php">Home</a>
-            |
-            <a href="About_us.php">About</a>
-            |
-            <a href="katalog/index.php">Catalog</a>
-            |
-            <a href="https://web.whatsapp.com/">Contact</a>
-        </ul>
-        <a href="#" id="gotop" rel="nofollow" name="gotop">Back To Top</a>
-        <br>
-        </br>
-        </center>
+       <div id="center" style="text-align: center;">
+       <ul class="footer-cat-links">
+        <a href="home.php">Home</a>
+        |
+        <a href="about.php">About</a>
+        |
+        <a href="katalog/index.php">Catalog</a>
+        |
+        <a href="https://web.whatsapp.com/">Contact</a>
+       </ul>
+       <a href="#" id="gotop" rel="nofollow" name="gotop">^Back To Top^</a>
+       <br>
+       </br>
+       </div>
 
         <div id="copyright">
             Copyright ©2023

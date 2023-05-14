@@ -82,7 +82,7 @@
             |
             <a href="https://web.whatsapp.com/">Contact</a>
         </ul>
-        <a href="#" id="gotop" rel="nofollow" name="gotop">^Back To Top^</a>
+        <a href="#" id="gotop" rel="nofollow" name="gotop">Back To Top</a>
         <br>
         </br>
         </center>

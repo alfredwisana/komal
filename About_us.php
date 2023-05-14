@@ -360,7 +360,7 @@
             </div>
         </center>
     </div>
-    <div class="col-sm-12">
+    <div class="container-fluid col-sm-12">
         <?php
         require "footer3.php";
         ?>

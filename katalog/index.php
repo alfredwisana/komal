@@ -50,120 +50,110 @@ require '../connect.php'
         position: relative;
         margin-left: -15px;
         margin-right: -15px;
-    }
+        }
 
-    .col-lg-2,
-    .col-md-3,
-    .col-sm-6,
-    .col-6 {
-        position: relative;
-        width: 100%;
-        padding: 0 15px;
-    }
+        .col-lg-2,
+        .col-md-3,
+        .col-sm-6,
+        .col-6 {
+            position: relative;
+            width: 100%;
+            padding: 0 15px;
+        }
 
-    .container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 17%;
-        border-left: 2px solid #000;
-        transform: translateX(-50%);
-    }
+        .row>div:nth-child(2),
+        .row>div:nth-child(10) {
+            position: relative;
+            z-index: 1;
+        }
 
-    .row>div:nth-child(2),
-    .row>div:nth-child(10) {
-        position: relative;
-        z-index: 1;
-    }
+        .col-2 {
+            width: calc(16.6667% - 30px);
+            margin: 15px;
+            position: relative;
+            background-color: #eee;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 100%;
+        }
 
-    .col-2 {
-        width: calc(16.6667% - 30px);
-        margin: 15px;
-        position: relative;
-        background-color: #eee;
-        padding: 10px;
-        box-sizing: border-box;
-        height: 100%;
-    }
+        .col-10 {
+            width: calc(83.3333% - 30px);
+            padding: 5px;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
 
-    .col-10 {
-        width: calc(83.3333% - 30px);
-        padding: 5px;
-        box-sizing: border-box;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    .row {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
+        .col {
+            width: calc(33.33% - 30px);
+            margin: 15px;
+            background-color: #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .col {
-        width: calc(33.33% - 30px);
-        margin: 15px;
-        background-color: #ddd;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+        /* Filter sidebar */
+        .sidebar {
+            width: 25%;
+            float: left;
+        }
 
-    /* Filter sidebar */
-    .sidebar {
-        width: 25%;
-        float: left;
-    }
+        /* Filter label */
+        .filter-label {
+            font-weight: bold;
+            margin-top: 20px;
+        }
 
-    /* Filter label */
-    .filter-label {
-        font-weight: bold;
-        margin-top: 20px;
-    }
+        /* Filter checkbox */
+        .filter-checkbox {
+            margin-bottom: 10px;
+        }
 
-    /* Filter checkbox */
-    .filter-checkbox {
-        margin-bottom: 10px;
-    }
+        /* Filter button */
+        .filter-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    /* Filter button */
-    .filter-button {
-        display: block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+        /* Filter button hover */
+        .filter-button:hover {
+            background-color: #0069d9;
+        }
 
-    /* Filter button hover */
-    .filter-button:hover {
-        background-color: #0069d9;
-    }
-
-    /* Filter di atas halaman produk */
-    .filter-container {
-        display: none;
-        background-color: #f2f2f2;
-        padding: 10px;
-    }
-
-    @media screen and (max-width: 992px) {
-        .container::before {
+        /* Filter di atas halaman produk */
+        .filter-container {
             display: none;
+            background-color: #f2f2f2;
+            padding: 10px;
         }
-        .separator {
-            display: none;
+
+        @media screen and (max-width: 992px) {
+            .container::before {
+                display: none;
+            }
+            .separator {
+                display: none;
+            }
+            .col-lg-2 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
         }
-        .col-lg-2 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-    }
 
         @media screen and (max-width: 991px) {
             .filter-container {
@@ -190,9 +180,9 @@ require '../connect.php'
         
 
         .separator {
-        border-right: 1px solid #ccc;
+        border-left: 2px solid #000;
+        border-bottom-width: 1px;
         height: 100%;
-        margin-right: 20px;
         }
 
         .filter-sidebar {
@@ -315,8 +305,17 @@ require '../connect.php'
         .btn:hover {
             background-color: #beafe1;
         }
+        
+        footer {
+            width: 100%;
+            position: static;
+            background-color: #f1f1f1;
+            z-index: 9999; /* Nilai z-index yang lebih tinggi */
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+        }
 
-        */
     </style>
     <script>
         // Tampilkan atau sembunyikan filter di atas halaman produk pada layar mobile
@@ -336,7 +335,7 @@ require '../connect.php'
         <?php
         require "../navbar3.php";
         ?>
-        <div class="container" style="margin-left: 0; margin-right: 0; max-width: 1655px; margin: 30px;">
+        <div class="container" style="max-width: 2000px; ">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="filter-sidebar">
@@ -362,7 +361,7 @@ require '../connect.php'
                         ?>
                     </div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-sm-12 seperator" id = "katalog" style="padding-left: 100px;">
+                <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
                     <?php
                     // Query untuk mengambil data barang dari database
                     $sql = "SELECT * FROM produk";

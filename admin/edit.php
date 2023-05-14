@@ -120,7 +120,7 @@ while ($row = mysqli_fetch_array($result)) {
         <div class="container">
             <div class="row mt-5 mb-5">
                 <div class="col">
-                    <img src="<?php echo $gambar ?>" alt="" style="max-width:25rem; max-height:25rem;">
+                    <img src="<?php echo $gambar ?>" alt="" style="max-width:20rem; max-height:20rem;">
                 </div>
                 <div class="col">
                     <div class="row">
@@ -194,7 +194,7 @@ while ($row = mysqli_fetch_array($result)) {
                             </div>
 
                             <div class="row mt-5">
-                                <button class="button" id="aubutton" style="background-color: #d9b4e2;" name="update">Update</button>
+                                <button class="button" id="aubutton" style="background-color: #d9b4e2; align-items:center;" name="update">Update</button>
                             </div>
                         </form>
 

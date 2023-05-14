@@ -53,7 +53,10 @@ $result = mysqli_query($con, $query);
         }
 
         #wrapper2 {
-            min-height: 15rem;
+            /* min-height: 15rem; */
+            height: fit-content;
+            position: relative;
+
         }
 
         /* custom scrollbar */
@@ -86,18 +89,21 @@ $result = mysqli_query($con, $query);
         }
 
         .container {
-            width: 85%;
-            position: relative;
+            width: 80%;
+            /* position: relative; */
+            float: right;
         }
 
         /* Style the sidebar - fixed full height */
         .sidebar {
             float: left;
             height: auto;
-            width: 15%;
+            width: 20%;
             z-index: 1;
             overflow-x: hidden;
 
+            padding-left: 1rem;
+            padding-right: 1rem;
             position: -webkit-sticky;
             position: -moz-sticky;
             position: -ms-sticky;
@@ -169,7 +175,7 @@ $result = mysqli_query($con, $query);
         </div>
         <br></br>
 
-        <div id="wrapper2">
+        <div id="wrapper2" style="height: auto;">
             <div class="sidebar">
 
                 <!-- Tambah category -->
@@ -184,7 +190,7 @@ $result = mysqli_query($con, $query);
                 <a>Delete Category</a>
                 <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
 
-                    <option value="0">--Pilih Kategori--</option>
+                    <option value="0">Pilih Kategori</option>
                     <?php
                     if (isset($_SESSION['username'])) {
                         $sql = "SELECT *  FROM category";
@@ -207,7 +213,7 @@ $result = mysqli_query($con, $query);
                 <form action="index.php" method="post" enctype="multipart/form-data">
                     <select class="form-control" name="namaKategori" id="namaKategori" style="width:65%; float:left;">
 
-                        <option value="0">--Pilih Kategori--</option>
+                        <option value="0">Pilih Kategori</option>
                         <?php
                         if (isset($_SESSION['username'])) {
                             $sql = "SELECT *  FROM category";
@@ -394,17 +400,20 @@ $result = mysqli_query($con, $query);
                         }, 1000);
 
                     },
-        
-                    error: function(request,status,error) {
-                    alert(request.responseText);
+
+                    error: function(request, status, error) {
+                        alert(request.responseText);
                     }
 
                 })
-                
-                   
+
+
             }
         })
     });
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
     // <!-- initialize AOS -->
     AOS.init();
 </script>

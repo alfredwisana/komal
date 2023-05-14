@@ -47,11 +47,36 @@ require '../connect.php'
             display: flex;
             flex-wrap: wrap;
             padding-top: 10px;
+            position: relative;
+        }
+        .col-lg-2,
+        .col-md-3,
+        .col-sm-6,
+        .col-6 {
+        position: relative;
+        width: 100%;
+        padding: 0 15px;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 17%;
+            border-left: 2px solid #000;
+            transform: translateX(-50%);
+        }
+
+        .row > div:nth-child(2),
+        .row > div:nth-child(10) {
+            position: relative;
+            z-index: 1;
         }
 
         .col-2 {
             width: calc(24% - 100px);
-            margin: 20px;
+            margin: 10px;
             position: absolute;
             top: 1;
             left: 0;
@@ -63,12 +88,13 @@ require '../connect.php'
 
         .col-10 {
             width: calc(76%);
-            margin-left: 190px;
+            margin-left: 250px;
             padding: 5px;
             box-sizing: border-box;
             height: 100%;
             display: flex;
             flex-wrap: wrap;
+            justify-content: flex-end; /* Menggeser konten ke kanan */
         }
 
         .row {
@@ -126,8 +152,15 @@ require '../connect.php'
             padding: 10px;
         }
 
+        @media screen and (max-width: 992px) {
+        .container::before {
+            display: none;
+        }
+        .separator {
+        display: none; /* Menghapus garis pada layar kecil */
+        }
+        }
         @media screen and (max-width: 768px) {
-
             /* Tampilkan filter di atas halaman produk pada layar mobile */
             .filter-container {
                 display: block;
@@ -137,12 +170,32 @@ require '../connect.php'
             .sidebar {
                 display: none;
             }
+
+            /* Menghapus garis di layar mobile */
+            .container::before {
+                display: none;
+            }
+            .separator {
+            display: none; /* Menghapus garis pada layar kecil */
+            }
+            
+            .col-10 {
+                margin-left: 0; /* Mengatur margin ke 0 pada layar mobile */
+                justify-content: flex-start; /* Mengatur konten kembali ke posisi awal */
+            }
+        }
+
+        .separator {
+        border-right: 1px solid #ccc;
+        height: 100%;
+        margin-right: 20px;
         }
 
         .filter-sidebar {
             background-color: #eee7d3;
             padding: 20px;
             border-radius: 10px;
+            width: 100%;
         }
 
         .catalog-item {
@@ -180,45 +233,94 @@ require '../connect.php'
             color: #007bff;
         }
         
-
         .card {
-            background-color: #eee7d3;
-            border-radius: 4px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            padding: 3px;
-            height: 100%;
-            margin-right: 12px;
+        background-color: #eee7d3;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
         }
 
         .card .card-img-top {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
         }
 
         .card .card-body {
-            padding: 16px;
+        padding: 16px;
+        height: 200px;
         }
 
         .card .card-title {
-            font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 8px;
         }
 
         .card .card-text {
-            font-size: 16px;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 16px;
+        font-size: 16px;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 16px;
         }
 
         .card .card-price {
-            font-size: 20px;
-            font-weight: 700;
-            color: #f44336;
-            margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #f44336;
+        margin-bottom: 8px;
+        }
+
+        .card .btn-primary {
+        background-color: #f44336;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        }
+
+        .card .btn-primary:hover {
+        background-color: #c0392b;
+        }
+
+        .card .card-title,
+        .card .card-price,
+        .card .btn-primary {
+        height: 40px; /* Atur tinggi tetap untuk title, harga, dan button */
+        display: flex;
+        align-items: center;
+        }
+
+        @media screen and (min-width: 576px) {
+        .col-sm-6,
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        }
+
+        @media screen and (min-width: 768px) {
+        .col-md-3 {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+        }
+        }
+
+        @media screen and (min-width: 992px) {
+        .col-lg-2 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        }
+
+        @media screen and (max-width: 576px) {
+        .container {
+            padding: 0 10px;
+        }
         }
 
         .btn {
@@ -252,102 +354,78 @@ require '../connect.php'
     </script>
 </head>
 
-<body style="background-color:#EAD7c3">
-
-    <body>
-        <!-- navabar -->
-        <?php
-        require "../navbar3.php";
-        ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-12">
-                    <div class="filter-sidebar">
-                        <h5>Katalog</h5>
-                        <div class='catalog-item'>
-                            <li class ='category' id ='semua'><a>semua</a></li>
-                        </div>
-                        <?php 
-                        $sql = "SELECT *  FROM category";
-                        $stmt = $con->prepare($sql);
-                        $stmt->execute();
-                        $res = $stmt->get_result();
-
-                        
-
-                        while($row = $res -> fetch_assoc()){
-                            echo "<div class='catalog-item'>";
-                            echo "<li class ='category' id ='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
-                            echo "</div>";
-                            
-                        }
-
-                        ?>
-                        <!-- <div class="catalog-item" href="#">
-                            <li><a href="#">Atasan</a></li>
-                        </div>
-                        <div class="catalog-item" href="#">
-                            <li><a href="#">Bawahan</a></li>
-                        </div>
-                        <div class="catalog-item" href="#">
-                            <li><a href="#">Dress</a></li>
-                        </div>
-                        <div class="catalog-item" href="#">
-                            <li><a href="#">Aksesoris</a></li>
-                        </div>
-                        <div class="catalog-item" href="#">
-                            <li><a href="#">Lain-Lain</a></li>
-                        </div> -->
+<body style="background-color:#EAD7c3; ">
+    <!-- navbar -->
+    <?php
+    require "../navbar3.php";
+    ?>
+    <div class="container" style="margin-left: 0; margin-right: 0; max-width: 1655px; margin: 30px;">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4">
+                <div class="filter-sidebar">
+                    <h5>Katalog</h5>
+                    <div class='catalog-item'>
+                        <li class='category' id='semua'><a>semua</a></li>
                     </div>
-                </div>
-                <div class="col-lg-9 col-md-8 col-sm-12" id = "katalog">
                     <?php
-                    // Query untuk mengambil data barang dari database
-                    $sql = "SELECT * FROM produk";
-                    $result = mysqli_query($con, $sql);
+                    $sql = "SELECT *  FROM category";
+                    $stmt = $con->prepare($sql);
+                    $stmt->execute();
+                    $res = $stmt->get_result();
 
-                    // Memulai pembukaan tag div untuk row
-                    echo '<div class="row">';
-
-                    $counter = 1;
-
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...?>">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <?php echo $row['namaServis'] ?>
-                                    </h5>
-                                    <p class="card-text">
-                                        <?php echo $row['deskripsi'] ?>
-                                    </p>
-                                    <p class="card-price">Rp
-                                        <?php echo $row['harga'] ?>
-                                    </p>
-                                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat
-                                        detail</a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        if ($counter % 3 == 0) {
-                            // Menutup tag div setelah 3 kolom
-                            echo '</div><div class="row">';
-                        }
-                        $counter++;
+                    while ($row = $res->fetch_assoc()) {
+                        echo "<div class='catalog-item'>";
+                        echo "<li class='category' id='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
+                        echo "</div>";
                     }
-                    // Menutup tag div untuk row
-                    echo '</div>';
                     ?>
                 </div>
             </div>
+            <div class="col-lg-10 col-md-9 col-sm-12 seperator" style="padding-left: 80px;">
+                <?php
+                // Query untuk mengambil data barang dari database
+                $sql = "SELECT * FROM produk";
+                $result = mysqli_query($con, $sql);
+
+                $counter = 1;
+
+                echo '<div class="row">';
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                        <div class="card">
+                        <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <?php echo $row['namaServis'] ?>
+                                </h5>
+                                <p class="card-price">Rp
+                                    <?php echo $row['harga'] ?>
+                                </p>
+                                <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    if ($counter % 6 == 0) {
+                        echo '</div><div class="row">';
+                    }
+                    $counter++;
+                }
+
+                echo '</div>';
+                ?>
+            </div>
+            
         </div>
-        <?php
-        require '../footer2.php';
-        ?>
-    </body>
+    </div>
+    <?php
+    require '../footer2.php';
+    ?>
+</body>
+
+
 
 </html>
 

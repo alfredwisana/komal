@@ -1,0 +1,232 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.col-6 {
+    width:50%;
+    display: inline-table;
+}
+
+footer {
+    background-color: #d9b4e2;
+    padding: 3em 4em 2em;
+    font: bold 16px sans-serif;
+}
+
+    footer .logo {
+        color:#fff;
+        font-size: 28px;
+        font-family: roboto;
+    }
+footer h3{
+	color: #6C3483;
+	font: normal 43px 'Cookie', cursive;
+	margin: 0;
+}
+footer h3 span{
+	color:  #17202A;
+}
+footer span{
+	color:  #17202A;
+	
+}
+
+    footer .row {
+        margin: 2em 0;
+        font-family: lato;
+        color: #17202A;
+        position: relative;
+        border-bottom: 1px solid #cecece;
+    }
+    
+    .footer-toggle {
+        display: none;
+    }
+
+    .link-cat {
+        cursor:pointer;
+    }
+    
+    footer ul {
+        padding:0;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;        
+    }
+
+        footer ul li {
+            list-style-type: none;
+            padding:0;            
+            -webkit-transition: all .5s ease-in-out;            
+            transition: all .5s ease-in-out;
+            line-height: 2;            
+        }  
+
+        footer .footer-cat, #newsletter span {
+            font-size: 26px;
+        }
+	footer .footer-cat, #info span {
+            font-size: 20px;
+        }
+
+        .footer-cat-links a {
+            color: #17202A;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .footer-cat-links.active > li a {
+            pointer-events: auto;
+        }
+
+        .footer-cat-links a:after {
+            top: 21px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+            background: #17202A;
+            
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+
+        .footer-cat-links a:hover:after, .footer-cat-links a:focus:after {
+            width: 100%;
+            left: 0;
+        }
+
+    .col-3 {
+        display: inline-table;
+        width:60%;
+    }
+
+    .col-3#newsletter {
+        width:30%
+    }
+
+	.footer-icons{
+	margin-top: 25px;
+	}
+
+	.footer-icons a{
+		display: inline-block;
+		width: 70px;
+		height:70px;
+		cursor: pointer;
+		background-color:  #beafe1;
+		border-radius: 2px;
+
+		font-size: 20px;
+		color: #17202A;
+		text-align: center;
+		line-height: 35px;
+
+		margin-right: 3px;
+		margin-bottom: 5px;
+	}
+
+        .social-links a:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .social-links a:hover, .social-links a:focus {
+            background-color: #212121;
+        }
+
+            .social-links a i {
+                width: 25px;
+                height: 25px;
+                text-align:center;
+            }
+
+
+    #copyright {
+        text-align: center;
+        color:#17202A;
+        font-family: lato;
+    }
+
+#owner {
+    text-align: center;
+    padding: 20px 0 0px;
+    color: #17202A;
+    font-family: lato;
+}
+
+    #owner a {
+        color:#fff;        
+    }
+
+a#gotop{
+  height:16px;
+  display:block;
+  text-decoration:none;
+  font-size:20px;
+color:#17202A;}
+
+/* iPads to Smartphone for Common Elements ----------- */  
+@media only screen and (max-width : 1024px) {    
+
+    .col-3 {
+        display: block;
+        width: 100%;
+        padding-bottom: 1em;
+        position: relative;
+    }
+
+    .col-3#newsletter {
+        width: 100%;
+        position: relative;
+        padding-bottom: 0;
+        padding-top: 1em;
+    }    
+        
+    footer .footer-cat {
+        margin-left: 25px;
+    }
+     
+    .footer-toggle,.footer-toggle::after {
+        background: #fff;
+        height: 2px;
+        width: 15px;
+        position: absolute;
+        display: block;
+        -webkit-transition:all .4s ease-in;
+        transition:all .4s ease-in;
+    }
+
+    .footer-toggle {        
+        top: 11px;
+        cursor:pointer;
+    }
+
+    .footer-toggle::after {
+        content: '';
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+	
+a#gotop{
+  height:16px;
+  display:block;
+  margin:5px 15px 0 0;
+  text-decoration:none;
+  font-size:20px
+  color:#17202A;}
+
+footer h3{
+	color: #6C3483;
+	font: normal 42px 'Cookie', cursive;
+	padding-left: 1.2em;
+}
+
+footer h3 span{
+	color:  #17202A;
+}

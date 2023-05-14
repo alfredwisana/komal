@@ -211,7 +211,7 @@
 
 <body style="background-color:#f7d7bc">
 
-    <?php require "navbar.php" ?>
+    <?php require "navbar4.php" ?>
 
     <a id="button" href="#navbar"></a>
 

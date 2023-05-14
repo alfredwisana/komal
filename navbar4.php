@@ -25,7 +25,7 @@
 <!-- navabar -->
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <img src="../images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
+            <img src="images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

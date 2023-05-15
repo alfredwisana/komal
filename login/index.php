@@ -110,7 +110,7 @@ require '../connect.php';
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
           <div class="form">
-            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;font-family:coolvetica;">Login</h2>
+            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;">Login</h2>
             <div class="input">
                 <input type="text" class="form-control" id="username"  placeholder="Username" style="font-family:coolvetica">
                 <div id="emailHelp" class="form-text" style="font-family:coolvetica">We'll never share your email with anyone else.</div>
@@ -118,7 +118,7 @@ require '../connect.php';
             <div class="input" style="padding-top:30px;">
                 <input type="password" class="form-control" id="password"  placeholder="Password">
             </div>
-            <p style="padding-top: 3%;"><a href="../index.php" style="font-family:coolvetica; text-decoration:none;">Back to Home page</a></p>
+            <p style="padding-top: 3%;"><a href="../index.php" style="font-family:coolvetica; text-decoration:none; color:black;">Back to Home page</a></p>
             <div class="text-center">
                 <button id="login" style="font-family:coolvetica">Login</button>
             </div>

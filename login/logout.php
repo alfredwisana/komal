@@ -1,4 +1,5 @@
 <?php 
+session_start(); 
 if (!isset($_SESSION['username'])) {
     header('location: ../login/index.php');
 }
@@ -7,7 +8,7 @@ $result = array(
     'message' => ""
   ); 
 if ( isset($_POST['logout'])){
-session_start(); 
+
 $username=$_SESSION['username'];
 session_destroy();
 $result['message'] = "Log Out ".$username. " berhasil";

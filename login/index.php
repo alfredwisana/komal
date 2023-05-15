@@ -172,6 +172,15 @@ require '../connect.php';
     })
     })
   })
+
+  // Swal.fire({
+  //     position: 'top-end',
+  //     icon: 'success',
+  //     title: 'Success',
+  //     text: 'You are successfully loged out. Please login to continue.',
+  //     showConfirmButton: false,
+  //     timer: 2000    
+  //     });
 </script>
 
 </html>

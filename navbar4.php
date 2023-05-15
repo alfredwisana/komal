@@ -15,15 +15,22 @@
         font-weight: bold;
         margin-left: -200px;
     }
+    #navbar4{
+            max-height: 3rem;
+    }
     @media only screen and (max-width : 1024px) { 
-        #info{
+        nav #info{
             margin-left: 0;
         }
+        #navbar4{
+            max-height: none;
+        }
+
     }
 </style>
 
 <!-- navabar -->
-<nav class="navbar navbar-expand-lg bg-light" style="max-height: 3rem;" id="navbar4">
+<nav class="navbar navbar-expand-lg bg-light" id="navbar4">
         <div class="container-fluid">
             <img src="images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>

@@ -15,7 +15,6 @@ while ($row = mysqli_fetch_array($result)) {
 
 <!doctype html>
 <html lang="en">
-<link rel="icon" href="../images/logo.png">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

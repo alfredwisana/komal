@@ -74,11 +74,11 @@
 
         <div id="center" style="text-align: center;">
        <ul class="footer-cat-links">
-        <a href="home.php">Home</a>
+        <a href="../index.php">Home</a>
         |
-        <a href="about.php">About</a>
+        <a href="../About_us.php">About</a>
         |
-        <a href="katalog/index.php">Catalog</a>
+        <a href="./index.php">Catalog</a>
         |
         <a href="https://web.whatsapp.com/">Contact</a>
        </ul>

@@ -239,7 +239,7 @@ while ($row = mysqli_fetch_array($result)) {
         </div>
 
         <?php
-        require '../footer2.php';
+        require 'footer.php';
         ?>
     </div>
 

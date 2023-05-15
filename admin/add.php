@@ -221,7 +221,7 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <?php
-        require '../footer2.php';
+        require 'footer.php';
         ?>
     </div>
 

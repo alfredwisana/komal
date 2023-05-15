@@ -15,6 +15,8 @@ require 'connect.php'
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
 	<title>Homepage</title>
+	<link rel="icon" type="image/png" href="./images/logo2.png" sizes="16x16">
+
 </head>
 
 <body>

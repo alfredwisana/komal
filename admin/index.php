@@ -40,6 +40,8 @@ $result = mysqli_query($con, $query);
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
+
     <!-- AOS Animate on Scroll -->
     <!-- CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

@@ -24,9 +24,10 @@
     </style>
 
     <footer>
+        <br>
         <div>
-            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 38%; width: 100px; margin-top: -3.6%;" />
-            <h3 style="padding-left: 47%; margin-top: -6.5%; margin-bottom: 3%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
+            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
+            <h3 style="margin-left: 45%; margin-top: -85px; margin-bottom: 30px;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
 
@@ -59,12 +60,12 @@
                 <div class="col-3" id="newsletter" style="margin-left: 10%;">
                     <span>Follow Us</span>
                     <div class="footer-icons">
-                    <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://whatsapp.com"><img src="../images/wa.png" style="height:3rem; margin-top: 0.5rem;"></a>
                     <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="../images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- tokped-->
-                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:3rem; margin-top: 0.5rem;"></a>
                     <!-- shopee-->
-                    <a href="https://shp.ee/trzp2g6"><img src="../images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://shp.ee/trzp2g6"><img src="../images/shopee.png" style="height:3rem; margin-top: 0.5rem;"></a>
                     <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     
@@ -74,11 +75,9 @@
 
         <div id="center" style="text-align: center;">
        <ul class="footer-cat-links">
-        <a href="../index.php">Home</a>
+        <a href="index.php">Home</a>
         |
-        <a href="../About_us.php">About</a>
-        |
-        <a href="./index.php">Catalog</a>
+        <a href="add.php">Add Item</a>
         |
         <a href="https://web.whatsapp.com/">Contact</a>
        </ul>

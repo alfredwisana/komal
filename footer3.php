@@ -25,8 +25,8 @@
 
     <footer>
         <div>
-            <p style="text-align:justify;"><img src="images/logo.png" style="margin-left: 35%; width: 100px; margin-top: -50px;" />
-            <h3 style="margin-left: 45%; margin-top: -85px; margin-bottom: 30px;"><span>Berkah Jaya</span> Baby Shop</h3></p>
+            <p style="text-align:justify;"><img src="images/logo.png" style="margin-left: 38%; width: 100px; margin-top: -3.6%;" />
+            <h3 style="padding-left: 47%; margin-top: -6.5%; margin-bottom: 3%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
 
@@ -74,9 +74,9 @@
 
        <div id="center" style="text-align: center;">
        <ul class="footer-cat-links">
-        <a href="home.php">Home</a>
+        <a href="index.php">Home</a>
         |
-        <a href="about.php">About</a>
+        <a href="About_us.php">About</a>
         |
         <a href="katalog/index.php">Catalog</a>
         |

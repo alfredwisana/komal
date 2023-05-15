@@ -16,21 +16,19 @@ if (isset($_POST['cat'])) {
 
         while ($row = mysqli_fetch_assoc($result)) {
 
-            echo "<div class='col-lg-4 col-md-6 col-sm-12 mb-4'>
+            echo "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>
             <div class='card'>
-                <img class='card-img-top' src=' $row[gambar] ' alt='...'>
+                <img class='card-img-top' src='$row[gambar]' alt='...'>
                 <div class='card-body'>
                     <h5 class='card-title'>$row[namaServis]</h5>
-                    
                     <p class='card-price'>Rp $row[harga]</p>
-                    <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat
-                        detail</a>
+                    <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat detail</a>
                 </div>
             </div>
         </div>";
 
-            if ($counter % 3 == 0) {
-                // Menutup tag div setelah 3 kolom
+            if ($counter % 4 == 0) {
+                // Menutup tag div setelah 4 kolom
                 echo '</div><div class="row">';
             }
             $counter++;
@@ -45,23 +43,22 @@ if (isset($_POST['cat'])) {
         echo '<div class="row">';
 
         $counter = 1;
-        // perbaiki katalog
+
         while ($row = mysqli_fetch_assoc($result)) {
 
-            echo "<div class='col-lg-4 col-md-6 col-sm-12 mb-4'>
+            echo "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>
             <div class='card'>
-                <img class='card-img-top' src=' $row[gambar] ' alt='...'>
+                <img class='card-img-top' src='$row[gambar]' alt='...'>
                 <div class='card-body'>
                     <h5 class='card-title'>$row[namaServis]</h5>
                     <p class='card-price'>Rp $row[harga]</p>
-                    <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat
-                        detail</a>
+                    <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat detail</a>
                 </div>
             </div>
         </div>";
 
-            if ($counter % 3 == 0) {
-                // Menutup tag div setelah 3 kolom
+            if ($counter % 4 == 0) {
+                // Menutup tag div setelah 4 kolom
                 echo '</div><div class="row">';
             }
             $counter++;
@@ -70,3 +67,5 @@ if (isset($_POST['cat'])) {
         echo '</div>';
     }
 }
+?>
+

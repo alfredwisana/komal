@@ -211,9 +211,9 @@
 
 <body style="background-color:#f7d7bc">
 
-    <?php require "navbar.php" ?>
+    <?php require "navbar4.php"?>
 
-    <a id="button" href="#navbar"></a>
+    <a id="button" href="#navbar4"></a>
 
     <!-- button -->
     <div id="button1" class="row">
@@ -360,7 +360,7 @@
             </div>
         </center>
     </div>
-    <div class="col-sm-12">
+    <div class="container-fluid col-sm-12">
         <?php
         require "footer3.php";
         ?>

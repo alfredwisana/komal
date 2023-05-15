@@ -246,5 +246,50 @@ while ($row = mysqli_fetch_array($result)) {
     </div>
 
 </body>
+<script>
+  $(document).ready(function(){
+    $("#logout").click(function(){
+      
+      $.ajax({
+        url: "../login/logout.php",
+        type: "POST",
+        dataType: "json",
+        data: {
+          logout: 1
+        },
+        success: function(result){
+          console.log('sukses');
+          if (result.status == 1)
+          {
+            Swal.fire({
+            icon: 'success',
+            title: 'SUCCESS',
+            text: result.message,
+            })
+          }
+          else
+          {
+            Swal.fire({
+            icon: 'error',
+            title: 'FAILED',
+            text: result.message,
+          })
+          }
 
+        if(result.status == 1) {
+          setTimeout(function(){window.location.replace("../login/index.php")}, 1000);
+        } else {
+            setTimeout(function(){window.location.replace("../login/index.php")}, 1000);
+        }
+      },
+      error: function(request,status,error) {
+        alert(request.responseText);
+      }
+  
+    })
+    })
+  })
+</script>
+<!-- Sweet Alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

@@ -25,8 +25,8 @@
 
     <footer>
         <div>
-            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 38%; width: 100px; margin-top: -3.6%;" />
-            <h3 style="padding-left: 47%; margin-top: -6.5%; margin-bottom: 3%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
+            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 37%; width: 100px; margin-top: -2.3%;" />
+            <h3 style="padding-left: 47%; margin-top: -4.1%; margin-bottom: 3%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
 

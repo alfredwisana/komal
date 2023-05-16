@@ -65,7 +65,6 @@ require '../connect.php'
                 flex-basis: 100%;
                 max-width: 100%;
             }
-
             
             }
 
@@ -91,15 +90,14 @@ require '../connect.php'
             }
             }
 
-            /* CSS untuk membuat katalog dan card memiliki lebar yang sama */
             #katalog .row {
                         display: flex;
                         flex-wrap: wrap;
                     }
 
                     #katalog .card {
-                        flex-basis: calc(25% - 20px); /* Mengatur lebar card secara proporsional */
-                        margin: 10px; /* Memberikan jarak antara card */
+                        flex-basis: calc(25% - 20px); 
+                        margin: 10px; 
                     }
 
             .clearfix::after {
@@ -159,24 +157,20 @@ require '../connect.php'
                 margin-bottom: 50px;
             }
 
-            /* Filter sidebar */
             .sidebar {
                 width: 25%;
                 float: left;
             }
 
-            /* Filter label */
             .filter-label {
                 font-weight: bold;
                 margin-top: 20px;
             }
 
-            /* Filter button hover */
             .filter-button:hover {
                 background-color: #0069d9;
             }
 
-            /* Filter di atas halaman produk */
             .filter-container {
                 display: none;
                 background-color: #f2f2f2;
@@ -282,7 +276,7 @@ require '../connect.php'
             .card .card-title,
             .card .card-price,
             .card .btn-primary {
-            height: 40px; /* Atur tinggi tetap untuk title, harga, dan button */
+            height: 40px; 
             display: flex;
             align-items: center;
             bottom: 5px;
@@ -323,17 +317,6 @@ require '../connect.php'
         <?php
         require "../navbar3.php";
         ?>
-        <script>
-            // Tampilkan atau sembunyikan filter di atas halaman produk pada layar mobile
-            function toggleFilter() {
-                var filterContainer = document.getElementById("filter-container");
-                if (filterContainer.style.display === "block") {
-                    filterContainer.style.display = "none";
-                } else {
-                    filterContainer.style.display = "block";
-                }
-            } ``
-        </script>
     </head>
     <body style="background-color:#EAD7c3;">
         <div class="container" style="max-width: 2000px;">
@@ -349,16 +332,11 @@ require '../connect.php'
                         $stmt = $con->prepare($sql);
                         $stmt->execute();
                         $res = $stmt->get_result();
-
-                        
-
                         while($row = $res -> fetch_assoc()){
                             echo "<div class='catalog-item'>";
                             echo "<li class ='category' id ='$row[namaKategori]'><a>$row[namaKategori]</a></li>";
                             echo "</div>";
-                            
                         }
-
                         ?>
                     </div>
                 </div>
@@ -404,25 +382,17 @@ require '../connect.php'
                     }
                 }
 
-                // Menggunakan class CardSet
-
                 $cardPerRow = 4;
                 $cardSet = new CardSet($cardPerRow);
-
-                // Query untuk mengambil data barang dari database
                 $sql = "SELECT * FROM produk";
                 $result = mysqli_query($con, $sql);
-
-                // Memulai pembukaan tag div untuk row
                 echo '<div class="row">';
 
                 while ($row = mysqli_fetch_assoc($result)) {
                     $colClass = 'col-lg-' . 12 / $cardPerRow . ' col-md-4 col-sm-6';
                     $cardSet->addCard($row, $colClass);
                 }
-
                 $cardSet->closeRowIfNeeded();
-
                 ?>
             </div>
         </div>
@@ -430,7 +400,6 @@ require '../connect.php'
     <?php
     require '../footer2.php';
     ?>
-    
 </html>
 <script>
     $(document).ready(function(){
@@ -453,7 +422,6 @@ require '../connect.php'
     })
 </script>
 <script>
-    // JavaScript untuk mengecek lebar jendela dan menyesuaikan kelas kolom
     window.addEventListener('DOMContentLoaded', function() {
         var resizeTimer;
 
@@ -485,4 +453,14 @@ require '../connect.php'
 
         checkWidth();
     });
+</script>
+<script>
+    function toggleFilter() {
+        var filterContainer = document.getElementById("filter-container");
+        if (filterContainer.style.display === "block") {
+            filterContainer.style.display = "none";
+        } else {
+            filterContainer.style.display = "block";
+        }
+    }
 </script>

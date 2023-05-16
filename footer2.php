@@ -25,7 +25,7 @@
 
     <footer>
        <div>
-            <p style="text-align:justify;"><img src="./images/logo.png" style="margin-left: 37%; width: 100px; margin-top: -2.5%" />
+            <p style="text-align:justify;"><img src="../images/logo.png" style="margin-left: 37%; width: 100px; margin-top: -2.5%" />
             <h3 style="padding-left: 47%; margin-top: -5.6%; margin-bottom: 2.8%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
@@ -59,12 +59,12 @@
                 <div class="col-3" id="newsletter" style="margin-left: 10%;">
                 <span style="margin-left: -20%;">Follow Us</span>
                   <div class="footer-icons"style="margin-left: -20%;">
-                    <a href="https://whatsapp.com" target="_blank"><img src="images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
-                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D" target="_blank"><img src="images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://whatsapp.com" target="_blank"><img src="../images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D" target="_blank"><img src="../images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- tokped-->
-                    <a href="https://www.tokopedia.com/berkahjayababyshop" target="_blank"><img src="images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.tokopedia.com/berkahjayababyshop" target="_blank"><img src="../images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- shopee-->
-                    <a href="https://shp.ee/trzp2g6" target="_blank"><img src="images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://shp.ee/trzp2g6" target="_blank"><img src="../images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     

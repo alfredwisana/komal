@@ -59,17 +59,6 @@ require '../connect.php'
             }
 
             }
-
-
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -91,15 +90,14 @@
   
             @media screen and (min-width: 992 max-width: 1300px) {
             .card .card-title {
@@ -102,22 +91,6 @@ require '../connect.php'
                     }
 
             .clearfix::after {
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -159,24 +157,20 @@
   
                 content: "";
                 display: table;
@@ -186,23 +159,6 @@ require '../connect.php'
             .filter-container {
                 display: none;
                 background-color: #f2f2f2;
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -282,7 +276,7 @@
-  
                 padding: 10px;
             }
             .filter-sidebar {
@@ -294,23 +250,6 @@ require '../connect.php'
             display: flex;
             align-items: center;
             bottom: 5px;
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -323,17 +317,6 @@
-  
             }
             .btn {
                 display: inline-block;
@@ -346,17 +285,6 @@ require '../connect.php'
     </head>
     <body style="background-color:#EAD7c3;">
         <div class="container" style="max-width: 2000px;">
-
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -349,16 +332,11 @@ function toggleFilter() {
-  
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">
                     <div class="filter-sidebar">
@@ -377,22 +305,6 @@ require '../connect.php'
                         ?>
                     </div>
                 </div>
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -404,33 +382,24 @@ public function closeRowIfNeeded() {
   
                 <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
                 <?php
@@ -452,16 +364,6 @@ require '../connect.php'
 </html>
 <script>
     $(document).ready(function(){
-
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -453,7 +422,6 @@ public function closeRowIfNeeded() {
   
         $(".category").click(function(){
             var v_cat = $(this).attr('id');
@@ -484,23 +386,6 @@ require '../connect.php'
     window.addEventListener('DOMContentLoaded', function() {
         var resizeTimer;
 
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -486,3 +454,13 @@ function checkWidth() {
-  
         function checkWidth() {
             var colClass;
             var windowWidth = window.innerWidth;

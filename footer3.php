@@ -25,8 +25,8 @@
 
     <footer>
         <div>
-            <p style="text-align:justify;"><img src="./images/logo.png" style="margin-left: 37%; width: 100px; margin-top: -2.3%;" />
-            <h3 style="padding-left: 47%; margin-top: -4.1%; margin-bottom: 3%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
+            <p style="text-align:justify;"><img src="./images/logo.png" style="margin-left: 37%; width: 100px; margin-top: -2.5%" />
+            <h3 style="padding-left: 47%; margin-top: -5.6%; margin-bottom: 2.8%;"><span>Berkah Jaya</span> Baby Shop</h3></p>
             <hr/>
         </div>
 
@@ -34,17 +34,17 @@
             <div class="vertical">
                 <div class="col-3" id="info">                
                 <div>
-                    <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9"><i class="fa fa-location-arrow" style="color: black;"></i></a>
-                    <p><span>Pusat : JL.Gubernur Sunandar no 578, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
+                    <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9" target="_blank"><i class="fa fa-location-arrow" style="color: black;"></i></a>
+                    <p><span>Pusat : Pasar Krian, Jl. Basuki Rahmat No. 11, Krian, Kec. Krian, Kabupaten Sidoarjo</span></p>
                 </div>
 
                 <div>
-                <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9"><i class="fa fa-location-arrow" style="color: black;"></i></a>
-                <p><span>Cabang : Jl. Magersari, RT.1/RW.1, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
+                <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9" target="_blank"><i class="fa fa-location-arrow" style="color: black;"></i></a>
+                <p><span>Cabang : Jl. Gubernur Sunandar No. 578, Krian, Kec. Krian, Kabupaten Sidoarjo</span></p>
                 </div>
 
                 <div>
-                    <a href="https://web.whatsapp.com/"><i class="fa fa-phone" style="color: black;"></i></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><i class="fa fa-phone" style="color: black;"></i></a>
                     <p><span>Telp : 085748177559</span></p>
                 </div>
 
@@ -59,12 +59,12 @@
                 <div class="col-3" id="newsletter" style="margin-left: 10%;">
                 <span style="margin-left: -20%;">Follow Us</span>
                   <div class="footer-icons"style="margin-left: -20%;">
-                    <a href="https://whatsapp.com"><img src="images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
-                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://whatsapp.com" target="_blank"><img src="images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D" target="_blank"><img src="images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- tokped-->
-                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.tokopedia.com/berkahjayababyshop" target="_blank"><img src="images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- shopee-->
-                    <a href="https://shp.ee/trzp2g6"><img src="images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://shp.ee/trzp2g6" target="_blank"><img src="images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     

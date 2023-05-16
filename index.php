@@ -15,6 +15,8 @@ require 'connect.php'
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
 	<title>Homepage</title>
+	<link rel="icon" type="image/png" href="./images/logo2.png" sizes="16x16">
+
 </head>
 
 <body>
@@ -89,6 +91,7 @@ require 'connect.php'
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card d-flex align-items-center" style="height: 300px;">
+					<br>
 						<img class="card-img-top" src="images/price.png" alt="Card image"  style="width: 100px; height: 100px; object-fit: contain;">
 						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
 							<h5 class="card-title">GOOD PRICE</h5>
@@ -98,6 +101,7 @@ require 'connect.php'
 				</div>
 				<div class="col-md-4">
 					<div class="card d-flex align-items-center" style="height: 300px;">
+					<br>
 						<img class="card-img-top" src="images/service.png" alt="Card image" style="width: 100px; height: 100px; object-fit: contain;">
 						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
 							<h5 class="card-title">GOOD SERVICE</h5>
@@ -107,6 +111,7 @@ require 'connect.php'
 				</div>
 				<div class="col-md-4">
 					<div class="card d-flex align-items-center" style="height: 300px;">
+					<br>
 						<img class="card-img-top" src="images/quality.png" alt="Card image"  style="width: 100px; height: 100px; object-fit: contain; ">
 						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
 								<h5 class="card-title">GOOD QUALITY</h5>
@@ -116,22 +121,47 @@ require 'connect.php'
 				</div>
 			</div>
 		</div>
+		<br>
 
 			
 		<div id="menu">
 		<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
 			<ul>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages" ></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
-				<li><a href="katalog"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages"></a></li>
+				<li><a href="katalog/booking.php?id=52"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=53"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=54"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=55"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=41"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=42"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=43"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
+				
+				<li><a href="katalog/booking.php?id=44"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a></li>
 			</ul>
 		</div>
 	</div>
+	<br>
 	<!-- <div class="row">
 		<div class="row">
 			<?php

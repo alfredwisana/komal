@@ -40,6 +40,7 @@ require '../connect.php'
             integrity="sha512-xxxxxx" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"
             integrity="sha512-xxxxxx" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
 
             <style>
             @media screen and (max-width: 992px) {

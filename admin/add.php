@@ -38,6 +38,8 @@ if (!isset($_SESSION['username'])) {
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
+
 
     <style>
         /* custom scrollbar */
@@ -221,7 +223,7 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <?php
-        require '../footer2.php';
+        require 'footer.php';
         ?>
     </div>
 
@@ -234,4 +236,6 @@ if (!isset($_SESSION['username'])) {
     AOS.init();
 </script>
 
+<!-- Sweet Alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

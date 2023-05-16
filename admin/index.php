@@ -40,6 +40,8 @@ $result = mysqli_query($con, $query);
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
+
     <!-- AOS Animate on Scroll -->
     <!-- CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -48,12 +50,7 @@ $result = mysqli_query($con, $query);
 
     <style>
         /* wrapper */
-        #wrapper {
-            background-color: eee7d3;
-        }
-
         #wrapper2 {
-            /* min-height: 15rem; */
             height: fit-content;
             position: relative;
 
@@ -93,14 +90,13 @@ $result = mysqli_query($con, $query);
 
         .container {
             width: 80%;
-            /* position: relative; */
             float: right;
         }
 
         /* Style the sidebar - fixed full height */
         .sidebar {
             float: left;
-            height: auto;
+            height: fit-content;
             width: 20%;
             z-index: 1;
             overflow-x: hidden;
@@ -165,10 +161,10 @@ $result = mysqli_query($con, $query);
 </head>
 
 <body>
-
+    <?php require "navbar.php" ?>
     <div id="wrapper" style="background-color:ee7d3;">
         <!-- navbar -->
-        <?php require "navbar.php" ?>
+
 
         <div id="header" style="position: relative; margin-top:-0.5rem; text-align: center; background-color:white;">
             <img src="../images/headerAdmin3.jpeg" style=" width:100%; opacity: 0.5;">
@@ -178,8 +174,8 @@ $result = mysqli_query($con, $query);
         </div>
         <br></br>
 
-        <div id="wrapper2" style="height: auto;">
-            <div class="sidebar">
+        <div id="wrapper2">
+            <div class="sidebar col-md-auto">
 
                 <!-- Tambah category -->
                 <form action="addCat.php" method="post" enctype="multipart/form-data">
@@ -191,24 +187,25 @@ $result = mysqli_query($con, $query);
                 <!-- Hapus category -->
                 <br><br>
                 <a>Delete Category</a>
-                <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
+                <form action="delCat.php" method="post" enctype="multipart/form-data">
+                    <select class="form-control" name="Kategori" id="Kategori" style="width:65%; float:left;">
 
-                    <option value="0">Pilih Kategori</option>
-                    <?php
-                    if (isset($_SESSION['username'])) {
-                        $sql = "SELECT *  FROM category";
-                        $stmt = $con->prepare($sql);
-                        $stmt->execute();
-                        $res = $stmt->get_result();
+                        <option value="0">Pilih Kategori</option>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                            $sql = "SELECT *  FROM category";
+                            $stmt = $con->prepare($sql);
+                            $stmt->execute();
+                            $res = $stmt->get_result();
 
-                        while ($row = $res->fetch_assoc()) {
-                            echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            while ($row = $res->fetch_assoc()) {
+                                echo "<option value ='" . $row['namaKategori'] . "'>" . $row['namaKategori'] . "</option>";
+                            }
                         }
-                    }
-                    ?>
-                </select>
-                <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
-
+                        ?>
+                    </select>
+                    <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
+                </form>
                 <br><br>
 
                 <!-- Cari category -->
@@ -237,7 +234,7 @@ $result = mysqli_query($con, $query);
 
             </div>
 
-            <div class="container">
+            <div class="container col">
 
                 <div class="row">
                     <?php
@@ -290,7 +287,7 @@ $result = mysqli_query($con, $query);
         </div>
 
         <!-- <div style="height:1rem; background-color:orange;"></div> -->
-        <?php require '../footer2.php'; ?>
+        <?php require 'footer.php'; ?>
     </div>
 
 </body>
@@ -420,6 +417,6 @@ $result = mysqli_query($con, $query);
     }
     // <!-- initialize AOS -->
     AOS.init();
-</script>
+ </script>
 
 </html>

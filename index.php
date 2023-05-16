@@ -20,12 +20,11 @@ require 'connect.php'
 </head>
 
 <body>
-
-	
+	<div id="topnav">
 		<?php
 		require 'navbar4.php';
 		?>
-	
+	</div>
 	<div class="content">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">

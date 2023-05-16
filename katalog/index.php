@@ -328,77 +328,102 @@ require '../connect.php'
                 </div>
                 <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
                 <?php
+                class CardSet {
+                    private $cardPerRow;
+                    private $counter;
 
-class CardSet {
-    private $cardPerRow;
-    private $counter;
+                    public function __construct($cardPerRow) {
+                        $this->cardPerRow = $cardPerRow;
+                        $this->counter = 0;
+                    }
 
-    public function __construct($cardPerRow) {
-        $this->cardPerRow = $cardPerRow;
-        $this->counter = 0;
-    }
+                    public function startRow() {
+                        echo '<div class="row">';
+                    }
 
-    public function startRow() {
-        echo '<div class="row">';
-    }
+                    public function endRow() {
+                        echo '</div>';
+                    }
 
-    public function endRow() {
-        echo '</div>';
-    }
+                    public function addCard($row, $colClass) {
+                        $this->counter++;
+                        ?>
+                        <div class="<?php echo $colClass; ?>">
+                            <div class="card">
+                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
+                                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
+                                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
 
-    public function addCard($row) {
-        if ($this->counter % $this->cardPerRow == 0) {
-            $this->startRow();
-        }
-        ?>
-        <div class="col-lg-<?php echo 12 / $this->cardPerRow; ?> col-md-4 col-sm-6">
-            <div class="card">
-                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
-                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
-                </div>
-            </div>
-        </div>
-        <?php
-        $this->counter++;
+                    public function closeRowIfNeeded() {
+                        if ($this->counter % $this->cardPerRow != 0) {
+                            $this->endRow();
+                        }
+                    }
+                }
 
-        if ($this->counter % $this->cardPerRow == 0) {
-            $this->endRow();
-        }
-    }
+                // Menggunakan class CardSet
 
-    public function closeRowIfNeeded() {
-        if ($this->counter % $this->cardPerRow != 0) {
-            $this->endRow();
-        }
-    }
-}
+                $cardPerRow = 4;
+                $cardSet = new CardSet($cardPerRow);
 
-// Menggunakan class CardSet
+                // Query untuk mengambil data barang dari database
+                $sql = "SELECT * FROM produk";
+                $result = mysqli_query($con, $sql);
 
-$cardPerRow = 4;
-$cardSet = new CardSet($cardPerRow);
+                // Memulai pembukaan tag div untuk row
+                echo '<div class="row">';
 
-// Query untuk mengambil data barang dari database
-$sql = "SELECT * FROM produk";
-$result = mysqli_query($con, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $colClass = 'col-lg-' . 12 / $cardPerRow . ' col-md-4 col-sm-6';
+                    $cardSet->addCard($row, $colClass);
+                }
 
-// Memulai pembukaan tag div untuk row
-echo '<div class="row">';
+                $cardSet->closeRowIfNeeded();
 
-while ($row = mysqli_fetch_assoc($result)) {
-    $cardSet->addCard($row);
-}
+                ?>
 
-$cardSet->closeRowIfNeeded();
+                <style>
+                    /* CSS untuk membuat katalog dan card memiliki lebar yang sama */
+                    #katalog .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
 
-?>
+                    #katalog .card {
+                        flex-basis: calc(25% - 20px); /* Mengatur lebar card secara proporsional */
+                        margin: 10px; /* Memberikan jarak antara card */
+                    }
+                </style>
 
-</div>
+                <script>
+                    // JavaScript untuk mengecek lebar jendela dan menyesuaikan kelas kolom
+                    window.addEventListener('DOMContentLoaded', function() {
+                        var resizeTimer;
 
-                </div>
+                        function checkWidth() {
+                            var colClass = (window.innerWidth <= 992) ? 'col-12' : 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
+                            var cards = document.querySelectorAll('.card');
+
+                            cards.forEach(function(card) {
+                                card.parentElement.className = colClass;
+                            });
+                        }
+
+                        window.addEventListener('resize', function() {
+                            clearTimeout(resizeTimer);
+                            resizeTimer = setTimeout(checkWidth, 250);
+                        });
+
+                        checkWidth();
+                    });
+                </script>
             </div>
         </div>
     </body>
@@ -427,4 +452,3 @@ $cardSet->closeRowIfNeeded();
         })
     })
 </script>
-

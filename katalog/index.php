@@ -41,50 +41,44 @@ require '../connect.php'
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"
             integrity="sha512-xxxxxx" crossorigin="anonymous"></script>
 
-        <style>
+            <style>
             @media screen and (max-width: 992px) {
-                .container::before {
-                    display: none;
-                }
-                .separator {
-                    display: none;
-                }
-                .col-lg-2 {
-                    flex: 0 0 25%;
-                    max-width: 25%;
-                }
+            .filter-container {
+                display: block;
+            }
+            .card-column {
+                width: 100%;
+            }
+            .sidebar {
+                display: none;
+            }
+            .container::before {
+                display: none;
+            }
+            .col-lg-2 {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
 
-            @media screen and (max-width: 991px) {
-                .filter-container {
-                    display: block;
-                }
-                .sidebar {
-                    display: none;
-                }
-                .container::before {
-                    display: none;
-                }
-                .separator {
-                display: none; 
-                }
-                .row .col-lg-2 {
-                    flex-basis: 100%;
-                    max-width: 100%;
-                }
-                .col-10 {
-                    margin-left: 0; 
-                    justify-content: flex-start; 
-                }
+            .col-lg-3 {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            }
+
+            .clearfix::after {
+                content: "";
+                display: table;
+                clear: both;
             }
 
             .container {
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 10px;
-            position: relative;
-            margin-left: -15px;
-            margin-right: -15px;
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 10px;
+                position: relative;
+                margin-left: -15px;
+                margin-right: -15px;
             }
 
             .col-lg-2,
@@ -121,7 +115,7 @@ require '../connect.php'
                 flex-wrap: wrap;
                 justify-content: flex-end;
             }
-            
+
             .row {
                 width: 100%;
                 display: flex;
@@ -153,10 +147,10 @@ require '../connect.php'
             }
 
             .filter-sidebar {
-            background-color: #eee7d3;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
+                background-color: #eee7d3;
+                padding: 20px;
+                border-radius: 10px;
+                width: 100%;
             }
 
             .catalog-item {
@@ -289,6 +283,9 @@ require '../connect.php'
             }
 
         </style>
+        <?php
+        require "../navbar3.php";
+        ?>
         <script>
             // Tampilkan atau sembunyikan filter di atas halaman produk pada layar mobile
             function toggleFilter() {
@@ -302,10 +299,6 @@ require '../connect.php'
         </script>
     </head>
     <body style="background-color:#EAD7c3;">
-            <!-- navabar -->
-        <?php
-        require "../navbar3.php";
-        ?>
         <div class="container" style="max-width: 2000px;">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">
@@ -333,64 +326,86 @@ require '../connect.php'
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
-                    <?php
-                    // Query untuk mengambil data barang dari database
-                    $sql = "SELECT * FROM produk";
-                    $result = mysqli_query($con, $sql);
+                <?php
 
-                    // Memulai pembukaan tag div untuk row
-                    echo '<div class="row">';
+class CardSet {
+    private $cardPerRow;
+    private $counter;
 
-                    $counter = 0;
-                    $cardPerRow = 4;
+    public function __construct($cardPerRow) {
+        $this->cardPerRow = $cardPerRow;
+        $this->counter = 0;
+    }
 
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        if ($counter % $cardPerRow == 0) {
-                            echo '<div class="row">';
-                        }
-                        ?>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
-                                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        $counter++;
+    public function startRow() {
+        echo '<div class="row">';
+    }
 
-                        if ($counter % $cardPerRow == 0) {
-                            echo '</div>';
-                        }
-                    }
+    public function endRow() {
+        echo '</div>';
+    }
 
-                    if ($counter % $cardPerRow != 0) {
-                        echo '</div>';
-                    }
-                    ?>
+    public function addCard($row) {
+        if ($this->counter % $this->cardPerRow == 0) {
+            $this->startRow();
+        }
+        ?>
+        <div class="col-lg-<?php echo 12 / $this->cardPerRow; ?> col-md-4 col-sm-6">
+            <div class="card">
+                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
+                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
+                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
                 </div>
             </div>
         </div>
         <?php
-        require '../footer2.php';
-        ?>
-    </body>
-</html>
+        $this->counter++;
 
-<script>
-    // Tampilkan atau sembunyikan filter di atas halaman produk pada layar mobile
-    function toggleFilter() {
-        var filterContainer = document.getElementById("filter-container");
-        if (filterContainer.style.display === "block") {
-            filterContainer.style.display = "none";
-        } else {
-            filterContainer.style.display = "block";
+        if ($this->counter % $this->cardPerRow == 0) {
+            $this->endRow();
         }
-    } ``
-</script>
+    }
+
+    public function closeRowIfNeeded() {
+        if ($this->counter % $this->cardPerRow != 0) {
+            $this->endRow();
+        }
+    }
+}
+
+// Menggunakan class CardSet
+
+$cardPerRow = 4;
+$cardSet = new CardSet($cardPerRow);
+
+// Query untuk mengambil data barang dari database
+$sql = "SELECT * FROM produk";
+$result = mysqli_query($con, $sql);
+
+// Memulai pembukaan tag div untuk row
+echo '<div class="row">';
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $cardSet->addCard($row);
+}
+
+$cardSet->closeRowIfNeeded();
+
+?>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <?php
+    require '../footer2.php';
+    ?>
+    
+</html>
 <script>
     $(document).ready(function(){
         $(".category").click(function(){
@@ -411,42 +426,4 @@ require '../connect.php'
         })
     })
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const categories = document.querySelectorAll('.category');
-        const semua = document.querySelector('#semua');
 
-        categories.forEach(category => {
-            category.addEventListener('click', function() {
-                categories.forEach(category => category.classList.remove('selected'));
-                this.classList.add('selected');
-
-                const selectedCategory = this.id;
-
-                // Kode tambahan: Mengatur tampilan produk berdasarkan kategori yang dipilih
-                const products = document.querySelectorAll('.card');
-
-                products.forEach(product => {
-                    if (selectedCategory === 'semua') {
-                        product.style.display = 'block';
-                    } else {
-                        const category = product.getAttribute('data-category');
-                        if (category === selectedCategory) {
-                            product.style.display = 'block';
-                        } else {
-                            product.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-
-        semua.addEventListener('click', function() {
-            categories.forEach(category => category.classList.remove('selected'));
-            this.classList.add('selected');
-
-            const products = document.querySelectorAll('.card');
-            products.forEach(product => product.style.display = 'block');
-        });
-    });
-</script>

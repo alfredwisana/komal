@@ -66,6 +66,17 @@ require '../connect.php'
                 max-width: 100%;
             }
             }
+            
+            /* CSS untuk membuat katalog dan card memiliki lebar yang sama */
+            #katalog .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    #katalog .card {
+                        flex-basis: calc(25% - 20px); /* Mengatur lebar card secara proporsional */
+                        margin: 10px; /* Memberikan jarak antara card */
+                    }
 
             .clearfix::after {
                 content: "";
@@ -121,6 +132,7 @@ require '../connect.php'
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+                margin-bottom: 50px;
             }
 
             /* Filter sidebar */
@@ -388,42 +400,6 @@ require '../connect.php'
                 $cardSet->closeRowIfNeeded();
 
                 ?>
-
-                <style>
-                    /* CSS untuk membuat katalog dan card memiliki lebar yang sama */
-                    #katalog .row {
-                        display: flex;
-                        flex-wrap: wrap;
-                    }
-
-                    #katalog .card {
-                        flex-basis: calc(25% - 20px); /* Mengatur lebar card secara proporsional */
-                        margin: 10px; /* Memberikan jarak antara card */
-                    }
-                </style>
-
-                <script>
-                    // JavaScript untuk mengecek lebar jendela dan menyesuaikan kelas kolom
-                    window.addEventListener('DOMContentLoaded', function() {
-                        var resizeTimer;
-
-                        function checkWidth() {
-                            var colClass = (window.innerWidth <= 992) ? 'col-12' : 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
-                            var cards = document.querySelectorAll('.card');
-
-                            cards.forEach(function(card) {
-                                card.parentElement.className = colClass;
-                            });
-                        }
-
-                        window.addEventListener('resize', function() {
-                            clearTimeout(resizeTimer);
-                            resizeTimer = setTimeout(checkWidth, 250);
-                        });
-
-                        checkWidth();
-                    });
-                </script>
             </div>
         </div>
     </body>
@@ -451,4 +427,26 @@ require '../connect.php'
             })
         })
     })
+</script>
+<script>
+    // JavaScript untuk mengecek lebar jendela dan menyesuaikan kelas kolom
+    window.addEventListener('DOMContentLoaded', function() {
+        var resizeTimer;
+
+        function checkWidth() {
+            var colClass = (window.innerWidth <= 992) ? 'col-12' : 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
+            var cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                card.parentElement.className = colClass;
+            });
+        }
+
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(checkWidth, 250);
+        });
+
+        checkWidth();
+    });
 </script>

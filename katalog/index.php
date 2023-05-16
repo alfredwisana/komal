@@ -65,8 +65,32 @@ require '../connect.php'
                 flex-basis: 100%;
                 max-width: 100%;
             }
-            }
+
             
+            }
+
+            @media screen and (min-width: 992 max-width: 1300px) {
+            .card .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+            }
+
+            .card .card-text {
+            font-size: 10px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 16px;
+            }
+
+            .card .card-price {
+            font-size: 12px;
+            font-weight: 700;
+            color: #f44336;
+            margin-bottom: 8px;
+            }
+            }
+
             /* CSS untuk membuat katalog dan card memiliki lebar yang sama */
             #katalog .row {
                         display: flex;
@@ -434,7 +458,19 @@ require '../connect.php'
         var resizeTimer;
 
         function checkWidth() {
-            var colClass = (window.innerWidth <= 992) ? 'col-12' : 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
+            var colClass;
+            var windowWidth = window.innerWidth;
+
+            if (windowWidth <= 992) {
+                colClass = 'col-12';
+            } else if (windowWidth > 992 && windowWidth <= 1030) {
+                colClass = 'col-lg-6 col-md-6 col-sm-6';
+            } else if (windowWidth > 1030 && windowWidth <= 1300) {
+                colClass = 'col-lg-4 col-md-4 col-sm-6';
+            } else {
+                colClass = 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
+            }
+
             var cards = document.querySelectorAll('.card');
 
             cards.forEach(function(card) {

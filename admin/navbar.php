@@ -41,7 +41,7 @@
                             <li class="nav-item"><a href="./add.php" class="nav-link text-uppercase font-weight-bold">Add Item</a></li>
                 </ul>
                 <div class="navbar-icons">
-                    <a href="#"><i class="fa-solid fa-circle-user fa-2xl" style="color: black;"></i></a>
+                    <a href="#" id="logout"><i class="fa-solid fa-circle-user fa-2xl" style="color: black;"></i></a>
                 </div>
             </div>
         </div>

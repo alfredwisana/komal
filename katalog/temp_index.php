@@ -57,8 +57,20 @@ require '../connect.php'
                 flex-basis: 100%;
                 max-width: 100%;
             }
-            
+
             }
+
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -91,15 +90,14 @@
+  
             @media screen and (min-width: 992 max-width: 1300px) {
             .card .card-title {
             font-family: 'Poppins', sans-serif;
@@ -78,15 +90,35 @@ require '../connect.php'
             margin-bottom: 8px;
             }
             }
+
             #katalog .row {
                         display: flex;
                         flex-wrap: wrap;
                     }
+
                     #katalog .card {
                         flex-basis: calc(25% - 20px); 
                         margin: 10px; 
                     }
+
             .clearfix::after {
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -159,24 +157,20 @@
+  
                 content: "";
                 display: table;
                 clear: both;
@@ -136,20 +168,41 @@ require '../connect.php'
                 flex-wrap: wrap;
                 margin-bottom: 50px;
             }
+
             .sidebar {
                 width: 25%;
                 float: left;
             }
+
             .filter-label {
                 font-weight: bold;
                 margin-top: 20px;
             }
+
             .filter-button:hover {
                 background-color: #0069d9;
             }
+
             .filter-container {
                 display: none;
                 background-color: #f2f2f2;
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -282,7 +276,7 @@
+  
                 padding: 10px;
             }
             .filter-sidebar {
@@ -241,6 +294,23 @@ require '../connect.php'
             display: flex;
             align-items: center;
             bottom: 5px;
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -323,17 +317,6 @@
+  
             }
             .btn {
                 display: inline-block;
@@ -269,7 +339,6 @@ require '../connect.php'
             background-color: #f1f1f1;
             padding: 0px;
             }
-
         </style>
         <?php
         require "../navbar3.php";
@@ -277,19 +346,19 @@ require '../connect.php'
     </head>
     <body style="background-color:#EAD7c3;">
         <div class="container" style="max-width: 2000px;">
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -349,16 +332,11 @@ function toggleFilter() {
+  
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
                     <div class="filter-sidebar">
                         <h5>Katalog</h5>
                         <div class='catalog-item'>
@@ -308,6 +377,23 @@ require '../connect.php'
                         ?>
                     </div>
                 </div>
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -404,33 +382,24 @@ public function closeRowIfNeeded() {
+  
                 <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
                 <?php
                 class CardSet {
@@ -344,11 +430,13 @@ require '../connect.php'
                         }
                     }
                 }
+
                 $cardPerRow = 4;
                 $cardSet = new CardSet($cardPerRow);
                 $sql = "SELECT * FROM produk";
                 $result = mysqli_query($con, $sql);
                 echo '<div class="row">';
+
                 while ($row = mysqli_fetch_assoc($result)) {
                     $colClass = 'col-lg-' . 12 / $cardPerRow . ' col-md-4 col-sm-6';
                     $cardSet->addCard($row, $colClass);
@@ -364,6 +452,17 @@ require '../connect.php'
 </html>
 <script>
     $(document).ready(function(){
+
+    
+        
+          
+    
+
+        
+        Expand All
+    
+    @@ -453,7 +422,6 @@ public function closeRowIfNeeded() {
+  
         $(".category").click(function(){
             var v_cat = $(this).attr('id');
             
@@ -384,6 +483,24 @@ require '../connect.php'
 <script>
     window.addEventListener('DOMContentLoaded', function() {
         var resizeTimer;
+
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -486,3 +454,13 @@ function checkWidth() {
+  
         function checkWidth() {
             var colClass;
             var windowWidth = window.innerWidth;

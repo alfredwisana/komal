@@ -156,7 +156,7 @@ require 'connect.php'
 				</a></li>
 				
 				<li><a href="katalog/booking.php?id=44"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
 				</a></li>
 			</ul>
 		</div>

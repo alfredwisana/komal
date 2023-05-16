@@ -45,6 +45,7 @@ body {
   padding: 100px;
   padding-top: 25px;
   padding-bottom: 25px;
+  position: relative;
 }
 
 #menuImages{
@@ -52,10 +53,26 @@ body {
   height: 600px;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s;
 }
 
-#menuImages:hover {
-	opacity: 0.8;
+.image_text {
+	color: black;
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transition: all 0.3s;
+	font-size: 30px;
+	transform: translate(-50%, -50%);
+}
+
+#menu ul li a:hover #menuImages {
+	opacity: 0.5;
+}
+
+#menu ul li a:hover .image_text {
+	opacity: 1;
 }
 
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');

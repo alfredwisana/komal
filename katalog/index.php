@@ -314,11 +314,12 @@ require '../connect.php'
             }
 
         </style>
-        <?php
-        require "../navbar3.php";
-        ?>
+        
     </head>
     <body style="background-color:#EAD7c3;">
+    <?php
+        require "../navbar3.php";
+    ?>
         <div class="container" style="max-width: 2000px;">
             <div class="row">
                 <div class="col-lg-2 col-md-4 col-sm-6">

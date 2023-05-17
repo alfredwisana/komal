@@ -1,7 +1,3 @@
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
@@ -15,15 +11,22 @@
         font-weight: bold;
         margin-left: -200px;
     }
+    #navbar4{
+            max-height: 3rem;
+    }
     @media only screen and (max-width : 1024px) { 
-        #info{
+        nav #info{
             margin-left: 0;
         }
+        #navbar4{
+            max-height: none;
+        }
+
     }
 </style>
 
 <!-- navabar -->
-<nav class="navbar navbar-expand-lg bg-light" style="max-height: 3rem;" id="navbar4">
+<nav class="navbar navbar-expand-lg bg-light" id="navbar4">
         <div class="container-fluid">
             <img src="../images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>

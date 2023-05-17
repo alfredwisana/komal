@@ -7,7 +7,6 @@ require '../connect.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-
     <!-- bootstrap 5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
@@ -24,6 +23,7 @@ require '../connect.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
 
     <style>
         body {
@@ -110,7 +110,7 @@ require '../connect.php';
 <body background="https://mediaini.com/wp-content/uploads/2021/01/Rekomendasi-perlengkapan-bayi-Instagram.jpg">
     <div class="wrapper container-lg">
           <div class="form">
-            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;font-family:coolvetica;">Login</h2>
+            <h2 style=" padding-bottom: 15px; text-align: center; font-weight: bold;">Login</h2>
             <div class="input">
                 <input type="text" class="form-control" id="username"  placeholder="Username" style="font-family:coolvetica">
                 <div id="emailHelp" class="form-text" style="font-family:coolvetica">We'll never share your email with anyone else.</div>
@@ -118,7 +118,7 @@ require '../connect.php';
             <div class="input" style="padding-top:30px;">
                 <input type="password" class="form-control" id="password"  placeholder="Password">
             </div>
-            <p style="padding-top: 3%;"><a href="../index.php" style="font-family:coolvetica; text-decoration:none;">Back to Home page</a></p>
+            <p style="padding-top: 3%;"><a href="../index.php" style="font-family:coolvetica; text-decoration:none; color:black;">Back to Home page</a></p>
             <div class="text-center">
                 <button id="login" style="font-family:coolvetica">Login</button>
             </div>
@@ -172,6 +172,15 @@ require '../connect.php';
     })
     })
   })
+
+  // Swal.fire({
+  //     position: 'top-end',
+  //     icon: 'success',
+  //     title: 'Success',
+  //     text: 'You are successfully loged out. Please login to continue.',
+  //     showConfirmButton: false,
+  //     timer: 2000    
+  //     });
 </script>
 
 </html>

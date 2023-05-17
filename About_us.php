@@ -346,7 +346,7 @@
             </div>
             <div class="col-sm-12">
                 <center>
-                    <a href="https://goo.gl/maps/KKsrqCRithfcGzXs9"><img src="images/map1.png"
+                    <a href="https://goo.gl/maps/KKsrqCRithfcGzXs9" target="_blank"><img src="images/map1.png"
                             style="border-radius:5px;height:65%;width: 65%;"></a>
                     <p style="font-family:coolvetica; margin-top: 1%; text-align:center;">Map Berkah Jaya 1 (Pasar
                         Krian,
@@ -357,7 +357,7 @@
             <div class="col-sm-12" style="padding-top:3%; padding-bottom:3%"></div>
             <div class="col-sm-12">
                 <center>
-                    <a href="https://goo.gl/maps/UMAuaf4avpkq6J3o9"><img src="images/map2.png"
+                    <a href="https://goo.gl/maps/UMAuaf4avpkq6J3o9" target="_blank"><img src="images/map2.png"
                             style="border-radius:5px;height:65%;width: 65%;"></a>
                     <p style="font-family:coolvetica; margin-top: 1%; text-align:center;">Map Berkah Jaya 2 (Jl.
                         Gubernur

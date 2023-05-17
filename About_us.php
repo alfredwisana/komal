@@ -247,28 +247,30 @@
     <!-- Foto Polaroid -->
 
     <div id="awal1" class="container-fluid" style="margin-top: 60px;">
-        <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
+        <div class="row">
+        <div class="col" style="height: 30rem;object-fit: contain;">
             <img src="images/awal1.png"
                 style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
-        <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
+        <div class="col" style="height: 30rem;object-fit: contain;">
             <img src="images/awal2.png"
                 style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
-        <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
+        <div class="col" style="height: 30rem;object-fit: contain;">
             <img src="images/awal3.png"
                 style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
 
-        <div class="col-12 col-md-3" style="height: 30rem;object-fit: contain;">
+        <div class="col" style="height: 30rem;object-fit: contain;">
             <img src="images/awal4.png"
                 style="height: 28.75rem;border: 0.1rem solid #000; margin-left:auto; margin-right:auto; display:block;">
         </div>
         <div class="col-md-12">
             <div style="height:1px;width: 100%;background-color: black;margin-top: 40px;">
             </div>
+        </div>
         </div>
 
         <!-- Text -->

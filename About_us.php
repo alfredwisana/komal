@@ -61,7 +61,7 @@
 
         [class*="col-"] {
             float: left;
-            padding: 15px;
+            padding-top: 15px;
         }
 
         .col-1 {
@@ -150,7 +150,7 @@
 
         /*banner*/
         #banner {
-            margin-top: 20px;
+            margin-top: 30px;
             width: 80%;
             height: 40rem;
             border: 0.1rem solid #000;

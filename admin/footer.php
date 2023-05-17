@@ -36,12 +36,12 @@
                 <div class="col-3" id="info">                
                 <div>
                     <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9"><i class="fa fa-location-arrow" style="color: black;"></i></a>
-                    <p><span>Pusat : JL.Gubernur Sunandar no 578, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
+                    <p><span>Pusat : Pasar Krian, Jl. Basuki Rahmat No. 11, Krian, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61262</span></p>
                 </div>
 
                 <div>
                 <a href="https://goo.gl/maps/nVRXkX62mVqLfZ1P9"><i class="fa fa-location-arrow" style="color: black;"></i></a>
-                <p><span>Cabang : Jl. Magersari, RT.1/RW.1, Krian, Sidoarjo, Kabupaten Sidoarjo</span></p>
+                <p><span>Cabang : Jl. Gubernur Sunandar No. 578, Krian, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61226</span></p>
                 </div>
 
                 <div>
@@ -81,7 +81,7 @@
         |
         <a href="https://web.whatsapp.com/">Contact</a>
        </ul>
-       <a href="#" id="gotop" rel="nofollow" name="gotop">^Back To Top^</a>
+       <a href="#" id="gotop" rel="nofollow" name="gotop">Back To Top</a>
        <br>
        </br>
        </div>

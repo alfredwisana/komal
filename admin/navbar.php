@@ -23,7 +23,7 @@
 </style>
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg bg-light" style="max-height: 4rem;" id="navbar4">
+<nav class="navbar navbar-expand-lg bg-light" style="max-height: 4.5rem;" id="navbar4">
         <div class="container-fluid">
             <img src="../images/logo.png" style="width: 3rem; margin-right: 1.1rem;">
             <h5 style="margin-top: 0.3rem;">Berkah Jaya Baby Shop </h5>

@@ -1,6 +1,6 @@
 <?php
-require '../connect.php'
-    ?>
+require '../connect.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -12,17 +12,14 @@ require '../connect.php'
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
         <!-- JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous"></script>
-        
+                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                crossorigin="anonymous"></script>
 
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.1.js"
-            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
         <!-- AOS Animate on Scroll -->
         <!-- CSS -->
@@ -31,68 +28,139 @@ require '../connect.php'
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
-            integrity="sha512-xxxxxx" crossorigin="anonymous" />
+            integrity="sha512-xxxxxx" crossorigin="anonymous"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"
-            integrity="sha512-xxxxxx" crossorigin="anonymous"></script>
+                integrity="sha512-xxxxxx" crossorigin="anonymous"></script>
         <link rel="icon" type="image/png" href="../images/logo2.png" sizes="16x16">
 
-            <style>
+        <style>
             @media screen and (max-width: 992px) {
-            .filter-container {
-                display: block;
-            }
-            .card-column {
-                width: 100%;
-            }
-            .sidebar {
-                display: none;
-            }
-            .container::before {
-                display: none;
-            }
-            .col-lg-2 {
-                flex: 0 0 100%;
-                max-width: 100%;
+                .filter-container {
+                    display: block;
+                    width: 100%;
+                }
+
+                .card-column {
+                    width: 100%;
+                }
+
+                .sidebar {
+                    display: none;
+                }
+
+                .container::before {
+                    display: none;
+                }
+
+                .col-lg-2 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                .col-lg-3 {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+                
+                .separator {
+                    border-left: 2px solid #EAD7c3;
+                    border-bottom-width: 1px;
+                    height: 100%;
+                }
             }
 
-            .col-lg-3 {
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-            
+            @media screen and (min-width: 993px) and (max-width: 1029px) {
+                .filter-container {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 30%;
+                    margin-right: 20px;
+                }
+
+                .card-column {
+                    width: 68%;
+                }
+
+                .col-lg-2,
+                .col-lg-3 {
+                    width: 30%;
+                    max-width: 30%;
+                }
+
+                .separator {
+                    border-left: 2px solid #000;
+                    border-bottom-width: 1px;
+                    height: 100%;
+                }
             }
 
-            @media screen and (min-width: 992 max-width: 1300px) {
-            .card .card-title {
-            font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 8px;
+            @media screen and (min-width: 1030px) and (max-width: 1299px) {
+                .filter-container {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 30%;
+                    margin-right: 20px;
+                }
+
+                .card-column {
+                    width: 68%;
+                }
+
+                .col-lg-2 {
+                    flex: 0 0 30%;
+                    max-width: 30%;
+                }
+
+                .col-lg-3 {
+                    flex-basis: 33.33%;
+                    max-width: 33.33%;
+                }
+
+                .separator {
+                border-left: 2px solid #000;
+                border-bottom-width: 1px;
+                height: 100%;
+            }
             }
 
-            .card .card-text {
-            font-size: 10px;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 16px;
-            }
+            @media screen and (min-width: 1300px) {
+                .filter-container {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 20%;
+                    margin-right: 20px;
+                }
 
-            .card .card-price {
-            font-size: 12px;
-            font-weight: 700;
-            color: #f44336;
-            margin-bottom: 8px;
+                .card-column {
+                    width: 78%;
+                }
+
+                .col-lg-2 {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+
+                .col-lg-3 {
+                    flex-basis: 25%;
+                    max-width: 25%;
+                }
+
+                .separator {
+                border-left: 2px solid #000;
+                border-bottom-width: 1px;
+                height: 100%;
             }
             }
 
             #katalog .row {
-                        display: flex;
-                        flex-wrap: wrap;
-                    }
+                display: flex;
+                flex-wrap: wrap;
+            }
 
-                    #katalog .card {
-                        flex-basis: calc(25% - 20px); 
-                        margin: 10px; 
-                    }
+            #katalog .card {
+                flex-basis: calc(25% - 20px); 
+                margin: 10px; 
+            }
 
             .clearfix::after {
                 content: "";
@@ -103,25 +171,9 @@ require '../connect.php'
             .container {
                 display: flex;
                 flex-wrap: wrap;
-                padding-top: 10px;
+                padding-top: 20px;
                 position: relative;
-                margin-left: -15px;
-                margin-right: -15px;
-            }
-
-            .col-lg-2,
-            .col-md-3,
-            .col-sm-6,
-            .col-6 {
-                position: relative;
-                width: 100%;
-                padding: 0 15px;
-            }
-
-            .row>div:nth-child(2),
-            .row>div:nth-child(10) {
-                position: relative;
-                z-index: 1;
+                margin-left: 25px;
             }
 
             .col-2 {
@@ -151,33 +203,84 @@ require '../connect.php'
                 margin-bottom: 50px;
             }
 
-            .sidebar {
-                width: 25%;
-                float: left;
+            .card {
+            background-color: #eee7d3;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
             }
 
-            .filter-label {
+            .card .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            }
+
+            .card .card-body {
+            padding: 16px;
+            height: 200px;
+            }
+
+            .card .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 4px;
+            }
+
+            .card .card-text {
+            font-size: 16px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 16px;
+            }
+
+            .card .card-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f44336;
+            margin-bottom: 8px;
+            }
+
+            .card .btn-primary {
+            background-color: #f44336;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            }
+
+            .card .btn-primary:hover {
+            background-color: #c0392b;
+            }
+
+            .card .card-title,
+            .card .card-price,
+            .card .btn-primary {
+            height: 53px; 
+            display: flex;
+            align-items: center;
+            bottom: 5px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #C8d3b8;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
                 font-weight: bold;
-                margin-top: 20px;
+                transition: background-color 0.3s ease;
             }
 
-            .filter-button:hover {
-                background-color: #0069d9;
+            .btn:hover {
+                background-color: #beafe1;
             }
-
-            .filter-container {
-                display: none;
-                background-color: #f2f2f2;
-                padding: 10px;
-            }
-
-            .filter-sidebar {
-                background-color: #eee7d3;
-                padding: 20px;
-                border-radius: 10px;
-                width: 100%;
-            }
-
+            
             .catalog-item {
                 margin-bottom: 10px;
                 color: white;
@@ -213,110 +316,37 @@ require '../connect.php'
                 color: #007bff;
             }
             
-            .card {
-            background-color: #eee7d3;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-bottom: 20px;
+            .sidebar {
+                width: 25%;
+                float: left;
             }
 
-            .card .card-img-top {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-            }
-
-            .card .card-body {
-            padding: 16px;
-            height: 200px;
-            }
-
-            .card .card-title {
-            font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 8px;
-            }
-
-            .card .card-text {
-            font-size: 16px;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 16px;
-            }
-
-            .card .card-price {
-            font-size: 20px;
-            font-weight: 700;
-            color: #f44336;
-            margin-bottom: 8px;
-            }
-
-            .card .btn-primary {
-            background-color: #f44336;
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-            }
-
-            .card .btn-primary:hover {
-            background-color: #c0392b;
-            }
-
-            .card .card-title,
-            .card .card-price,
-            .card .btn-primary {
-            height: 40px; 
-            display: flex;
-            align-items: center;
-            bottom: 5px;
-            }
-
-            .btn {
-                display: inline-block;
-                padding: 10px 20px;
-                background-color: #C8d3b8;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 16px;
+            .filter-label {
                 font-weight: bold;
-                transition: background-color 0.3s ease;
+                margin-top: 20px;
             }
 
-            .btn:hover {
-                background-color: #beafe1;
+            .filter-button:hover {
+                background-color: #0069d9;
             }
 
-            .separator {
-            border-left: 2px solid #000;
-            border-bottom-width: 1px;
-            height: 100%;
-            }
-
-            footer {
-            position: static;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #f1f1f1;
-            padding: 0px;
+            .filter-sidebar {
+                background-color: #eee7d3;
+                padding: 20px;
+                border-radius: 10px;
+                width: 100%;
             }
 
         </style>
-        
     </head>
+
     <body style="background-color:#EAD7c3;">
-    <?php
-        require "../navbar3.php";
-    ?>
-        <div class="container" style="max-width: 2000px;">
+        <?php
+            require "../navbar3.php";
+        ?>
+        <div class="container" style="max-width: 1900px;">
             <div class="row">
-                <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="filter-container col-lg-2 col-md-4 col-sm-6" id="filter-container">
                     <div class="filter-sidebar">
                         <h5>Katalog</h5>
                         <div class='catalog-item'>
@@ -335,127 +365,93 @@ require '../connect.php'
                         ?>
                     </div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-sm-12 separator" id = "katalog" style="padding-left: 100px;">
-                <?php
-                class CardSet {
-                    private $cardPerRow;
-                    private $counter;
-
-                    public function __construct($cardPerRow) {
-                        $this->cardPerRow = $cardPerRow;
-                        $this->counter = 0;
-                    }
-
-                    public function startRow() {
-                        echo '<div class="row">';
-                    }
-
-                    public function endRow() {
-                        echo '</div>';
-                    }
-
-                    public function addCard($row, $colClass) {
-                        $this->counter++;
-                        ?>
-                        <div class="<?php echo $colClass; ?>">
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo $row['gambar'] ?>" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
-                                    <p class="card-price">Rp <?php echo $row['harga'] ?></p>
-                                    <a href="booking.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Lihat detail</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-10 col-md-8 col-sm-6 card-column separator">
+                    <div class="row" id="katalog" style="margin-bottom: 0px">
                         <?php
-                    }
+                        $sql = "SELECT * FROM produk";
+                        $result = mysqli_query($con, $sql);
 
-                    public function closeRowIfNeeded() {
-                        if ($this->counter % $this->cardPerRow != 0) {
-                            $this->endRow();
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>
+                                    <div class='card'>
+                                        <img class='card-img-top' src='$row[gambar]' alt='...'>
+                                        <div class='card-body'>
+                                            <h5 class='card-title'>$row[namaServis]</h5>
+                                            <p class='card-price'>Rp $row[harga]</p>
+                                            <a href='booking.php?id=".$row['id']."' class='btn btn-primary'>Lihat detail</a>
+                                        </div>
+                                    </div>
+                                </div>";
+                            }
+                        } else {
+                            echo "No katalog available";
                         }
-                    }
-                }
-
-                $cardPerRow = 4;
-                $cardSet = new CardSet($cardPerRow);
-                $sql = "SELECT * FROM produk";
-                $result = mysqli_query($con, $sql);
-                echo '<div class="row">';
-
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $colClass = 'col-lg-' . 12 / $cardPerRow . ' col-md-4 col-sm-6';
-                    $cardSet->addCard($row, $colClass);
-                }
-                $cardSet->closeRowIfNeeded();
-                ?>
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-    <?php
-    require '../footer2.php';
-    ?>
-</html>
-<script>
-    $(document).ready(function(){
-        $(".category").click(function(){
-            var v_cat = $(this).attr('id');
-            
-            $.ajax({
-                type : "post",
-                url: "proc.php",
-                data :{
-                    cat : v_cat
-                },
-                success: function(result){
-                    
-                    $("#katalog").html(result);
+        <?php
+        require '../footer2.php';
+        ?>
+        <script>
+            $(document).ready(function() {
+            function updateCardLayout() {
+                const screenWidth = window.innerWidth;
+                let cardsPerRow;
+
+                if (screenWidth >= 1300) {
+                cardsPerRow = 4;
+                } else if (1299 > screenWidth >= 1030) {
+                cardsPerRow = 3;
+                } else if (1029 > screenWidth >= 993) {
+                cardsPerRow = 2;
+                } else {
+                cardsPerRow = 1;
                 }
 
-            })
-        })
-    })
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        var resizeTimer;
-
-        function checkWidth() {
-            var colClass;
-            var windowWidth = window.innerWidth;
-
-            if (windowWidth <= 992) {
-                colClass = 'col-12';
-            } else if (windowWidth > 992 && windowWidth <= 1030) {
-                colClass = 'col-lg-6 col-md-6 col-sm-6';
-            } else if (windowWidth > 1030 && windowWidth <= 1300) {
-                colClass = 'col-lg-4 col-md-4 col-sm-6';
-            } else {
-                colClass = 'col-lg-<?php echo 12 / $cardPerRow; ?> col-md-4 col-sm-6';
+                const $katalog = $("#katalog");
+                $katalog.removeClass("row-cols-1 row-cols-2 row-cols-3 row-cols-4");
+                $katalog.addClass(`row-cols-${cardsPerRow}`);
             }
 
-            var cards = document.querySelectorAll('.card');
-
-            cards.forEach(function(card) {
-                card.parentElement.className = colClass;
+            $(window).resize(function() {
+                updateCardLayout();
             });
-        }
 
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(checkWidth, 250);
-        });
+            updateCardLayout();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".category").click(function(){
+                    var v_cat = $(this).attr('id');
+                    
+                    $.ajax({
+                        type : "post",
+                        url: "proc.php",
+                        data :{
+                            cat : v_cat
+                        },
+                        success: function(result){
+                            
+                            $("#katalog").html(result);
+                        }
 
-        checkWidth();
-    });
-</script>
-<script>
-    function toggleFilter() {
-        var filterContainer = document.getElementById("filter-container");
-        if (filterContainer.style.display === "block") {
-            filterContainer.style.display = "none";
-        } else {
-            filterContainer.style.display = "block";
-        }
-    }
-</script>
+                    })
+                })
+            })
+        </script>
+        <script>
+            function toggleFilter() {
+                var filterContainer = document.getElementById("filter-container");
+                if (filterContainer.style.display === "block") {
+                    filterContainer.style.display = "none";
+                } else {
+                    filterContainer.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>

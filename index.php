@@ -121,7 +121,29 @@ require 'connect.php'
 			</div>
 		</div>
 		<br>
-
+		
+		<div class="container">
+		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="row g-0">
+							<div class="col-md-6">
+								<img class="card-img-top" src="images/catalog_bajubawahan1.jpg" alt="Product Image">
+							</div>
+							<div class="col-md-6">
+								<div class="card-body">
+									<h5 class="card-title">Celana Pendek Hijau</h5>
+									<p class="card-text">Celana pendek berwarna hijau. Celana untuk anak laki-laki. Sangat nyaman untuk dipakai.
+Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; panjang: 31cm; Cris(slangkang): 20cm; Paha: 20cm), M (pinggang:belum ditarik(normal) 38cm, sudah ditarik 60cm; panjang: 32cm; Cris(slangkang): 21cm; Paha: 21cm), L (pinggang:belum ditarik(normal)41cm, sudah ditarik 63cm; panjang: 33cm; Cris(slangkang): 22cm; Paha: 22cm)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
 			
 		<div id="menu">
 		<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
@@ -159,6 +181,7 @@ require 'connect.php'
 				</a></li>
 			</ul>
 		</div>
+		
 	</div>
 	<br>
 	<!-- <div class="row">

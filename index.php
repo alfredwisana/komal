@@ -144,44 +144,65 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 			</div>
 		</div>
 		<br>
-			
-		<div id="menu">
-		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
-			<ul>
-				<li><a href="katalog/booking.php?id=52"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
+
+		<div id="menu" class="row">
+			<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
+				<div class="col-md-3">
+					<a href="katalog/booking.php?id=52">
+					<img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-100" alt="Product Image">
 				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=53"><img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=54"><img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=55"><img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=41"><img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=42"><img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=43"><img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-				
-				<li><a href="katalog/booking.php?id=44"><img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a></li>
-			</ul>
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=53">
+					<img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=54">
+					<img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=55">
+					<img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
 		</div>
-		
+		<div id="menu" class="row">
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=41">
+				<img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-100" alt="Product Image">
+				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=42">
+					<img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=43">
+					<img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a href="katalog/booking.php?id=44">
+					<img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-100" alt="Product Image">
+					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+				</a>
+			</div>
+		</div>
 	</div>
 	<br>
 	<!-- <div class="row">

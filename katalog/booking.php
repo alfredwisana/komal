@@ -68,9 +68,58 @@ while ($row = mysqli_fetch_array($result)) {
             background: lightblue;
         }
 
-        .btn:hover {
-            transform: scale(1.2);
-            transition: .2s;
+        button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+        background-color: #d6b18a;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: .6rem;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        }
+
+        button span:not(:nth-child(6)) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 30px;
+        width: 30px;
+        background-color: #c28b51;
+        border-radius: 50%;
+        transition: .6s ease;
+        }
+
+        button span:nth-child(6) {
+        position: relative;
+        }
+
+        button span:nth-child(1) {
+        transform: translate(-3.3em, -4em);
+        }
+
+        button span:nth-child(2) {
+        transform: translate(-6em, 1.3em);
+        }
+
+        button span:nth-child(3) {
+        transform: translate(-.2em, 1.8em);
+        }
+
+        button span:nth-child(4) {
+        transform: translate(3.5em, 1.4em);
+        }
+
+        button span:nth-child(5) {
+        transform: translate(3.5em, -3.8em);
+        }
+
+        button:hover span:not(:nth-child(6)) {
+        transform: translate(-50%, -50%) scale(4);
+        transition: 1.5s ease;
         }
     </style>
 </head>
@@ -82,10 +131,6 @@ while ($row = mysqli_fetch_array($result)) {
         <?php
             include "../navbar3.php"
         ?>
-
-        <form method='post'>
-            <input onclick='goBack()' type='button' value='Back' />
-        </form>
 
         <script>
             function goBack() {
@@ -105,9 +150,14 @@ while ($row = mysqli_fetch_array($result)) {
                         <p style="font-weight: bold;">Rp <?php echo $harga ?></p>
                         <p><?php echo $deskripsi ?></p>
                     </div>
-                    <div class="row mt-5">
-                        <!-- <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: lightblue;">Book Now</button> -->
-                    </div>
+                        <button onclick='goBack()' value="Back">
+                        <span class="circle1"></span>
+                        <span class="circle2"></span>
+                        <span class="circle3"></span>
+                        <span class="circle4"></span>
+                        <span class="circle5"></span>
+                        <span class="text">Back</span>
+                        </button>
                 </div>
             </div>
         </div>

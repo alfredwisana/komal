@@ -61,6 +61,10 @@ body {
   position: relative;
 }
 
+#menu .col-md-3{
+	padding: 10px;
+}
+
 #menuImages{
   object-fit: cover;
   height: 600px;
@@ -71,6 +75,23 @@ body {
 
 .card{
 	background-color: #eee7d3;
+	height: 100%;
+}
+
+.card-title{
+	color: black;
+}
+
+.card-text{
+	color: black;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: none;
 }
 
 .image_text {

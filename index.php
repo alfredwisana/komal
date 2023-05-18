@@ -16,7 +16,6 @@ require 'connect.php'
 
 	<title>Homepage</title>
 	<link rel="icon" type="image/png" href="./images/logo2.png" sizes="16x16">
-
 </head>
 
 <body>
@@ -24,13 +23,11 @@ require 'connect.php'
 	<?php
 		require 'navbar4.php';
 	?>
-	
+	<!-- Carousel -->
 	<div class="content">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<!-- to make an image as an access to link put the image inside the a and make 
-                         sure it has the img-responsive class -->
 					<img src="images/carousel1.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
 					<div class="absolute-div">
 						<div class="carousel-caption">
@@ -40,8 +37,6 @@ require 'connect.php'
 				</div>
 
 				<div class="carousel-item">
-					<!-- to make an image as an access to link put the image inside the a and make 
-                         sure it has the img-responsive class -->
 					<img src="images/carousel2.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
 					<div class="absolute-div">
 						<div class="carousel-caption">
@@ -51,8 +46,6 @@ require 'connect.php'
 				</div>
 
 				<div class="carousel-item">
-					<!-- to make an image as an access to link put the image inside the a and make 
-                         sure it has the img-responsive class -->
 					<img src="images/carousel3.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
 					<div class="absolute-div">
 						<div class="carousel-caption">
@@ -62,8 +55,6 @@ require 'connect.php'
 				</div>
 
 				<div class="carousel-item">
-					<!-- to make an image as an access to link put the image inside the a and make 
-                         sure it has the img-responsive class -->
 					<img src="images/carousel4.jpg" class="img-responsive d-block w-100" alt="..." id="carouselImage">
 					<div class="absolute-div">
 						<div class="carousel-caption">
@@ -84,7 +75,7 @@ require 'connect.php'
 			</button>
 		</div>
 
-	
+		<!-- Best In Market -->
 		<div class="container mt-5">
 		<h2 class="text-center mb-4"><b>WHY WE ARE THE BEST IN MARKET</b></h2>
 			<div class="row">
@@ -121,7 +112,7 @@ require 'connect.php'
 			</div>
 		</div>
 		<br>
-		
+		<!-- Best Selling Product Display -->
 		<div class="container">
 		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
@@ -144,65 +135,113 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 			</div>
 		</div>
 		<br>
-
+		
+		<!-- ProductHub first row -->
 		<div id="menu" class="row">
-			<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
-				<div class="col-md-3">
+			<div class="col-md-3">
+				<div class="card card-small">
 					<a href="katalog/booking.php?id=52">
-					<img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-100" alt="Product Image">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+						<img src="images/catalog_baju/kbthn_bayi1.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>My Baby Powder</b></h5>
+							<p class="card-text">My Baby's baby powder (Soft & Gentle) 100 g + 25 g extra. Keep your baby's skin smooth and comfort all day</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="katalog/booking.php?id=53">
-					<img src="images/catalog_baju/kbthn_bayi2.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=53">
+						<img src="images/catalog_baju/kbthn_bayi2.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>My Baby Lotion</b></h5>
+							<p class="card-text">My Baby's Milk Bath (Sweet Floral) 100 ml. Terrbuat dari milk dan oat. Keep your baby's skin smooth and comfort all day</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="katalog/booking.php?id=54">
-					<img src="images/catalog_baju/kbthn_bayi3.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=54">
+						<img src="images/catalog_baju/kbthn_bayi3.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Cussons Baby Powder</b></h5>
+							<p class="card-text">Cussons Baby Powder (Smooth & Soft) 200 + 100g extra. Wangi sakura yang tahan lama selembut kasih sayang ibu.</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="katalog/booking.php?id=55">
-					<img src="images/catalog_baju/kbthn_bayi4.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=55">
+						<img src="images/catalog_baju/kbthn_bayi4.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Johnson's Baby Powder</b></h5>
+							<p class="card-text">Johnson's Bedtime Baby Powder 500 g. Dengan wangi NATURAL CALM yang menenangkan, membantu bayi nyaman sebelum tidur.</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
+
+		<!-- ProductHub second row -->
 		<div id="menu" class="row">
 			<div class="col-md-3">
-				<a href="katalog/booking.php?id=41">
-				<img src="images/catalog_baju/set1.jpg" class="img-responsive d-block w-100" alt="Product Image">
-				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
-			</div>
-			<div class="col-md-3">
-				<a href="katalog/booking.php?id=42">
-					<img src="images/catalog_baju/set2.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
-			</div>
-
-			<div class="col-md-3">
-				<a href="katalog/booking.php?id=43">
-					<img src="images/catalog_baju/set3.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=41">
+						<img src="images/catalog_baju/set1.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Set Kaos Rock City dan Celana Pendek</b></h5>
+							<p class="card-text">Set kaos Rock and City dan Celana pendek.
+Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="katalog/booking.php?id=44">
-					<img src="images/catalog_baju/set4.jpg" class="img-responsive d-block w-100" alt="Product Image">
-					<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-				</a>
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=42">
+						<img src="images/catalog_baju/set2.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Set Kaos Buaya dan Celana</b></h5>
+							<p class="card-text">Set kaos Buaya dan celana pendek jeans.
+Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=43">
+						<img src="images/catalog_baju/set3.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Set Sleeveless Shirt Dino & Celana</b></h5>
+							<p class="card-text">Set kaos tanpa lengan Dinosaurus dan celana pendek abu-abu.
+Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card card-small">
+					<a href="katalog/booking.php?id=44">
+						<img src="images/catalog_baju/set4.jpg" class="card-img-top" alt="Product Image">
+						<div class="card-body">
+							<h5 class="card-title"><b>Set Fancy Fashion</b></h5>
+							<p class="card-text">Set kemeja, rompi, dasi dan celana pendek.
+Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
+	
 	</div>
 	<br>
 	<!-- <div class="row">

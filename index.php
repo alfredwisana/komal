@@ -138,6 +138,7 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 		
 		<!-- ProductHub first row -->
 		<div id="menu" class="row">
+		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
 			<div class="col-md-3">
 				<div class="card card-small">
 					<a href="katalog/booking.php?id=52">
@@ -241,8 +242,23 @@ Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana 
 				</div>
 			</div>
 		</div>
-	
-	</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+			<div class="text-center">
+				<img src="" alt="Additional Image">
+				<p>Kepuasan anda adalah kesenangan kami</p>
+				<a href="About_us.php"><p>Selengkapnya tentang berkat jaya</p></a>
+			</div>
+			</div>
+		</div>
+
+		<!-- <div class ="row">
+		<ul>
+			<h6><b>Kepuasan Anda adalah kesenangan kami.</b></h6>
+			<a href="About_us.php"><h6><b>Selengkapnya tentang Berkah Jaya</b></h6></a>
+		</ul>
+		</div>
+	</div> -->
 	<br>
 	<!-- <div class="row">
 		<div class="row">

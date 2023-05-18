@@ -16,6 +16,19 @@ body {
   z-index: 1;
 }
 
+.carousel-item img{
+	border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+	border-radius: 50px;
+}
+
+.carousel-inner {
+	width: 80%; 
+	margin: 0 auto; 
+}
 .content {
   padding-top: 60px;
 }

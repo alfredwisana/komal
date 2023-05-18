@@ -123,7 +123,7 @@ require 'connect.php'
 		<br>
 		
 		<div class="container">
-		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
+		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
 				<div class="col-md-8">
 					<div class="card">
@@ -146,7 +146,7 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 		<br>
 			
 		<div id="menu">
-		<h2 class="text-center mb-4"><b>SOME OF OUR BEST SELLING PRODUCTS</b></h2>
+		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
 			<ul>
 				<li><a href="katalog/booking.php?id=52"><img src="images/catalog_baju/kbthn_bayi1.jpg" class="img-responsive d-block w-80" alt="..." id="menuImages">
 				<div class="image_text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>

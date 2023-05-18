@@ -125,7 +125,7 @@ require 'connect.php'
 		<div class="container">
 		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<div class="card">
 						<div class="row g-0">
 							<div class="col-md-6">

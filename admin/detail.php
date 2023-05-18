@@ -160,11 +160,11 @@ while ($row = mysqli_fetch_array($result)) {
 
                         <form action="update.php" method="post">
                             <!-- <h3 class="mb-4"><?php echo $namaServis ?></h3> -->
-                            <h3 class="mb-4">Item's Detail</h3>
+                            <h4 class="mb-4">Item's Detail</h4>
 
                             <div class="row mb-3">
                          
-                                <div class="col-9" style="font-size: x-large;">
+                                <div class="col-9" style="font-size: large;">
                                     <?php echo $deskripsi ?>
                                 </div>
                             </div>

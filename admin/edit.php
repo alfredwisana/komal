@@ -194,7 +194,7 @@ while ($row = mysqli_fetch_array($result)) {
                                     <label for="">Deskripsi: </label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" value="<?php echo $deskripsi ?>" name="deskripsi">
+                                    <textarea type="text" class="form-control" value="<?php echo $deskripsi ?>" name="deskripsi"></textarea>
                                 </div>
                             </div>
 

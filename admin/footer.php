@@ -60,12 +60,12 @@
                 <div class="col-3" id="newsletter" style="margin-left: 10%;">
                     <span>Follow Us</span>
                     <div class="footer-icons">
-                    <a href="https://wa.me/6281358022279"><img src="../images/wa.png" style="height:3rem; margin-top: 0.5rem;"></a>
-                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D"><img src="../images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://wa.me/6281358022279" target="_blank"><img src="../images/wa.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.instagram.com/berkahjaya.babyshop/?igshid=ZDdkNTZiNTM%3D" target="_blank"><img src="../images/insta.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- tokped-->
-                    <a href="https://www.tokopedia.com/berkahjayababyshop"><img src="../images/tokped.png" style="height:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://www.tokopedia.com/berkahjayababyshop" target="_blank"><img src="../images/tokped.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- shopee-->
-                    <a href="https://shp.ee/trzp2g6"><img src="../images/shopee.png" style="height:3rem; margin-top: 0.5rem;"></a>
+                    <a href="https://shp.ee/trzp2g6" target="_blank"><img src="../images/shopee.png" style="height:3rem; weight:3rem; margin-top: 0.5rem;"></a>
                     <!-- <a href="https://Tokopedia.com"><i class="fa fa-tokopedia"></i></a> -->
                     </div>
                     

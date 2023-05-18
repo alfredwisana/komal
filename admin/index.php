@@ -147,7 +147,7 @@ $result = mysqli_query($con, $query);
         <!-- navbar -->
 
 
-        <div id="header" style="position: relative; margin-top:-0.5rem; text-align: center; background-color:white;">
+        <div id="header" style="position: relative; text-align: center; background-color:white;">
             <img src="../images/headerAdmin3.jpeg" style=" width:100%; opacity: 0.5;">
             <!-- Hello -->
             <h3 class="display-4 mt-3" data-aos="zoom-out" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);">Hello <?php echo $_SESSION['username'] ?></h3>

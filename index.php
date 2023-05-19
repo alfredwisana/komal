@@ -84,7 +84,7 @@ require 'connect.php'
 					<br>
 						<img class="card-img-top" src="images/price.png" alt="Card image"  style="width: 100px; height: 100px; object-fit: contain;">
 						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
-							<h5 class="card-title">GOOD PRICE</h5>
+							<h5 class="card-title" style="padding-top: 5px;">GOOD PRICE</h5>
 							<p class="card-text text-muted">Harga yang bersaing dibandingkan toko-toko yang lain.</p>
 						</div>
 					</div>
@@ -94,7 +94,7 @@ require 'connect.php'
 					<br>
 						<img class="card-img-top" src="images/service.png" alt="Card image" style="width: 100px; height: 100px; object-fit: contain;">
 						<div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
-							<h5 class="card-title">GOOD SERVICE</h5>
+							<h5 class="card-title" style="padding-top:35px">GOOD SERVICE</h5>
 							<p class="card-text text-muted">Service yang sangat baik dan kepuasan kustomer adalah yang utama.</p>	
 						</div>
 					</div>
@@ -116,17 +116,17 @@ require 'connect.php'
 		<div class="container">
 		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-9 mx-auto">
 					<div class="card custom-card">
 						<div class="row g-0">
 							<div class="col-md-6">
-								<img class="card-img-top img-fluid" style="max-height: 100%; object-fit: contain;"src="images/catalog_bajubawahan1.jpg" alt="Product Image">
+								<img class="card-img-top img-fluid" style="max-height: 100%; object-fit: contain; padding: 20px;"src="images/catalog_bajubawahan1.jpg" alt="Product Image">
 							</div>
 							<div class="col-md-6">
 								<div class="card-body">
 									<h5 class="card-title">Celana Pendek Hijau</h5>
 									<p class="card-text">Celana pendek berwarna hijau. Celana untuk anak laki-laki. Sangat nyaman untuk dipakai.
-Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; panjang: 31cm; Cris(slangkang): 20cm; Paha: 20cm), M (pinggang:belum ditarik(normal) 38cm, sudah ditarik 60cm; panjang: 32cm; Cris(slangkang): 21cm; Paha: 21cm), L (pinggang:belum ditarik(normal)41cm, sudah ditarik 63cm; panjang: 33cm; Cris(slangkang): 22cm; Paha: 22cm)</p>
+Size yang tersedia: <br><br>1. S : Pinggang: belum ditarik (normal) 35cm, sudah ditarik 57cm; panjang: 31cm; Cris (slangkang): 20cm; Paha: 20cm, <br><br>2. M : Pinggang:belum ditarik (normal) 38cm, sudah ditarik 60cm; panjang: 32cm; Cris (slangkang): 21cm; Paha: 21cm, <br><br>3. L : Pinggang:belum ditarik (normal) 41cm, sudah ditarik 63cm; panjang: 33cm; Cris (slangkang): 22cm; Paha: 22cm</p>
 								</div>
 							</div>
 						</div>
@@ -241,12 +241,15 @@ Size yang tersedia: S, M, dan L </p>
 					</a>
 				</div>
 			</div>
-		</div>
+		</div><br>
 		<div class="row">
-			<div class="col-md-6 offset-md-3">
+			<div class="col-md-4 offset-md-3">
 			<div class="text-center">
-				<img src="" alt="Additional Image">
+				<div class="col-md-1 mb-3" style="float: right">
+					<img src="images/homepage_below.jpg" alt="Additional Image" style="width: 300px;">
+				</div>
 				<p>Kepuasan anda adalah kesenangan kami</p>
+				<br>
 				<a href="About_us.php"><p>Selengkapnya tentang berkat jaya</p></a>
 			</div>
 			</div>

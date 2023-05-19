@@ -117,7 +117,7 @@ body {
 
 .card .card-body {
 	padding: 16px;
-	height: 200px;
+	height: 10%;
 }
 
 .card .card-title {
@@ -130,7 +130,7 @@ body {
 .card .card-text {
 	font-size: 16px;
 	font-family: 'Playfair Display', serif;
-	margin-bottom: 16px;
+	margin-bottom: 10%;
 }
 
 .image_text {

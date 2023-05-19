@@ -117,10 +117,10 @@ require 'connect.php'
 		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="card">
+					<div class="card custom-card">
 						<div class="row g-0">
 							<div class="col-md-6">
-								<img class="card-img-top" src="images/catalog_bajubawahan1.jpg" alt="Product Image">
+								<img class="card-img-top img-fluid" style="max-height: 100%; object-fit: contain;"src="images/catalog_bajubawahan1.jpg" alt="Product Image">
 							</div>
 							<div class="col-md-6">
 								<div class="card-body">
@@ -137,10 +137,10 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 		<br>
 		
 		<!-- ProductHub first row -->
-		<div id="menu" class="row">
+		<div id="menu" class="row gx-md-5 justify-content-center">
 		<h2 class="text-center mb-4"><b>PRODUCT HUB</b></h2>
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=52">
 						<img src="images/catalog_baju/kbthn_bayi1.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
@@ -151,8 +151,8 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=53">
 						<img src="images/catalog_baju/kbthn_bayi2.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
@@ -163,8 +163,8 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=54">
 						<img src="images/catalog_baju/kbthn_bayi3.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
@@ -175,8 +175,8 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=55">
 						<img src="images/catalog_baju/kbthn_bayi4.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
@@ -189,54 +189,54 @@ Size yang tersedia: S (pinggang: belum ditarik(normal)35cm, sudah ditarik 57cm; 
 		</div>
 
 		<!-- ProductHub second row -->
-		<div id="menu" class="row">
-			<div class="col-md-3">
-				<div class="card card-small">
+		<div id="menu" class="row gx-md-5 justify-content-center">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=41">
 						<img src="images/catalog_baju/set1.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
 							<h5 class="card-title"><b>Set Kaos Rock City dan Celana Pendek</b></h5>
 							<p class="card-text">Set kaos Rock and City dan Celana pendek.
-Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+Size yang tersedia: S, M, dan L </p>
 						</div>
 					</a>
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=42">
 						<img src="images/catalog_baju/set2.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
 							<h5 class="card-title"><b>Set Kaos Buaya dan Celana</b></h5>
 							<p class="card-text">Set kaos Buaya dan celana pendek jeans.
-Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+							Size yang tersedia: S, M, dan L </p>
 						</div>
 					</a>
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=43">
 						<img src="images/catalog_baju/set3.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
 							<h5 class="card-title"><b>Set Sleeveless Shirt Dino & Celana</b></h5>
 							<p class="card-text">Set kaos tanpa lengan Dinosaurus dan celana pendek abu-abu.
-Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+							Size yang tersedia: S, M, dan L </p>						
 						</div>
 					</a>
 				</div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="card card-small">
+			<div class="col-md-2 mb-4">
+				<div class="card card-small card-custom">
 					<a href="katalog/booking.php?id=44">
 						<img src="images/catalog_baju/set4.jpg" class="card-img-top" alt="Product Image">
 						<div class="card-body">
 							<h5 class="card-title"><b>Set Fancy Fashion</b></h5>
 							<p class="card-text">Set kemeja, rompi, dasi dan celana pendek.
-Size yang tersedia: S (Lebar dada : 27 cm; Panjang baju : 37 cm; Panjang celana : 26 cm), M (Lebar dada : 30 cm; Panjang baju : 39 cm; Panjang celana : 29 cm), L (Lebar dada : 32 cm; Panjang baju : 41 cm; Panjang celana : 31 cm)</p>
+							Size yang tersedia: S, M, dan L </p>
 						</div>
 					</a>
 				</div>

@@ -116,7 +116,7 @@ require 'connect.php'
 		<div class="container">
 		<h2 class="text-center mb-4"><b>BEST SELLING PRODUCT</b></h2>
 			<div class="row">
-				<div class="col-md-9 mx-auto">
+				<div class="col-md-12 mx-auto">
 					<div class="card custom-card">
 						<div class="row g-0">
 							<div class="col-md-6">
@@ -243,14 +243,14 @@ Size yang tersedia: S, M, dan L </p>
 			</div>
 		</div><br>
 		<div class="row">
-			<div class="col-md-4 offset-md-3">
+			<div class="col-md-5 offset-md-2">
 			<div class="text-center">
 				<div class="col-md-1 mb-3" style="float: right">
 					<img src="images/homepage_below.jpg" alt="Additional Image" style="width: 300px;">
 				</div>
 				<p>Kepuasan anda adalah kesenangan kami</p>
 				<br>
-				<a href="About_us.php"><p>Selengkapnya tentang berkat jaya</p></a>
+				<a href="About_us.php" style="color: black; text-decoration: none;"><p>Selengkapnya tentang berkat jaya</p></a>
 			</div>
 			</div>
 		</div>

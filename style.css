@@ -45,47 +45,15 @@ body {
   width: 100%;
 }
 
-#menu ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  align-items: center;
-}
-
-#menu li {
-  float: left;
-  width: 50%;
-  padding: 100px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  position: relative;
-}
-
-#menu .col-md-3{
-	padding: 10px;
-}
-
-#menuImages{
-  object-fit: cover;
-  height: 600px;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.3s;
-}
-
-.card-title{
+.card-title {
 	color: black;
 }
 
-.card-text{
+.card-text {
 	color: black;
 }
 
 .card a {
-    text-decoration: none;
-}
-
-.card a:hover {
     text-decoration: none;
 }
 
@@ -133,25 +101,6 @@ body {
 	margin-bottom: 10%;
 }
 
-.image_text {
-	color: black;
-	opacity: 0;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transition: all 0.3s;
-	font-size: 30px;
-	transform: translate(-50%, -50%);
-}
-
-#menu ul li a:hover #menuImages {
-	opacity: 0.5;
-}
-
-#menu ul li a:hover .image_text {
-	opacity: 1;
-}
-
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 *{
@@ -164,6 +113,7 @@ footer{
 	/* position: fixed; */
 	bottom: 0;
 }
+
 .footer-distributed{
 	background-color: #d9b4e2;
 	box-sizing: border-box;
@@ -347,4 +297,8 @@ footer{
 	#menu li {
 		width: 100%;
 	}
+}
+
+.link-to-about-us:hover {
+	text-decoration: underline !important;
 }

@@ -241,17 +241,12 @@ Size yang tersedia: S, M, dan L </p>
 					</a>
 				</div>
 			</div>
-		</div><br>
-		<div class="row">
-			<div class="col-md-5 offset-md-2">
+		</div>
+		<div class="row" style="font-family: 'Poppins', sans-serif; margin-top: 50px; margin-bottom: 30px;">
 			<div class="text-center">
-				<div class="col-md-1 mb-3" style="float: right">
-					<img src="images/homepage_below.jpg" alt="Additional Image" style="width: 300px;">
-				</div>
-				<p>Kepuasan anda adalah kesenangan kami</p>
+				<p style="font-size: 25px; font-weight: bold;">"Kepuasan anda adalah kesenangan kami"</p>
 				<br>
-				<a href="About_us.php" style="color: black; text-decoration: none;"><p>Selengkapnya tentang berkat jaya</p></a>
-			</div>
+				<a class="link-to-about-us" href="About_us.php" style="color: black; text-decoration: none;  font-size: 20px;"><p>Selengkapnya tentang berkat jaya</p></a>
 			</div>
 		</div>
 

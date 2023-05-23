@@ -138,12 +138,16 @@ $result = mysqli_query($con, $query);
                 float: none;
             }
         }
+
+        a{
+            font-weight: 500;
+        }
     </style>
 </head>
 
 <body>
     <?php require "navbar.php" ?>
-    <div id="wrapper" style="background-color:ee7d3;">
+    <div id="wrapper" style="background-color:#f4d7f9;">
         <!-- navbar -->
 
 
@@ -156,13 +160,15 @@ $result = mysqli_query($con, $query);
         <br></br>
 
         <div id="wrapper2">
-            <div class="sidebar col-md-auto">
+            <div class="sidebar col-md-auto" style="background-color:#E4C8E8; border-radius:0.7rem;">
+            <br>
+            <img src="../images/carousel1.jpg" style="max-height:8rem; border-radius:0.6rem;"> 
 
                 <!-- Tambah category -->
                 <form action="addCat.php" method="post" enctype="multipart/form-data">
                     <a>New Category</a>
                     <input type="text" id="addCat" name="addCat" class="form-control" style="width:65%; float:left;" onkeyup="if(this.value.length > 0) document.getElementById('addCatButton').disabled = false; else document.getElementById('addCatButton').disabled = true;" />
-                    <button class="btn btn-outline-success bg-white" id="addCatButton" name="addCatButton" style="width:30%; float:right;" disabled>Add</button>
+                    <button class="btn btn-outline-success" id="addCatButton" name="addCatButton" style="width:30%; float:right; background-color:#c53a5c; color:white; border: #c53a5c;" disabled>Add</button>
                 </form>
 
                 <!-- Hapus category -->
@@ -185,7 +191,7 @@ $result = mysqli_query($con, $query);
                         }
                         ?>
                     </select>
-                    <button class="btn btn-outline-success bg-white" id="delCat" name="delCat" style="width:30%; float:right;" disabled>Delete</button>
+                    <button class="btn btn-outline-success" id="delCat" name="delCat" style="width:30%; float:right; background-color:#c53a5c; color:white; border: #c53a5c;" disabled>Delete</button>
                 </form>
                 <br><br>
 
@@ -209,9 +215,9 @@ $result = mysqli_query($con, $query);
                         }
                         ?>
                     </select>
-                    <button class="btn btn-outline-success bg-white" name="seaCat" id="seaCat" type="submit" style="width:30%; float:right;" disabled>Search</button>
+                    <button class="btn btn-outline-success" name="seaCat" id="seaCat" type="submit" style="width:30%; float:right; background-color:#c53a5c; color:white; border: #c53a5c;" disabled>Search</button>
                 </form>
-                <br><br><br><br><br><br>
+                <br><br><br>
 
             </div>
 
@@ -243,18 +249,18 @@ $result = mysqli_query($con, $query);
                         while ($row = mysqli_fetch_array($result)) {
                     ?>
                             <div class="col-md-4 col-sm-1 mb-5 col d-flex justify-content-center">
-                                <div class="card" style="width: 18rem; border-radius: 15px;" data-aos="zoom-out">
+                                <div class="card" style="width: 18rem; border-radius: 15px; background-color:#E4C8E8; box-shadow: 0.2rem 0.2rem lightblue; " data-aos="zoom-out">
                                     <img src="<?php echo $row['gambar'] ?>" alt="..." style="border-radius: 15px;">
                                     <div class="card-body" id="<?php echo $row['id'] ?>">
                                         <h5 class="card-title"><?php echo $row['namaServis'] ?></h5>
                                         <p class="card-text"><?php echo $row['category'] ?></p>
                                         <h6>Harga: Rp.<?php echo $row['harga'] ?></h6>
                                         <br>
-                                        <a href="detail.php?id=<?php echo $row['id'] ?>" class="btn detail" style="border: solid 2px #80f0ff;"><i style="color: #05c1ff;">Lihat Detail</i></a>
+                                        <a href="detail.php?id=<?php echo $row['id'] ?>" class="btn detail" style="border: solid 2px #c53a5c; background-color:#c53a5c;"><i style="color: white;">Lihat Detail</i></a>
 
-                                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #80f0ff;"><i class="fa-solid fa-pen-to-square" style="color: #05c1ff;"></i></a>
+                                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn edit" style="border: solid 2px #c53a5c; background-color:#c53a5c;"><i class="fa-solid fa-pen-to-square" style="color: white;"></i></a>
 
-                                        <a class="btn delete" style="border: solid 2px red;"><i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+                                        <a class="btn delete" style="border: solid 2px #c53a5c; background-color:#c53a5c"><i class="fa-solid fa-trash-can" style="color: white;"></i></a>
                                     </div>
                                 </div>
                             </div>
